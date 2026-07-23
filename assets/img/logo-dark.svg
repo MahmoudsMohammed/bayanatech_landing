@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 160" role="img" aria-label="(J'F'*C Bayanatech">
+  <rect width="420" height="160" fill="#0A0A0A"/>
+  <rect x="18" y="18" width="18" height="18" fill="#C0C0C0"/>
+  <rect x="48" y="8" width="42" height="42" fill="#0A6DCA"/>
+  <rect x="98" y="28" width="36" height="36" fill="#0A6DCA"/>
+  <rect x="8" y="58" width="72" height="72" fill="#0A6DCA"/>
+  <rect x="8" y="138" width="14" height="14" fill="#C0C0C0"/>
+  <rect x="88" y="118" width="22" height="22" fill="#C0C0C0"/>
+  <text x="140" y="78" fill="#0A6DCA" font-family="Cairo, Segoe UI, Arial, sans-serif" font-size="52" font-weight="700">(J'F'*C</text>
+  <text x="140" y="118" fill="#FFFFFF" font-family="Plus Jakarta Sans, Segoe UI, Arial, sans-serif" font-size="28" font-weight="600">Bayanatech</text>
+  <circle cx="318" cy="112" r="4" fill="#0A6DCA"/>
+  <circle cx="334" cy="112" r="4" fill="#0A6DCA"/>
+  <circle cx="350" cy="112" r="4" fill="#0A6DCA"/>
+</svg>
