@@ -1,347 +1,1086 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="بياناتك لتقنية المعلومات — شريك موثوق للتحول الرقمي وحلول تقنية المعلومات في المملكة العربية السعودية.">
-  <title>بياناتك لتقنية المعلومات | التحول الرقمي وحلول تقنية المعلومات</title>
-  <link rel="icon" href="../assets/img/logo-mark.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-  <link href="../assets/css/tokens.css" rel="stylesheet">
-  <link href="../assets/css/main.css" rel="stylesheet">
-</head>
-<body>
-  <a class="skip-link" href="#main">تخطى إلى المحتوى</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="بياناتك لتقنية المعلومات — شريك موثوق للتحول الرقمي وحلول تقنية المعلومات في المملكة العربية السعودية."
+    />
+    <title>
+      بياناتك لتقنية المعلومات | التحول الرقمي وحلول تقنية المعلومات
+    </title>
+    <link rel="icon" href="../assets/img/logo-mark.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link href="../assets/css/tokens.css" rel="stylesheet" />
+    <link href="../assets/css/main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">تخطى إلى المحتوى</a>
 
-  <header class="site-header">
-    <nav class="navbar navbar-expand-lg" aria-label="الرئيسية">
-      <div class="container">
-        <a class="brand-logo" href="index.html">
-          <img src="../assets/img/logo-transparent.png" class="logo-full" height="46" alt="Bayanatech">
-          <span class="brand-name">بياناتك<span class="brand-tag">لتقنية المعلومات</span></span>
-        </a>
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-label="فتح القائمة">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse d-none d-lg-flex">
-          <ul class="navbar-nav mx-auto align-items-lg-center">
-            <li class="nav-item nav-item-mega position-static">
-              <a class="nav-link nav-link-main" href="solutions.html" aria-expanded="false" aria-haspopup="true">خدماتنا</a>
-              <div class="mega-menu" role="region" aria-label="قائمة الحلول">
-                <div class="container">
-                  <div class="row g-3">
-                    <div class="col-md-4"><a class="mega-item" href="solutions.html#infrastructure"><span class="mega-icon"><i class="bi bi-hdd-network"></i></span><div><h6>البنية التحتية</h6><p>أسس تقنية قوية قابلة للتوسع</p></div></a></div>
-                    <div class="col-md-4"><a class="mega-item" href="solutions.html#cybersecurity"><span class="mega-icon"><i class="bi bi-shield-check"></i></span><div><h6>الأمن السيبراني</h6><p>حماية البيانات والشبكات واستمرارية الأعمال</p></div></a></div>
-                    <div class="col-md-4"><a class="mega-item" href="solutions.html#cloud"><span class="mega-icon"><i class="bi bi-cloud"></i></span><div><h6>الخدمات السحابية</h6><p>مرونة دون التخلي عن السيطرة</p></div></a></div>
-                    <div class="col-md-4"><a class="mega-item" href="solutions.html#networking"><span class="mega-icon"><i class="bi bi-diagram-3"></i></span><div><h6>الشبكات</h6><p>LAN وWAN ولاسلكي بأداء عالٍ</p></div></a></div>
-                    <div class="col-md-4"><a class="mega-item" href="solutions.html#managed"><span class="mega-icon"><i class="bi bi-headset"></i></span><div><h6>إدارة تقنية المعلومات</h6><p>دعم استباقي باتفاقيات واضحة</p></div></a></div>
-                    <div class="col-md-4"><a class="mega-item" href="solutions.html#software"><span class="mega-icon"><i class="bi bi-grid-1x2"></i></span><div><h6>برمجيات الأعمال</h6><p>أنظمة تحقق عائداً ملموساً</p></div></a></div>
+    <header class="site-header">
+      <nav class="navbar navbar-expand-lg" aria-label="الرئيسية">
+        <div class="container">
+          <a class="brand-logo" href="index.html">
+            <img
+              src="../assets/img/logo-transparent.png"
+              class="logo-full"
+              height="46"
+              alt="Bayanatech"
+            />
+            <span class="brand-name"
+              >بياناتك<span class="brand-tag">لتقنية المعلومات</span></span
+            >
+          </a>
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#mobileNav"
+            aria-controls="mobileNav"
+            aria-label="فتح القائمة"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse d-none d-lg-flex">
+            <ul class="navbar-nav mx-auto align-items-lg-center">
+              <li class="nav-item nav-item-mega position-static">
+                <a
+                  class="nav-link nav-link-main"
+                  href="solutions.html"
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  >خدماتنا</a
+                >
+                <div class="mega-menu" role="region" aria-label="قائمة الحلول">
+                  <div class="container">
+                    <div class="row g-3">
+                      <div class="col-md-4">
+                        <a
+                          class="mega-item"
+                          href="solutions.html#infrastructure"
+                          ><span class="mega-icon"
+                            ><i class="bi bi-hdd-network"></i
+                          ></span>
+                          <div>
+                            <h6>البنية التحتية</h6>
+                            <p>أسس تقنية قوية قابلة للتوسع</p>
+                          </div></a
+                        >
+                      </div>
+                      <div class="col-md-4">
+                        <a class="mega-item" href="solutions.html#cybersecurity"
+                          ><span class="mega-icon"
+                            ><i class="bi bi-shield-check"></i
+                          ></span>
+                          <div>
+                            <h6>الأمن السيبراني</h6>
+                            <p>حماية البيانات والشبكات واستمرارية الأعمال</p>
+                          </div></a
+                        >
+                      </div>
+                      <div class="col-md-4">
+                        <a class="mega-item" href="solutions.html#cloud"
+                          ><span class="mega-icon"
+                            ><i class="bi bi-cloud"></i
+                          ></span>
+                          <div>
+                            <h6>الخدمات السحابية</h6>
+                            <p>مرونة دون التخلي عن السيطرة</p>
+                          </div></a
+                        >
+                      </div>
+                      <div class="col-md-4">
+                        <a class="mega-item" href="solutions.html#networking"
+                          ><span class="mega-icon"
+                            ><i class="bi bi-diagram-3"></i
+                          ></span>
+                          <div>
+                            <h6>الشبكات</h6>
+                            <p>LAN وWAN ولاسلكي بأداء عالٍ</p>
+                          </div></a
+                        >
+                      </div>
+                      <div class="col-md-4">
+                        <a class="mega-item" href="solutions.html#managed"
+                          ><span class="mega-icon"
+                            ><i class="bi bi-headset"></i
+                          ></span>
+                          <div>
+                            <h6>إدارة تقنية المعلومات</h6>
+                            <p>دعم استباقي باتفاقيات واضحة</p>
+                          </div></a
+                        >
+                      </div>
+                      <div class="col-md-4">
+                        <a class="mega-item" href="solutions.html#software"
+                          ><span class="mega-icon"
+                            ><i class="bi bi-grid-1x2"></i
+                          ></span>
+                          <div>
+                            <h6>برمجيات الأعمال</h6>
+                            <p>أنظمة تحقق عائداً ملموساً</p>
+                          </div></a
+                        >
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </li>
-            <li class="nav-item"><a class="nav-link nav-link-main" href="products.html">المنتجات</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-main" href="case-studies.html">أعمالنا</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-main" href="about.html">من نحن</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-main" href="resources.html">المدونة</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-main" href="contact.html">تواصل معنا</a></li>
-          </ul>
-          <div class="d-flex align-items-center gap-2">
-            <a class="lang-switch" href="../en/index.html" data-switch-lang="en" hreflang="en">English</a>
-            <a class="btn btn-brand" href="consultation.html">اطلب عرض سعر</a>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <div class="offcanvas offcanvas-start offcanvas-nav" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel">
-    <div class="offcanvas-header">
-      <h2 class="offcanvas-title h5" id="mobileNavLabel">القائمة</h2>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="إغلاق"></button>
-    </div>
-    <div class="offcanvas-body">
-      <nav aria-label="الجوال">
-        <a class="nav-link" href="index.html">الرئيسية</a>
-        <div class="accordion accordion-flush" id="mobAcc">
-          <div class="accordion-item border-0">
-            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobSol">خدماتنا</button></h3>
-            <div id="mobSol" class="accordion-collapse collapse" data-bs-parent="#mobAcc">
-              <div class="accordion-body">
-                <a class="nav-link" href="solutions.html">كل الحلول</a>
-                <a class="nav-link" href="solutions.html#infrastructure">البنية التحتية</a>
-                <a class="nav-link" href="solutions.html#cybersecurity">الأمن السيبراني</a>
-                <a class="nav-link" href="solutions.html#cloud">السحابة</a>
-              </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-link-main" href="products.html"
+                  >المنتجات</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-link-main" href="case-studies.html"
+                  >أعمالنا</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-link-main" href="about.html">من نحن</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-link-main" href="resources.html"
+                  >المدونة</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-link-main" href="contact.html"
+                  >تواصل معنا</a
+                >
+              </li>
+            </ul>
+            <div class="d-flex align-items-center gap-2">
+              <a
+                class="lang-switch"
+                href="../en/index.html"
+                data-switch-lang="en"
+                hreflang="en"
+                >English</a
+              >
+              <a class="btn btn-brand" href="consultation.html">اطلب عرض سعر</a>
             </div>
           </div>
         </div>
-        <a class="nav-link" href="products.html">المنتجات</a>
-        <a class="nav-link" href="case-studies.html">أعمالنا</a>
-        <a class="nav-link" href="about.html">من نحن</a>
-        <a class="nav-link" href="resources.html">المدونة</a>
-        <a class="nav-link" href="contact.html">تواصل معنا</a>
-        <a class="btn btn-brand w-100 mt-3" href="consultation.html">اطلب عرض سعر</a>
-        <a class="lang-switch d-inline-block mt-3" href="../en/index.html" data-switch-lang="en">English</a>
       </nav>
+    </header>
+
+    <div
+      class="offcanvas offcanvas-start offcanvas-nav"
+      tabindex="-1"
+      id="mobileNav"
+      aria-labelledby="mobileNavLabel"
+    >
+      <div class="offcanvas-header">
+        <h2 class="offcanvas-title h5" id="mobileNavLabel">القائمة</h2>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="إغلاق"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <nav aria-label="الجوال">
+          <a class="nav-link" href="index.html">الرئيسية</a>
+          <div class="accordion accordion-flush" id="mobAcc">
+            <div class="accordion-item border-0">
+              <h3 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#mobSol"
+                >
+                  خدماتنا
+                </button>
+              </h3>
+              <div
+                id="mobSol"
+                class="accordion-collapse collapse"
+                data-bs-parent="#mobAcc"
+              >
+                <div class="accordion-body">
+                  <a class="nav-link" href="solutions.html">كل الحلول</a>
+                  <a class="nav-link" href="solutions.html#infrastructure"
+                    >البنية التحتية</a
+                  >
+                  <a class="nav-link" href="solutions.html#cybersecurity"
+                    >الأمن السيبراني</a
+                  >
+                  <a class="nav-link" href="solutions.html#cloud">السحابة</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="nav-link" href="products.html">المنتجات</a>
+          <a class="nav-link" href="case-studies.html">أعمالنا</a>
+          <a class="nav-link" href="about.html">من نحن</a>
+          <a class="nav-link" href="resources.html">المدونة</a>
+          <a class="nav-link" href="contact.html">تواصل معنا</a>
+          <a class="btn btn-brand w-100 mt-3" href="consultation.html"
+            >اطلب عرض سعر</a
+          >
+          <a
+            class="lang-switch d-inline-block mt-3"
+            href="../en/index.html"
+            data-switch-lang="en"
+            >English</a
+          >
+        </nav>
+      </div>
     </div>
-  </div>
 
-  <main id="main">
-    <section class="hero hero-v2">
-      <div class="hero-orb hero-orb-one" aria-hidden="true"></div>
-      <div class="hero-orb hero-orb-two" aria-hidden="true"></div>
-      <div class="container">
-        <div class="row align-items-center g-5">
-          <div class="col-lg-6 hero-content" data-hero-item>
-            <p class="hero-eyebrow"><span class="status-dot"></span> شريكك التقني منذ أكثر من 14 عاماً</p>
-            <h1>حلول تقنية متكاملة <span>لدعم نمو أعمالك</span></h1>
-            <p class="lead">نصمّم وننفّذ بنية تقنية آمنة وموثوقة للشركات والجهات الحكومية والتعليمية، من الشبكات والسيرفرات إلى الحماية والدعم المستمر.</p>
-            <div class="d-flex flex-wrap gap-3 hero-actions">
-              <a class="btn btn-brand btn-lg" href="consultation.html">اطلب عرض سعر <i class="bi bi-arrow-left"></i></a>
-              <a class="btn btn-ghost-light btn-lg" href="contact.html">تواصل معنا</a>
-            </div>
-            <div class="hero-proof">
-              <div><strong>+14</strong><span>عاماً من الخبرة</span></div>
-              <div><strong>+300</strong><span>مشروع تقني</span></div>
-              <div><strong>سريع</strong><span>دعم محلي</span></div>
-            </div>
-          </div>
-          <div class="col-lg-6 hero-visual" data-hero-item>
-            <div class="network-console" data-parallax-card>
-              <div class="console-head">
-                <div class="console-title"><span class="live-dot"></span> مركز العمليات التقنية</div>
-                <span class="console-status">الأنظمة مستقرة</span>
-              </div>
-              <div class="network-map" aria-hidden="true">
-                <span class="map-line line-a"></span><span class="map-line line-b"></span><span class="map-line line-c"></span>
-                <div class="network-node node-core"><i class="bi bi-hdd-rack"></i><span>الخوادم</span></div>
-                <div class="network-node node-shield"><i class="bi bi-shield-check"></i><span>الحماية</span></div>
-                <div class="network-node node-cloud"><i class="bi bi-cloud-check"></i><span>السحابة</span></div>
-                <div class="network-node node-wifi"><i class="bi bi-wifi"></i><span>الشبكات</span></div>
-              </div>
-              <div class="console-metrics">
-                <div><span>توفر الشبكة</span><strong>99.9%</strong><div class="metric-bar"><i style="width:99.9%"></i></div></div>
-                <div><span>الحماية</span><strong>نشطة</strong><div class="metric-bar"><i style="width:94%"></i></div></div>
-              </div>
-              <div class="floating-badge"><i class="bi bi-check-circle-fill"></i> مراقبة ودعم متواصل</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="scroll-cue" href="#services" aria-label="انتقل إلى الخدمات"><span></span></a>
-    </section>
-
-    <section class="trust-strip" aria-label="عملاؤنا">
-      <div class="container">
-        <p class="trust-label">ثقة بنتها مشاريع ناجحة وشراكات طويلة الأمد</p>
-        <div class="logo-marquee">
-          <div class="logo-track">
-            <span>وقف الملك عبدالله</span><span>فارسي القابضة</span><span>منازلي للفنادق</span><span>مكارم المدينة</span>
-            <span>القطاع التعليمي</span><span>المنشآت التجارية</span><span>وقف الملك عبدالله</span><span>فارسي القابضة</span>
-            <span>منازلي للفنادق</span><span>مكارم المدينة</span><span>القطاع التعليمي</span><span>المنشآت التجارية</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section services-v2" id="services">
-      <div class="container">
-        <div class="section-header centered reveal">
-          <span class="section-eyebrow">خدماتنا</span>
-          <h2 class="section-title">كل ما تحتاجه بنيتك التقنية، في مكان واحد</h2>
-          <p class="section-lead">حلول عملية تبدأ بفهم احتياجك وتنتهي بتشغيل مستقر ودعم يمكن الاعتماد عليه.</p>
-        </div>
-        <div class="services-grid">
-          <a class="service-card service-card-featured reveal" href="solutions.html#networking"><span class="service-num">01</span><div class="card-icon"><i class="bi bi-diagram-3"></i></div><h3>البنية التحتية للشبكات</h3><p>تصميم وتنفيذ شبكات LAN وWAN منظمة، سريعة وقابلة للتوسع.</p><span class="service-link">اعرف المزيد <i class="bi bi-arrow-left"></i></span></a>
-          <a class="service-card reveal" href="solutions.html#infrastructure"><span class="service-num">02</span><div class="card-icon"><i class="bi bi-server"></i></div><h3>السيرفرات والتخزين</h3><p>توريد وتركيب وإدارة حلول الخوادم وحماية البيانات.</p><span class="service-link">اعرف المزيد <i class="bi bi-arrow-left"></i></span></a>
-          <a class="service-card reveal" href="solutions.html#surveillance"><span class="service-num">03</span><div class="card-icon"><i class="bi bi-camera-video"></i></div><h3>كاميرات المراقبة</h3><p>أنظمة مراقبة احترافية تمنحك وضوحاً وتحكماً كاملاً.</p><span class="service-link">اعرف المزيد <i class="bi bi-arrow-left"></i></span></a>
-          <a class="service-card reveal" href="solutions.html#wireless"><span class="service-num">04</span><div class="card-icon"><i class="bi bi-wifi"></i></div><h3>الشبكات اللاسلكية</h3><p>تغطية Wi-Fi مؤسسية مستقرة للمكاتب والفنادق والمستودعات.</p><span class="service-link">اعرف المزيد <i class="bi bi-arrow-left"></i></span></a>
-          <a class="service-card reveal" href="solutions.html#communications"><span class="service-num">05</span><div class="card-icon"><i class="bi bi-telephone"></i></div><h3>السنترالات والاتصال</h3><p>حلول IPPBX حديثة للاتصال الداخلي وخدمة العملاء.</p><span class="service-link">اعرف المزيد <i class="bi bi-arrow-left"></i></span></a>
-          <a class="service-card reveal" href="solutions.html#cybersecurity"><span class="service-num">06</span><div class="card-icon"><i class="bi bi-shield-lock"></i></div><h3>أمن المعلومات</h3><p>طبقات حماية متكاملة للشبكات والأنظمة والبيانات الحساسة.</p><span class="service-link">اعرف المزيد <i class="bi bi-arrow-left"></i></span></a>
-          <a class="service-card reveal" href="solutions.html#managed"><span class="service-num">07</span><div class="card-icon"><i class="bi bi-headset"></i></div><h3>عقود الصيانة والدعم</h3><p>استجابة سريعة وصيانة استباقية تضمن استمرارية أعمالك.</p><span class="service-link">اعرف المزيد <i class="bi bi-arrow-left"></i></span></a>
-          <a class="service-card reveal" href="solutions.html#attendance"><span class="service-num">08</span><div class="card-icon"><i class="bi bi-person-badge"></i></div><h3>الحضور والانصراف</h3><p>أنظمة بصمة ووجه وبطاقات لإدارة وقت فريقك بدقة.</p><span class="service-link">اعرف المزيد <i class="bi bi-arrow-left"></i></span></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section why-v2" id="why">
-      <div class="container">
-        <div class="row align-items-center g-5">
-          <div class="col-lg-5 reveal">
-            <span class="section-eyebrow">لماذا بياناتك؟</span>
-            <h2 class="section-title">خبرة تقنية تتحول إلى نتائج ملموسة</h2>
-            <p class="section-lead">لا نقدّم أجهزة فقط؛ نبني حلولاً مدروسة ونبقى معك بعد التشغيل لضمان الاستقرار والتطور.</p>
-            <a class="btn btn-brand-outline mt-4" href="about.html">تعرّف علينا</a>
-          </div>
-          <div class="col-lg-7">
-            <div class="why-grid">
-              <article class="why-item reveal"><span>01</span><i class="bi bi-award"></i><div><h3>خبرة طويلة</h3><p>أكثر من 14 عاماً في تنفيذ المشاريع التقنية للقطاعات المختلفة.</p></div></article>
-              <article class="why-item reveal"><span>02</span><i class="bi bi-lightning-charge"></i><div><h3>دعم فني سريع</h3><p>فريق محلي قريب منك يتعامل مع الأعطال بوضوح وسرعة.</p></div></article>
-              <article class="why-item reveal"><span>03</span><i class="bi bi-check2-circle"></i><div><h3>تنفيذ احترافي</h3><p>تخطيط وتوثيق واختبار يضمن جودة المشروع من أول مرة.</p></div></article>
-              <article class="why-item reveal"><span>04</span><i class="bi bi-people"></i><div><h3>فريق متخصص</h3><p>مهندسون وفنيون بخبرة عملية في حلول البنية والأمن والدعم.</p></div></article>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section product-spotlight" id="products">
-      <div class="container">
-        <div class="product-stage reveal">
+    <main id="main">
+      <section class="hero hero-v2">
+        <div class="hero-orb hero-orb-one" aria-hidden="true"></div>
+        <div class="hero-orb hero-orb-two" aria-hidden="true"></div>
+        <div class="container">
           <div class="row align-items-center g-5">
-            <div class="col-lg-6">
-              <span class="product-kicker">منتج بياناتك</span>
-              <h2>تعمير ERP</h2>
-              <p class="product-lead">نظام سحابي متكامل لإدارة المكاتب الهندسية والمساحية وتحويل المعاملات الورقية إلى سير عمل رقمي أكثر كفاءة ودقة.</p>
-              <ul class="product-points">
-                <li><i class="bi bi-check-circle-fill"></i> إدارة المشاريع والمهام</li>
-                <li><i class="bi bi-check-circle-fill"></i> العمليات المالية والإدارية</li>
-                <li><i class="bi bi-check-circle-fill"></i> تقارير لحظية وقرارات أسرع</li>
-                <li><i class="bi bi-check-circle-fill"></i> وصول سحابي آمن من أي مكان</li>
-              </ul>
-              <div class="d-flex flex-wrap gap-3">
-                <a class="btn btn-light btn-lg" href="products.html">اكتشف تعمير</a>
-                <a class="btn btn-ghost-light btn-lg" href="products.html">كل المنتجات</a>
+            <div class="col-lg-6 hero-content" data-hero-item>
+              <p class="hero-eyebrow">
+                <span class="status-dot"></span> شريكك التقني منذ أكثر من 14
+                عاماً
+              </p>
+              <h1>حلول تقنية متكاملة <span>لدعم نمو أعمالك</span></h1>
+              <p class="lead">
+                نصمّم وننفّذ بنية تقنية آمنة وموثوقة للشركات والجهات الحكومية
+                والتعليمية، من الشبكات والسيرفرات إلى الحماية والدعم المستمر.
+              </p>
+              <div class="d-flex flex-wrap gap-3 hero-actions">
+                <a class="btn btn-brand btn-lg" href="consultation.html"
+                  >اطلب عرض سعر <i class="bi bi-arrow-left"></i
+                ></a>
+                <a class="btn btn-ghost-light btn-lg" href="contact.html"
+                  >تواصل معنا</a
+                >
+              </div>
+              <div class="hero-proof">
+                <div><strong>+14</strong><span>عاماً من الخبرة</span></div>
+                <div><strong>+300</strong><span>مشروع تقني</span></div>
+                <div><strong>سريع</strong><span>دعم محلي</span></div>
               </div>
             </div>
-            <div class="col-lg-6">
-              <div class="erp-window" data-parallax-card>
-                <div class="erp-top"><span></span><span></span><span></span><strong>لوحة تحكم تعمير</strong></div>
-                <div class="erp-body">
-                  <aside><i class="bi bi-grid"></i><i class="bi bi-folder"></i><i class="bi bi-bar-chart"></i><i class="bi bi-people"></i></aside>
-                  <div class="erp-content">
-                    <div class="erp-summary"><span><small>المشاريع النشطة</small><strong>24</strong></span><span><small>المعاملات اليوم</small><strong>86</strong></span></div>
-                    <div class="erp-chart"><i style="height:42%"></i><i style="height:65%"></i><i style="height:50%"></i><i style="height:86%"></i><i style="height:72%"></i><i style="height:96%"></i></div>
-                    <div class="erp-rows"><span></span><span></span><span></span></div>
+            <div class="col-lg-6 hero-visual" data-hero-item>
+              <div class="network-console" data-parallax-card>
+                <div class="console-head">
+                  <div class="console-title">
+                    <span class="live-dot"></span> مركز العمليات التقنية
                   </div>
+                  <span class="console-status">الأنظمة مستقرة</span>
+                </div>
+                <div class="network-map" aria-hidden="true">
+                  <span class="map-line line-a"></span
+                  ><span class="map-line line-b"></span
+                  ><span class="map-line line-c"></span>
+                  <div class="network-node node-core">
+                    <i class="bi bi-hdd-rack"></i><span>الخوادم</span>
+                  </div>
+                  <div class="network-node node-shield">
+                    <i class="bi bi-shield-check"></i><span>الحماية</span>
+                  </div>
+                  <div class="network-node node-cloud">
+                    <i class="bi bi-cloud-check"></i><span>السحابة</span>
+                  </div>
+                  <div class="network-node node-wifi">
+                    <i class="bi bi-wifi"></i><span>الشبكات</span>
+                  </div>
+                </div>
+                <div class="console-metrics">
+                  <div>
+                    <span>توفر الشبكة</span><strong>99.9%</strong>
+                    <div class="metric-bar"><i style="width: 99.9%"></i></div>
+                  </div>
+                  <div>
+                    <span>الحماية</span><strong>نشطة</strong>
+                    <div class="metric-bar"><i style="width: 94%"></i></div>
+                  </div>
+                </div>
+                <div class="floating-badge">
+                  <i class="bi bi-check-circle-fill"></i> مراقبة ودعم متواصل
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+        <a class="scroll-cue" href="#services" aria-label="انتقل إلى الخدمات"
+          ><span></span
+        ></a>
+      </section>
 
-    <section class="section projects-v2" id="projects">
-      <div class="container">
-        <div class="section-header d-flex flex-wrap justify-content-between align-items-end gap-3 reveal">
-          <div><span class="section-eyebrow">أبرز أعمالنا</span><h2 class="section-title mb-2">مشاريع صنعت فرقاً حقيقياً</h2><p class="section-lead">نماذج من حلول نفذناها لتطوير الاتصال ورفع جاهزية الأعمال.</p></div>
-          <a class="btn btn-brand-outline" href="case-studies.html">عرض كل المشاريع</a>
+      <section class="trust-strip" aria-label="عملاؤنا">
+        <div class="container">
+          <p class="trust-label">ثقة بنتها مشاريع ناجحة وشراكات طويلة الأمد</p>
+          <div class="logo-marquee">
+            <div class="logo-track">
+              <span>وقف الملك عبدالله</span><span>فارسي القابضة</span
+              ><span>منازلي للفنادق</span><span>مكارم المدينة</span>
+              <span>القطاع التعليمي</span><span>المنشآت التجارية</span
+              ><span>وقف الملك عبدالله</span><span>فارسي القابضة</span>
+              <span>منازلي للفنادق</span><span>مكارم المدينة</span
+              ><span>القطاع التعليمي</span><span>المنشآت التجارية</span>
+            </div>
+          </div>
         </div>
-        <div class="projects-grid">
-          <a class="project-card project-large reveal" href="case-studies.html"><div class="project-art art-network"><i class="bi bi-buildings"></i></div><div class="project-copy"><span>الفنادق والضيافة</span><h3>ربط فروع مجموعة فندقية بشبكة موثوقة</h3><p>بنية شبكات وربط لاسلكي ودعم فني مستمر لعدة مواقع.</p><i class="bi bi-arrow-up-left project-arrow"></i></div></a>
-          <a class="project-card reveal" href="case-studies.html"><div class="project-art art-security"><i class="bi bi-shield-check"></i></div><div class="project-copy"><span>القطاع غير الربحي</span><h3>تطوير شبكة ونظم معلومات وقف خيري</h3><i class="bi bi-arrow-up-left project-arrow"></i></div></a>
-          <a class="project-card reveal" href="case-studies.html"><div class="project-art art-support"><i class="bi bi-headset"></i></div><div class="project-copy"><span>الشركات</span><h3>سبع سنوات من الدعم لشركة قابضة</h3><i class="bi bi-arrow-up-left project-arrow"></i></div></a>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section contact-v2" id="quick-contact">
-      <div class="container">
-        <div class="contact-shell">
-          <div class="row g-0">
-            <div class="col-lg-5 contact-copy reveal">
-              <span class="section-eyebrow">ابدأ مشروعك</span>
-              <h2>دعنا نبني الحل التقني المناسب لأعمالك</h2>
-              <p>شاركنا احتياجك وسيتواصل معك أحد متخصصينا لمناقشة أفضل مسار للتنفيذ.</p>
-              <div class="contact-direct">
-                <a href="tel:0503326610"><i class="bi bi-telephone"></i><span>اتصل بنا<strong dir="ltr">050 332 6610</strong></span></a>
-                <a href="https://wa.me/966568587099" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i><span>تواصل عبر<strong dir="ltr">056 858 7099</strong></span></a>
-              </div>
+      <section class="section services-v2" id="services">
+        <div class="container">
+          <div class="section-header centered reveal">
+            <span class="section-eyebrow">خدماتنا</span>
+            <h2 class="section-title">
+              كل ما تحتاجه بنيتك التقنية، في مكان واحد
+            </h2>
+            <p class="section-lead">
+              حلول عملية تبدأ بفهم احتياجك وتنتهي بتشغيل مستقر ودعم يمكن
+              الاعتماد عليه.
+            </p>
+          </div>
+          <div class="services-grid">
+            <a
+              class="service-card service-card-featured reveal"
+              href="solutions.html#networking"
+              ><span class="service-num">01</span>
+              <div class="card-icon"><i class="bi bi-diagram-3"></i></div>
+              <h3>البنية التحتية للشبكات</h3>
+              <p>تصميم وتنفيذ شبكات LAN وWAN منظمة، سريعة وقابلة للتوسع.</p>
+              <span class="service-link"
+                >اعرف المزيد <i class="bi bi-arrow-left"></i></span
+            ></a>
+            <a class="service-card reveal" href="solutions.html#infrastructure"
+              ><span class="service-num">02</span>
+              <div class="card-icon"><i class="bi bi-server"></i></div>
+              <h3>السيرفرات والتخزين</h3>
+              <p>توريد وتركيب وإدارة حلول الخوادم وحماية البيانات.</p>
+              <span class="service-link"
+                >اعرف المزيد <i class="bi bi-arrow-left"></i></span
+            ></a>
+            <a class="service-card reveal" href="solutions.html#surveillance"
+              ><span class="service-num">03</span>
+              <div class="card-icon"><i class="bi bi-camera-video"></i></div>
+              <h3>كاميرات المراقبة</h3>
+              <p>أنظمة مراقبة احترافية تمنحك وضوحاً وتحكماً كاملاً.</p>
+              <span class="service-link"
+                >اعرف المزيد <i class="bi bi-arrow-left"></i></span
+            ></a>
+            <a class="service-card reveal" href="solutions.html#wireless"
+              ><span class="service-num">04</span>
+              <div class="card-icon"><i class="bi bi-wifi"></i></div>
+              <h3>الشبكات اللاسلكية</h3>
+              <p>تغطية Wi-Fi مؤسسية مستقرة للمكاتب والفنادق والمستودعات.</p>
+              <span class="service-link"
+                >اعرف المزيد <i class="bi bi-arrow-left"></i></span
+            ></a>
+            <a class="service-card reveal" href="solutions.html#communications"
+              ><span class="service-num">05</span>
+              <div class="card-icon"><i class="bi bi-telephone"></i></div>
+              <h3>السنترالات والاتصال</h3>
+              <p>حلول IPPBX حديثة للاتصال الداخلي وخدمة العملاء.</p>
+              <span class="service-link"
+                >اعرف المزيد <i class="bi bi-arrow-left"></i></span
+            ></a>
+            <a class="service-card reveal" href="solutions.html#cybersecurity"
+              ><span class="service-num">06</span>
+              <div class="card-icon"><i class="bi bi-shield-lock"></i></div>
+              <h3>أمن المعلومات</h3>
+              <p>طبقات حماية متكاملة للشبكات والأنظمة والبيانات الحساسة.</p>
+              <span class="service-link"
+                >اعرف المزيد <i class="bi bi-arrow-left"></i></span
+            ></a>
+            <a class="service-card reveal" href="solutions.html#managed"
+              ><span class="service-num">07</span>
+              <div class="card-icon"><i class="bi bi-headset"></i></div>
+              <h3>عقود الصيانة والدعم</h3>
+              <p>استجابة سريعة وصيانة استباقية تضمن استمرارية أعمالك.</p>
+              <span class="service-link"
+                >اعرف المزيد <i class="bi bi-arrow-left"></i></span
+            ></a>
+            <a class="service-card reveal" href="solutions.html#attendance"
+              ><span class="service-num">08</span>
+              <div class="card-icon"><i class="bi bi-person-badge"></i></div>
+              <h3>الحضور والانصراف</h3>
+              <p>أنظمة بصمة ووجه وبطاقات لإدارة وقت فريقك بدقة.</p>
+              <span class="service-link"
+                >اعرف المزيد <i class="bi bi-arrow-left"></i></span
+            ></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section why-v2" id="why">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-5 reveal">
+              <span class="section-eyebrow">لماذا بياناتك؟</span>
+              <h2 class="section-title">خبرة تقنية تتحول إلى نتائج ملموسة</h2>
+              <p class="section-lead">
+                لا نقدّم أجهزة فقط؛ نبني حلولاً مدروسة ونبقى معك بعد التشغيل
+                لضمان الاستقرار والتطور.
+              </p>
+              <a class="btn btn-brand-outline mt-4" href="about.html"
+                >تعرّف علينا</a
+              >
             </div>
             <div class="col-lg-7">
-              <form class="quick-form needs-validation reveal" novalidate data-form="home-quote">
-                <input type="hidden" name="_subject" value="Bayanatech homepage quote request">
-                <div class="row g-3">
-                  <div class="col-md-6"><label class="form-label" for="quickName">الاسم</label><input class="form-control" id="quickName" name="name" required><div class="invalid-feedback">يرجى إدخال الاسم.</div></div>
-                  <div class="col-md-6"><label class="form-label" for="quickCompany">اسم المنشأة</label><input class="form-control" id="quickCompany" name="company"></div>
-                  <div class="col-md-6"><label class="form-label" for="quickPhone">رقم الجوال</label><input class="form-control" id="quickPhone" name="phone" type="tel" required><div class="invalid-feedback">يرجى إدخال رقم التواصل.</div></div>
-                  <div class="col-md-6"><label class="form-label" for="quickService">الخدمة المطلوبة</label><select class="form-select" id="quickService" name="service" required><option value="">اختر الخدمة</option><option>الشبكات</option><option>السيرفرات</option><option>كاميرات المراقبة</option><option>السنترالات</option><option>أمن المعلومات</option><option>عقود الصيانة</option><option>تعمير ERP</option></select><div class="invalid-feedback">يرجى اختيار الخدمة.</div></div>
-                  <div class="col-12"><label class="form-label" for="quickMessage">كيف يمكننا مساعدتك؟</label><textarea class="form-control" id="quickMessage" name="message" rows="3"></textarea></div>
-                  <div class="col-12"><div data-recaptcha></div><p class="small text-danger d-none mb-0" data-recaptcha-error>يرجى إكمال التحقق.</p></div>
-                  <div class="col-12 d-flex flex-wrap align-items-center gap-3"><button class="btn btn-brand btn-lg" type="submit">إرسال الطلب <i class="bi bi-arrow-left"></i></button><span class="form-note"><i class="bi bi-lock"></i> بياناتك محفوظة ولن تتم مشاركتها</span></div>
-                  <div class="col-12"><div class="alert alert-success d-none mb-0" tabindex="-1" data-form-success>تم استلام طلبك بنجاح، وسنتواصل معك قريباً.</div><div class="alert alert-danger d-none mb-0" tabindex="-1" data-form-error>تعذّر الإرسال. حاول مرة أخرى.</div></div>
-                </div>
-              </form>
+              <div class="why-grid">
+                <article class="why-item reveal">
+                  <span>01</span><i class="bi bi-award"></i>
+                  <div>
+                    <h3>خبرة طويلة</h3>
+                    <p>
+                      أكثر من 14 عاماً في تنفيذ المشاريع التقنية للقطاعات
+                      المختلفة.
+                    </p>
+                  </div>
+                </article>
+                <article class="why-item reveal">
+                  <span>02</span><i class="bi bi-lightning-charge"></i>
+                  <div>
+                    <h3>دعم فني سريع</h3>
+                    <p>فريق محلي قريب منك يتعامل مع الأعطال بوضوح وسرعة.</p>
+                  </div>
+                </article>
+                <article class="why-item reveal">
+                  <span>03</span><i class="bi bi-check2-circle"></i>
+                  <div>
+                    <h3>تنفيذ احترافي</h3>
+                    <p>تخطيط وتوثيق واختبار يضمن جودة المشروع من أول مرة.</p>
+                  </div>
+                </article>
+                <article class="why-item reveal">
+                  <span>04</span><i class="bi bi-people"></i>
+                  <div>
+                    <h3>فريق متخصص</h3>
+                    <p>
+                      مهندسون وفنيون بخبرة عملية في حلول البنية والأمن والدعم.
+                    </p>
+                  </div>
+                </article>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
 
-  <footer class="site-footer">
-    <div class="footer-glow" aria-hidden="true"></div>
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand-col">
-          <div class="footer-brand"><img src="../assets/img/logo.png" class="logo-full" height="48" alt="بياناتك Bayanatech"></div>
-          <p class="footer-tagline">شريك موثوق للتحول الرقمي وحلول تقنية المعلومات للشركات في المملكة العربية السعودية.</p>
-          <div class="social-links" aria-label="وسائل التواصل">
-            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-            <a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a>
-            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+      <section class="section projects-v2" id="projects">
+        <div class="container">
+          <div
+            class="section-header d-flex flex-wrap justify-content-between align-items-end gap-3 reveal"
+          >
+            <div>
+              <span class="section-eyebrow">أبرز أعمالنا</span>
+              <h2 class="section-title mb-2">مشاريع صنعت فرقاً حقيقياً</h2>
+              <p class="section-lead">
+                نماذج من حلول نفذناها لتطوير الاتصال ورفع جاهزية الأعمال.
+              </p>
+            </div>
+            <a class="btn btn-brand-outline" href="case-studies.html"
+              >عرض كل المشاريع</a
+            >
+          </div>
+          <div class="projects-grid">
+            <a
+              class="project-card project-large reveal"
+              href="case-studies.html"
+              ><div class="project-art art-network">
+                <i class="bi bi-buildings"></i>
+              </div>
+              <div class="project-copy">
+                <span>الفنادق والضيافة</span>
+                <h3>ربط فروع مجموعة فندقية بشبكة موثوقة</h3>
+                <p>بنية شبكات وربط لاسلكي ودعم فني مستمر لعدة مواقع.</p>
+                <i class="bi bi-arrow-up-left project-arrow"></i></div
+            ></a>
+            <a class="project-card reveal" href="case-studies.html"
+              ><div class="project-art art-security">
+                <i class="bi bi-shield-check"></i>
+              </div>
+              <div class="project-copy">
+                <span>القطاع غير الربحي</span>
+                <h3>تطوير شبكة ونظم معلومات وقف خيري</h3>
+                <i class="bi bi-arrow-up-left project-arrow"></i></div
+            ></a>
+            <a class="project-card reveal" href="case-studies.html"
+              ><div class="project-art art-support">
+                <i class="bi bi-headset"></i>
+              </div>
+              <div class="project-copy">
+                <span>الشركات</span>
+                <h3>سبع سنوات من الدعم لشركة قابضة</h3>
+                <i class="bi bi-arrow-up-left project-arrow"></i></div
+            ></a>
           </div>
         </div>
-        <div>
-          <h5>استكشف</h5>
-          <ul>
-            <li><a href="solutions.html">خدماتنا</a></li>
-            <li><a href="products.html">المنتجات</a></li>
-            <li><a href="case-studies.html">أعمالنا</a></li>
-            <li><a href="about.html">من نحن</a></li>
-            <li><a href="resources.html">المدونة</a></li>
-          </ul>
+      </section>
+
+      <section class="section product-spotlight" id="products">
+        <div class="container">
+          <div class="product-stage reveal">
+            <div class="row align-items-center g-5">
+              <div class="col-lg-6">
+                <span class="product-kicker">منتج بياناتك</span>
+                <h2>تعمير ERP</h2>
+                <p class="product-lead">
+                  نظام سحابي متكامل لإدارة المكاتب الهندسية والمساحية وتحويل
+                  المعاملات الورقية إلى سير عمل رقمي أكثر كفاءة ودقة.
+                </p>
+                <ul class="product-points">
+                  <li>
+                    <i class="bi bi-check-circle-fill"></i> إدارة المشاريع
+                    والمهام
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill"></i> العمليات المالية
+                    والإدارية
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill"></i> تقارير لحظية وقرارات
+                    أسرع
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill"></i> وصول سحابي آمن من أي
+                    مكان
+                  </li>
+                </ul>
+                <div class="d-flex flex-wrap gap-3">
+                  <a class="btn btn-light btn-lg" href="products.html"
+                    >اكتشف تعمير</a
+                  >
+                  <a class="btn btn-ghost-light btn-lg" href="products.html"
+                    >كل المنتجات</a
+                  >
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="erp-window" data-parallax-card>
+                  <div class="erp-top">
+                    <span></span><span></span><span></span
+                    ><strong>لوحة تحكم تعمير</strong>
+                  </div>
+                  <div class="erp-body">
+                    <aside>
+                      <i class="bi bi-grid"></i><i class="bi bi-folder"></i
+                      ><i class="bi bi-bar-chart"></i
+                      ><i class="bi bi-people"></i>
+                    </aside>
+                    <div class="erp-content">
+                      <div class="erp-summary">
+                        <span
+                          ><small>المشاريع النشطة</small
+                          ><strong>24</strong></span
+                        ><span
+                          ><small>المعاملات اليوم</small
+                          ><strong>86</strong></span
+                        >
+                      </div>
+                      <div class="erp-chart">
+                        <i style="height: 42%"></i><i style="height: 65%"></i
+                        ><i style="height: 50%"></i><i style="height: 86%"></i
+                        ><i style="height: 72%"></i><i style="height: 96%"></i>
+                      </div>
+                      <div class="erp-rows">
+                        <span></span><span></span><span></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div>
-          <h5>خدماتنا</h5>
-          <ul>
-            <li><a href="solutions.html#networking">الشبكات</a></li>
-            <li><a href="solutions.html#cybersecurity">الأمن السيبراني</a></li>
-            <li><a href="solutions.html#cloud">السحابة</a></li>
-            <li><a href="solutions.html#managed">عقود الصيانة</a></li>
-          </ul>
+      </section>
+
+      <section
+        class="section section-muted testimonial-showcase"
+        id="testimonials"
+        aria-labelledby="testimonials-title"
+      >
+        <div class="container">
+          <div class="section-header centered reveal">
+            <span class="section-eyebrow">شهادات نعتز بها</span>
+            <h2 class="section-title" id="testimonials-title">قالوا عنا</h2>
+            <p class="section-lead">
+              كلمات من شركاء وثقوا ببياناتك لتطوير بنيتهم التقنية ودعم أعمالهم.
+            </p>
+          </div>
+
+          <div
+            id="testimonialCarousel"
+            class="carousel slide testimonial-carousel reveal"
+            data-bs-ride="carousel"
+            data-bs-interval="7000"
+            data-bs-pause="hover"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#testimonialCarousel"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="الشهادة الأولى"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#testimonialCarousel"
+                data-bs-slide-to="1"
+                aria-label="الشهادة الثانية"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#testimonialCarousel"
+                data-bs-slide-to="2"
+                aria-label="الشهادة الثالثة"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#testimonialCarousel"
+                data-bs-slide-to="3"
+                aria-label="الشهادة الرابعة"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#testimonialCarousel"
+                data-bs-slide-to="4"
+                aria-label="الشهادة الخامسة"
+              ></button>
+            </div>
+
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <article class="testimonial-slide">
+                  <div class="testimonial-person">
+                    <figure class="testimonial-logo">
+                      <img
+                        src="../assets/img/testimonial-ali-alzahrani.png"
+                        alt="شعار وقف الملك عبدالله"
+                        loading="lazy"
+                      />
+                    </figure>
+                    <div>
+                      <h3>علي محمد القرشي الزهراني</h3>
+                      <p>مدير إدارة الخدمات المساندة</p>
+                    </div>
+                  </div>
+                  <blockquote>
+                    <i class="bi bi-quote" aria-hidden="true"></i>
+                    يتقدم وقف خادم الحرمين الشريفين الملك عبدالله بن عبدالعزيز
+                    لوالديه بجزيل الشكر والتقدير لمؤسسة بياناتك لتقنية
+                    المعلومات على ما بذلوه من مجهود رائع كان له الأثر الفعال في
+                    تطوير البنية التحتية لشبكة الحاسب الآلي ونظم المعلومات، مع
+                    تمنياتي لهم بالمزيد من التقدم والنجاح.
+                  </blockquote>
+                </article>
+              </div>
+
+              <div class="carousel-item">
+                <article class="testimonial-slide">
+                  <div class="testimonial-person">
+                    <figure class="testimonial-logo">
+                      <img
+                        src="../assets/img/testimonial-saleh-farsi.jpg"
+                        alt="شعار صديق فارسي القابضة"
+                        loading="lazy"
+                      />
+                    </figure>
+                    <div>
+                      <h3>الدكتور صالح بن صديق فارسي</h3>
+                      <p>الرئيس التنفيذي</p>
+                    </div>
+                  </div>
+                  <blockquote>
+                    <i class="bi bi-quote" aria-hidden="true"></i>
+                    تتقدم شركة صديق صالح فارسي القابضة بخالص الشكر والتقدير
+                    لمؤسسة بياناتك لتقنية المعلومات على جهودهم المبذولة في بناء
+                    شبكة الحاسب الآلي وما تميزوا به من دعم فني على مدى سبع
+                    سنوات، سائلين المولى عز وجل أن يجعل ذلك في ميزان حسناتهم.
+                  </blockquote>
+                </article>
+              </div>
+
+              <div class="carousel-item">
+                <article class="testimonial-slide">
+                  <div class="testimonial-person">
+                    <figure class="testimonial-logo">
+                      <img
+                        src="../assets/img/testimonial-jihad-nazer.png"
+                        alt="شعار مجموعة منازلي"
+                        loading="lazy"
+                      />
+                    </figure>
+                    <div>
+                      <h3>جهاد عبدالرحمن ناظر</h3>
+                      <p>رئيس مجلس الإدارة</p>
+                    </div>
+                  </div>
+                  <blockquote>
+                    <i class="bi bi-quote" aria-hidden="true"></i>
+                    تشهد شركة منازلي للفنادق بأن مؤسسة بياناتك لتقنية المعلومات
+                    قامت بتركيب البنية التحتية لشبكات الحاسب والربط من خلال
+                    التقنية اللاسلكية لفنادق المجموعة وتقديم الدعم الفني اللازم،
+                    مما ساهم في إنجاز المشروع على الوجه الأكمل.
+                  </blockquote>
+                </article>
+              </div>
+
+              <div class="carousel-item">
+                <article class="testimonial-slide">
+                  <div class="testimonial-person">
+                    <figure class="testimonial-logo">
+                      <img
+                        src="../assets/img/testimonial-saad-alowaydi.png"
+                        alt="شعار مجموعة الشهباء"
+                        loading="lazy"
+                      />
+                    </figure>
+                    <div>
+                      <h3>الدكتور سعد عبدالله العويضي</h3>
+                      <p>رئيس مجلس الإدارة</p>
+                    </div>
+                  </div>
+                  <blockquote>
+                    <i class="bi bi-quote" aria-hidden="true"></i>
+                    كل الشكر والتقدير لمؤسسة بياناتك لتقنية المعلومات على ما
+                    قاموا به من جهود مميزة في تركيب شبكات الحاسب الآلي والربط
+                    الإلكتروني بين الفنادق، وتقديم الدعم الفني لأكثر من ثماني
+                    سنوات. نتمنى لهم دوام التوفيق والنجاح.
+                  </blockquote>
+                </article>
+              </div>
+
+              <div class="carousel-item">
+                <article class="testimonial-slide">
+                  <div class="testimonial-person">
+                    <figure class="testimonial-logo">
+                      <img
+                        src="../assets/img/testimonial-naif-zaini.png"
+                        alt="شعار مجموعة مكارم المدينة الفندقية"
+                        loading="lazy"
+                      />
+                    </figure>
+                    <div>
+                      <h3>نايف زيني محمد عارف</h3>
+                      <p>رئيس مجلس الإدارة</p>
+                    </div>
+                  </div>
+                  <blockquote>
+                    <i class="bi bi-quote" aria-hidden="true"></i>
+                    تشهد مجموعة مكارم المدينة الفندقية بأن مؤسسة بياناتك لتقنية
+                    المعلومات قامت بخدمات الربط الإلكتروني عبر تقنية الشبكات
+                    اللاسلكية وتقديم الدعم الفني، فلهم جزيل الشكر والتقدير على
+                    جهودهم الطيبة.
+                  </blockquote>
+                </article>
+              </div>
+            </div>
+
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#testimonialCarousel"
+              data-bs-slide="prev"
+              aria-label="الشهادة السابقة"
+            >
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#testimonialCarousel"
+              data-bs-slide="next"
+              aria-label="الشهادة التالية"
+            >
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+          </div>
         </div>
-        <div class="footer-contact-col">
-          <h5>تواصل معنا</h5>
-          <ul class="footer-contact-list">
-            <li><i class="bi bi-geo-alt"></i><span>مؤسسة بياناتك لتقنية المعلومات - المدينة المنورة - شارع خالد ابن الوليد - دوار القبلتين - مقابل محطة نفط</span></li>
-            <li><i class="bi bi-telephone"></i><a href="tel:0503326610" dir="ltr">050 332 6610</a></li>
-            <li><i class="bi bi-whatsapp"></i><a href="https://wa.me/966568587099" target="_blank" rel="noopener" dir="ltr">056 858 7099</a></li>
-            <li><i class="bi bi-envelope"></i><a href="mailto:info@bayanatech.com.sa">info@bayanatech.com.sa</a></li>
-            <li><i class="bi bi-clock"></i><span>السبت - الخميس 09:00 - 19:00</span></li>
-          </ul>
-          <a class="btn btn-brand footer-cta" href="consultation.html">اطلب عرض سعر</a>
+      </section>
+
+      <section class="section contact-v2" id="quick-contact">
+        <div class="container">
+          <div class="contact-shell">
+            <div class="row g-0">
+              <div class="col-lg-5 contact-copy reveal">
+                <span class="section-eyebrow">ابدأ مشروعك</span>
+                <h2>دعنا نبني الحل التقني المناسب لأعمالك</h2>
+                <p>
+                  شاركنا احتياجك وسيتواصل معك أحد متخصصينا لمناقشة أفضل مسار
+                  للتنفيذ.
+                </p>
+                <div class="contact-direct">
+                  <a href="tel:0503326610"
+                    ><i class="bi bi-telephone"></i
+                    ><span
+                      >اتصل بنا<strong dir="ltr">050 332 6610</strong></span
+                    ></a
+                  >
+                  <a
+                    href="https://wa.me/966568587099"
+                    target="_blank"
+                    rel="noopener"
+                    ><i class="bi bi-whatsapp"></i
+                    ><span
+                      >تواصل عبر<strong dir="ltr">056 858 7099</strong></span
+                    ></a
+                  >
+                </div>
+              </div>
+              <div class="col-lg-7">
+                <form
+                  class="quick-form needs-validation reveal"
+                  novalidate
+                  data-form="home-quote"
+                >
+                  <input
+                    type="hidden"
+                    name="_subject"
+                    value="Bayanatech homepage quote request"
+                  />
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label class="form-label" for="quickName">الاسم</label
+                      ><input
+                        class="form-control"
+                        id="quickName"
+                        name="name"
+                        required
+                      />
+                      <div class="invalid-feedback">يرجى إدخال الاسم.</div>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label" for="quickCompany"
+                        >اسم المنشأة</label
+                      ><input
+                        class="form-control"
+                        id="quickCompany"
+                        name="company"
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label" for="quickPhone"
+                        >رقم الجوال</label
+                      ><input
+                        class="form-control"
+                        id="quickPhone"
+                        name="phone"
+                        type="tel"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        يرجى إدخال رقم التواصل.
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label" for="quickService"
+                        >الخدمة المطلوبة</label
+                      ><select
+                        class="form-select"
+                        id="quickService"
+                        name="service"
+                        required
+                      >
+                        <option value="">اختر الخدمة</option>
+                        <option>الشبكات</option>
+                        <option>السيرفرات</option>
+                        <option>كاميرات المراقبة</option>
+                        <option>السنترالات</option>
+                        <option>أمن المعلومات</option>
+                        <option>عقود الصيانة</option>
+                        <option>تعمير ERP</option>
+                      </select>
+                      <div class="invalid-feedback">يرجى اختيار الخدمة.</div>
+                    </div>
+                    <div class="col-12">
+                      <label class="form-label" for="quickMessage"
+                        >كيف يمكننا مساعدتك؟</label
+                      ><textarea
+                        class="form-control"
+                        id="quickMessage"
+                        name="message"
+                        rows="3"
+                      ></textarea>
+                    </div>
+                    <div class="col-12">
+                      <div data-recaptcha></div>
+                      <p
+                        class="small text-danger d-none mb-0"
+                        data-recaptcha-error
+                      >
+                        يرجى إكمال التحقق.
+                      </p>
+                    </div>
+                    <div
+                      class="col-12 d-flex flex-wrap align-items-center gap-3"
+                    >
+                      <button class="btn btn-brand btn-lg" type="submit">
+                        إرسال الطلب <i class="bi bi-arrow-left"></i></button
+                      ><span class="form-note"
+                        ><i class="bi bi-lock"></i> بياناتك محفوظة ولن تتم
+                        مشاركتها</span
+                      >
+                    </div>
+                    <div class="col-12">
+                      <div
+                        class="alert alert-success d-none mb-0"
+                        tabindex="-1"
+                        data-form-success
+                      >
+                        تم استلام طلبك بنجاح، وسنتواصل معك قريباً.
+                      </div>
+                      <div
+                        class="alert alert-danger d-none mb-0"
+                        tabindex="-1"
+                        data-form-error
+                      >
+                        تعذّر الإرسال. حاول مرة أخرى.
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-glow" aria-hidden="true"></div>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand-col">
+            <div class="footer-brand">
+              <img
+                src="../assets/img/logo.png"
+                class="logo-full"
+                height="48"
+                alt="بياناتك Bayanatech"
+              />
+            </div>
+            <p class="footer-tagline">
+              شريك موثوق للتحول الرقمي وحلول تقنية المعلومات للشركات في المملكة
+              العربية السعودية.
+            </p>
+            <div class="social-links" aria-label="وسائل التواصل">
+              <a href="#" aria-label="LinkedIn"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+              <a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+              <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            </div>
+          </div>
+          <div>
+            <h5>استكشف</h5>
+            <ul>
+              <li><a href="solutions.html">خدماتنا</a></li>
+              <li><a href="products.html">المنتجات</a></li>
+              <li><a href="case-studies.html">أعمالنا</a></li>
+              <li><a href="about.html">من نحن</a></li>
+              <li><a href="resources.html">المدونة</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5>خدماتنا</h5>
+            <ul>
+              <li><a href="solutions.html#networking">الشبكات</a></li>
+              <li>
+                <a href="solutions.html#cybersecurity">الأمن السيبراني</a>
+              </li>
+              <li><a href="solutions.html#cloud">السحابة</a></li>
+              <li><a href="solutions.html#managed">عقود الصيانة</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact-col">
+            <h5>تواصل معنا</h5>
+            <ul class="footer-contact-list">
+              <li>
+                <i class="bi bi-geo-alt"></i
+                ><span
+                  >مؤسسة بياناتك لتقنية المعلومات - المدينة المنورة - شارع خالد
+                  ابن الوليد - دوار القبلتين - مقابل محطة نفط</span
+                >
+              </li>
+              <li>
+                <i class="bi bi-telephone"></i
+                ><a href="tel:0503326610" dir="ltr">050 332 6610</a>
+              </li>
+              <li>
+                <i class="bi bi-whatsapp"></i
+                ><a
+                  href="https://wa.me/966568587099"
+                  target="_blank"
+                  rel="noopener"
+                  dir="ltr"
+                  >056 858 7099</a
+                >
+              </li>
+              <li>
+                <i class="bi bi-envelope"></i
+                ><a href="mailto:info@bayanatech.com.sa"
+                  >info@bayanatech.com.sa</a
+                >
+              </li>
+              <li>
+                <i class="bi bi-clock"></i
+                ><span>السبت - الخميس 09:00 - 19:00</span>
+              </li>
+            </ul>
+            <a class="btn btn-brand footer-cta" href="consultation.html"
+              >اطلب عرض سعر</a
+            >
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span
+            >جميع الحقوق محفوظة © 2008–2026 لمؤسسة بياناتك لتقنية
+            المعلومات</span
+          >
+          <span>المدينة المنورة، المملكة العربية السعودية</span>
         </div>
       </div>
-      <div class="footer-bottom">
-        <span>جميع الحقوق محفوظة © 2008–2026 لمؤسسة بياناتك لتقنية المعلومات</span>
-        <span>المدينة المنورة، المملكة العربية السعودية</span>
+    </footer>
+
+    <div class="fab-contact">
+      <a
+        class="fab-btn fab-whatsapp"
+        href="https://wa.me/966568587099"
+        target="_blank"
+        rel="noopener"
+        aria-label="واتساب"
+        ><i class="bi bi-whatsapp"></i
+      ></a>
+      <a class="fab-btn fab-consult" href="consultation.html"
+        ><i class="bi bi-calendar-check"></i><span>اطلب عرض سعر</span></a
+      >
+    </div>
+
+    <div class="sticky-cta-bar" role="region" aria-label="تواصل سريع">
+      <div
+        class="container d-flex flex-wrap align-items-center justify-content-between gap-2"
+      >
+        <span class="small mb-0">جاهز للحديث مع خبير؟</span>
+        <a class="btn btn-brand" href="consultation.html">اطلب عرض سعر</a>
       </div>
     </div>
-  </footer>
 
-  <div class="fab-contact">
-    <a class="fab-btn fab-whatsapp" href="https://wa.me/966568587099" target="_blank" rel="noopener" aria-label="واتساب"><i class="bi bi-whatsapp"></i></a>
-    <a class="fab-btn fab-consult" href="consultation.html"><i class="bi bi-calendar-check"></i><span>اطلب عرض سعر</span></a>
-  </div>
-
-  <div class="sticky-cta-bar" role="region" aria-label="تواصل سريع">
-    <div class="container d-flex flex-wrap align-items-center justify-content-between gap-2">
-      <span class="small mb-0">جاهز للحديث مع خبير؟</span>
-      <a class="btn btn-brand" href="consultation.html">اطلب عرض سعر</a>
-    </div>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/js/config.js"></script>
-  <script src="../assets/js/products.js"></script>
-  <script src="../assets/js/i18n.js"></script>
-  <script src="../assets/js/main.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/config.js"></script>
+    <script src="../assets/js/products.js"></script>
+    <script src="../assets/js/i18n.js"></script>
+    <script src="../assets/js/main.js"></script>
+  </body>
 </html>
