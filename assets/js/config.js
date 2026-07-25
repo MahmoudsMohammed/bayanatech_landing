@@ -3,8 +3,8 @@
  * Add your Google reCAPTCHA v2 site key from https://www.google.com/recaptcha/admin
  */
 window.BAYANATECH_CONFIG = {
-  formRecipient: "info@bayanatech.com.sa",
-  formEndpoint: "https://formsubmit.co/ajax/info@bayanatech.com.sa",
+  formRecipient: "no-reply@tameercloud.com",
+  formEndpoint: "https://formsubmit.co/ajax/no-reply@tameercloud.com",
   /*
    * Google reCAPTCHA v2 Checkbox site key (NOT the secret key).
    * Create one at https://www.google.com/recaptcha/admin
