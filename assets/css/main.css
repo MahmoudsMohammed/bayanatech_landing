@@ -1859,13 +1859,6 @@ body.is-ready [data-hero-item]:nth-child(2) {
   color: #fff;
 }
 
-.service-card-featured:hover,
-.service-card-featured h3,
-.service-card-featured p,
-.service-card-featured .service-link {
-  color: #fff;
-}
-
 .service-card-featured .card-icon {
   background: rgba(255, 255, 255, 0.13);
   color: #fff;
@@ -1909,6 +1902,13 @@ body.is-ready [data-hero-item]:nth-child(2) {
   color: var(--brand-primary);
   font-size: var(--fs-sm);
   font-weight: var(--fw-semibold);
+}
+
+.service-card-featured:hover,
+.service-card-featured h3,
+.service-card-featured p,
+.service-card-featured .service-link {
+  color: #fff;
 }
 
 .service-card:hover .service-link i {
