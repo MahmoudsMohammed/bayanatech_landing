@@ -359,7 +359,7 @@
         }
 
         form.classList.add("was-validated");
-        const endpoint = cfg.formEndpoint || `https://formsubmit.co/ajax/${cfg.formRecipient || "mahmoudsmohammed24@gmail.com"}`;
+        const endpoint = cfg.formEndpoint || `https://formsubmit.co/ajax/${cfg.formRecipient || "info@bayanatech.com.sa"}`;
         const data = new FormData(form);
         data.append("_template", "table");
         data.append("_captcha", "false");
