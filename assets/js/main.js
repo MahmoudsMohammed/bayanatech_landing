@@ -60,7 +60,28 @@
       },
       { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
     );
-    els.forEach((el) => io.observe(el));
+    els.forEach((el, index) => {
+      el.style.setProperty("--reveal-delay", `${Math.min(index % 4, 3) * 70}ms`);
+      io.observe(el);
+    });
+  }
+
+  /* Lightweight pointer depth for interactive product visuals */
+  function initParallaxCards() {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    document.querySelectorAll("[data-parallax-card]").forEach((card) => {
+      const baseTransform = getComputedStyle(card).transform === "none" ? "" : getComputedStyle(card).transform;
+      card.addEventListener("pointermove", (event) => {
+        if (event.pointerType === "touch") return;
+        const rect = card.getBoundingClientRect();
+        const x = (event.clientX - rect.left) / rect.width - 0.5;
+        const y = (event.clientY - rect.top) / rect.height - 0.5;
+        card.style.transform = `${baseTransform} rotateX(${y * -3}deg) rotateY(${x * 4}deg) translateY(-3px)`;
+      });
+      card.addEventListener("pointerleave", () => {
+        card.style.transform = baseTransform;
+      });
+    });
   }
 
   /* Animated counters */
@@ -297,15 +318,17 @@
   }
 
   document.addEventListener("DOMContentLoaded", () => {
+    requestAnimationFrame(() => document.body.classList.add("is-ready"));
     initHeader();
     initMegaMenu();
-    initReveal();
-    initCounters();
     initProductFilters();
     initProductDetail();
     initFeaturedProducts();
+    initReveal();
+    initCounters();
     initForms();
     initStickyCta();
     initNewsletter();
+    initParallaxCards();
   });
 })();

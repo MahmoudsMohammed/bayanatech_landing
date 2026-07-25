@@ -1,15 +1,15 @@
 :root {
   /* Brand — sampled from official Bayanatech logo */
-  --brand-primary: #0a6dca;
-  --brand-primary-dark: #0856a1;
-  --brand-primary-light: #2f88d8;
-  --brand-secondary: #0a6dca;
-  --brand-secondary-light: #5aa3e0;
+  --brand-primary: #0057b8;
+  --brand-primary-dark: #003f88;
+  --brand-primary-light: #2f7fd4;
+  --brand-secondary: #0057b8;
+  --brand-secondary-light: #73b4f2;
   --brand-neutral: #c0c0c0;
   --brand-neutral-dark: #8a8a8a;
-  --brand-accent: #0a6dca;
-  --brand-accent-hover: #0856a1;
-  --brand-accent-soft: rgba(10, 109, 202, 0.12);
+  --brand-accent: #0057b8;
+  --brand-accent-hover: #003f88;
+  --brand-accent-soft: rgba(0, 87, 184, 0.1);
 
   /* Surfaces */
   --bg: #ffffff;
@@ -20,8 +20,8 @@
   --surface-glass: rgba(255, 255, 255, 0.86);
 
   /* Text */
-  --text: #121212;
-  --text-muted: #6e6e6e;
+  --text: #333333;
+  --text-muted: #687385;
   --text-inverse: #ffffff;
   --text-on-accent: #ffffff;
 
@@ -29,9 +29,9 @@
   --border: #e4e4e4;
   --border-strong: #c8c8c8;
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 8px 24px rgba(10, 109, 202, 0.1);
+  --shadow-md: 0 8px 24px rgba(0, 87, 184, 0.1);
   --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.12);
-  --shadow-hover: 0 12px 32px rgba(10, 109, 202, 0.16);
+  --shadow-hover: 0 18px 44px rgba(0, 87, 184, 0.16);
 
   /* Radius */
   --radius-sm: 10px;
@@ -53,7 +53,7 @@
 
   /* Typography */
   --font-en: "Plus Jakarta Sans", system-ui, sans-serif;
-  --font-ar: "Cairo", "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-ar: "IBM Plex Sans Arabic", "Cairo", "Plus Jakarta Sans", system-ui, sans-serif;
   --font: var(--font-en);
   --fs-xs: 0.8125rem;
   --fs-sm: 0.875rem;
@@ -73,8 +73,8 @@
   /* Layout */
   --header-h: 76px;
   --container: 1140px;
-  --transition: 0.25s ease;
-  --focus-ring: 0 0 0 3px rgba(10, 109, 202, 0.35);
+  --transition: 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+  --focus-ring: 0 0 0 3px rgba(0, 87, 184, 0.3);
 }
 
 html[lang="ar"] {
