@@ -7,13 +7,29 @@ const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 
+const CONTACT = {
+  phone: "0503326610",
+  phoneDisplay: "050 332 6610",
+  whatsapp: "966568587099",
+  whatsappDisplay: "056 858 7099",
+  email: "info@bayanatech.com.sa",
+  address: {
+    ar: "مؤسسة بياناتك لتقنية المعلومات - المدينة المنورة - شارع خالد ابن الوليد - دوار القبلتين - مقابل محطة نفط",
+    en: "Bayanatech for Information Technology — Madinah, Khalid Ibn Al-Walid St., Al-Qiblatain Roundabout, opposite Naft station"
+  },
+  hours: {
+    ar: "السبت - الخميس 09:00 - 19:00",
+    en: "Saturday – Thursday, 09:00 – 19:00"
+  }
+};
+
 function head({ lang, title, description, active }) {
   const rtl = lang === "ar";
   const bootstrap = rtl
     ? "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
     : "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css";
   const fonts = rtl
-    ? "https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    ? "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
     : "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap";
   return `<!DOCTYPE html>
 <html lang="${lang}" dir="${rtl ? "rtl" : "ltr"}">
@@ -43,24 +59,26 @@ function header(lang, active) {
   const brand = isAr
     ? `<span class="brand-name">بياناتك<span class="brand-tag">لتقنية المعلومات</span></span>`
     : `<span class="brand-name">Bayanatech<span class="brand-tag">Information Technology</span></span>`;
+  const switchFile = active === "home" ? "index" : active;
   const t = isAr
     ? {
         navAria: "الرئيسية",
-        solutions: "الحلول",
+        solutions: "خدماتنا",
         products: "المنتجات",
-        industries: "القطاعات",
+        midLabel: "أعمالنا",
+        midHref: "case-studies.html",
+        midKey: "case-studies",
         about: "من نحن",
-        resources: "الموارد",
-        contact: "اتصل بنا",
-        consult: "اطلب استشارة",
+        resources: "المدونة",
+        contact: "تواصل معنا",
+        consult: "اطلب عرض سعر",
         menu: "القائمة",
         close: "إغلاق",
         home: "الرئيسية",
-        allSol: "كل الحلول",
-        cases: "قصص النجاح",
+        allSol: "كل الخدمات",
         mega: [
           ["#infrastructure", "bi-hdd-network", "البنية التحتية", "أسس تقنية قوية قابلة للتوسع"],
-          ["#cybersecurity", "bi-shield-check", "الأمن السيبراني", "حماية البيانات والشبكات"],
+          ["#cybersecurity", "bi-shield-check", "الأمن السيبراني", "حماية البيانات والشبكات واستمرارية الأعمال"],
           ["#cloud", "bi-cloud", "الخدمات السحابية", "مرونة دون التخلي عن السيطرة"],
           ["#networking", "bi-diagram-3", "الشبكات", "LAN وWAN ولاسلكي بأداء عالٍ"],
           ["#managed", "bi-headset", "إدارة تقنية المعلومات", "دعم استباقي باتفاقيات واضحة"],
@@ -72,7 +90,9 @@ function header(lang, active) {
         navAria: "Primary",
         solutions: "Solutions",
         products: "Products",
-        industries: "Industries",
+        midLabel: "Industries",
+        midHref: "industries.html",
+        midKey: "industries",
         about: "About",
         resources: "Resources",
         contact: "Contact",
@@ -83,12 +103,12 @@ function header(lang, active) {
         allSol: "All Solutions",
         cases: "Case Studies",
         mega: [
-          ["#infrastructure", "bi-hdd-network", "IT Infrastructure", "Resilient foundations that scale"],
+          ["#infrastructure", "bi-hdd-network", "IT Infrastructure", "Resilient foundations that scale with your business"],
           ["#cybersecurity", "bi-shield-check", "Cybersecurity", "Protect data, networks, and continuity"],
           ["#cloud", "bi-cloud", "Cloud Services", "Agility without compromising control"],
           ["#networking", "bi-diagram-3", "Networking", "LAN, WAN, and wireless that perform"],
           ["#managed", "bi-headset", "Managed IT", "Proactive support with clear SLAs"],
-          ["#software", "bi-grid-1x2", "Business Software", "Systems that deliver ROI"]
+          ["#software", "bi-grid-1x2", "Business Software", "ERP and workplace systems that deliver ROI"]
         ],
         offcanvas: "end"
       };
@@ -103,6 +123,11 @@ function header(lang, active) {
                     </div>`
     )
     .join("");
+
+  const mobileMid = isAr
+    ? `<a class="nav-link" href="case-studies.html">${t.midLabel}</a>`
+    : `<a class="nav-link" href="industries.html">${t.midLabel}</a>
+        <a class="nav-link" href="case-studies.html">${t.cases}</a>`;
 
   return `
   <header class="site-header">
@@ -122,13 +147,13 @@ function header(lang, active) {
               <div class="mega-menu" role="region"><div class="container"><div class="row g-3">${megaItems}</div></div></div>
             </li>
             <li class="nav-item"><a class="nav-link nav-link-main${act("products")}" href="products.html">${t.products}</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-main${act("industries")}" href="industries.html">${t.industries}</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-main${act(t.midKey)}" href="${t.midHref}">${t.midLabel}</a></li>
             <li class="nav-item"><a class="nav-link nav-link-main${act("about")}" href="about.html">${t.about}</a></li>
             <li class="nav-item"><a class="nav-link nav-link-main${act("resources")}" href="resources.html">${t.resources}</a></li>
             <li class="nav-item"><a class="nav-link nav-link-main${act("contact")}" href="contact.html">${t.contact}</a></li>
           </ul>
           <div class="d-flex align-items-center gap-2">
-            <a class="lang-switch" href="../${other}/${active === "home" ? "index" : active}.html" data-switch-lang="${other}" hreflang="${other}">${otherLabel}</a>
+            <a class="lang-switch" href="../${other}/${switchFile}.html" data-switch-lang="${other}" hreflang="${other}">${otherLabel}</a>
             <a class="btn btn-brand" href="consultation.html">${t.consult}</a>
           </div>
         </div>
@@ -142,17 +167,30 @@ function header(lang, active) {
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="${t.close}"></button>
     </div>
     <div class="offcanvas-body">
-      <nav>
+      <nav aria-label="${isAr ? "الجوال" : "Mobile"}">
         <a class="nav-link" href="index.html">${t.home}</a>
-        <a class="nav-link" href="solutions.html">${t.solutions}</a>
+        <div class="accordion accordion-flush" id="mobAcc">
+          <div class="accordion-item border-0">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobSol">${t.solutions}</button>
+            </h3>
+            <div id="mobSol" class="accordion-collapse collapse" data-bs-parent="#mobAcc">
+              <div class="accordion-body">
+                <a class="nav-link" href="solutions.html">${t.allSol}</a>
+                <a class="nav-link" href="solutions.html#infrastructure">${t.mega[0][2]}</a>
+                <a class="nav-link" href="solutions.html#cybersecurity">${t.mega[1][2]}</a>
+                <a class="nav-link" href="solutions.html#cloud">${t.mega[2][2]}</a>
+              </div>
+            </div>
+          </div>
+        </div>
         <a class="nav-link" href="products.html">${t.products}</a>
-        <a class="nav-link" href="industries.html">${t.industries}</a>
+        ${mobileMid}
         <a class="nav-link" href="about.html">${t.about}</a>
-        <a class="nav-link" href="case-studies.html">${t.cases}</a>
         <a class="nav-link" href="resources.html">${t.resources}</a>
         <a class="nav-link" href="contact.html">${t.contact}</a>
         <a class="btn btn-brand w-100 mt-3" href="consultation.html">${t.consult}</a>
-        <a class="lang-switch d-inline-block mt-3" href="../${other}/index.html" data-switch-lang="${other}">${otherLabel}</a>
+        <a class="lang-switch d-inline-block mt-3" href="../${other}/${switchFile}.html" data-switch-lang="${other}">${otherLabel}</a>
       </nav>
     </div>
   </div>
@@ -161,63 +199,110 @@ function header(lang, active) {
 
 function footer(lang) {
   const isAr = lang === "ar";
+  const wa = `https://wa.me/${CONTACT.whatsapp}`;
   if (isAr) {
     return `
   <footer class="site-footer">
+    <div class="footer-glow" aria-hidden="true"></div>
     <div class="container">
-      <div class="row g-5">
-        <div class="col-lg-4">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
           <div class="footer-brand"><img src="../assets/img/logo.png" class="logo-full" height="48" alt="بياناتك Bayanatech"></div>
-          <p class="small mb-3">شريك موثوق للتحول الرقمي وحلول تقنية المعلومات للشركات في المملكة العربية السعودية.</p>
-          <div class="social-links"><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a><a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a><a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a></div>
+          <p class="footer-tagline">شريك موثوق للتحول الرقمي وحلول تقنية المعلومات للشركات في المملكة العربية السعودية.</p>
+          <div class="social-links" aria-label="وسائل التواصل">
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
         </div>
-        <div class="col-6 col-md-3 col-lg-2"><h5>الشركة</h5><ul><li><a href="about.html">من نحن</a></li><li><a href="case-studies.html">قصص النجاح</a></li><li><a href="resources.html">الموارد</a></li><li><a href="contact.html">اتصل بنا</a></li></ul></div>
-        <div class="col-6 col-md-3 col-lg-2"><h5>الحلول</h5><ul><li><a href="solutions.html">الشبكات</a></li><li><a href="solutions.html#cybersecurity">الأمن</a></li><li><a href="solutions.html#cloud">السحابة</a></li><li><a href="products.html">المنتجات</a></li></ul></div>
-        <div class="col-6 col-md-3 col-lg-2"><h5>القطاعات</h5><ul><li><a href="industries.html#hospitality">الضيافة</a></li><li><a href="industries.html#education">التعليم</a></li><li><a href="industries.html#government">الحكومي</a></li><li><a href="industries.html#healthcare">الصحة</a></li></ul></div>
-        <div class="col-6 col-md-3 col-lg-2"><h5>الدعم</h5><ul><li><a href="contact.html">الدعم الفني</a></li><li><a href="consultation.html">الاستشارة</a></li><li><a href="mailto:info@bayanatech.com.sa">البريد</a></li><li><a href="tel:0503326610">050 332 6610</a></li></ul></div>
-      </div>
-      <div class="row mt-4">
-        <div class="col-lg-6">
-          <h5>النشرة البريدية</h5>
-          <form class="newsletter-form row g-2" data-newsletter>
-            <div class="col-sm-8"><label class="visually-hidden" for="newsEmail">البريد</label><input class="form-control" id="newsEmail" type="email" name="email" placeholder="البريد المهني" required></div>
-            <div class="col-sm-4"><button class="btn btn-brand w-100" type="submit">اشترك</button></div>
-            <p class="small mt-2 mb-0" data-newsletter-msg hidden>شكراً لك — تم الاشتراك.</p>
-          </form>
+        <div>
+          <h5>استكشف</h5>
+          <ul>
+            <li><a href="solutions.html">خدماتنا</a></li>
+            <li><a href="products.html">المنتجات</a></li>
+            <li><a href="case-studies.html">أعمالنا</a></li>
+            <li><a href="about.html">من نحن</a></li>
+            <li><a href="resources.html">المدونة</a></li>
+          </ul>
         </div>
-        <div class="col-lg-6"><h5>تواصل</h5><p class="small mb-1"><a href="mailto:info@bayanatech.com.sa">info@bayanatech.com.sa</a></p><p class="small mb-0"><a href="tel:0503326610">050 332 6610</a></p></div>
+        <div>
+          <h5>خدماتنا</h5>
+          <ul>
+            <li><a href="solutions.html#networking">الشبكات</a></li>
+            <li><a href="solutions.html#cybersecurity">الأمن السيبراني</a></li>
+            <li><a href="solutions.html#cloud">السحابة</a></li>
+            <li><a href="solutions.html#managed">عقود الصيانة</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact-col">
+          <h5>تواصل معنا</h5>
+          <ul class="footer-contact-list">
+            <li><i class="bi bi-geo-alt"></i><span>${CONTACT.address.ar}</span></li>
+            <li><i class="bi bi-telephone"></i><a href="tel:${CONTACT.phone}" dir="ltr">${CONTACT.phoneDisplay}</a></li>
+            <li><i class="bi bi-whatsapp"></i><a href="${wa}" target="_blank" rel="noopener" dir="ltr">${CONTACT.whatsappDisplay}</a></li>
+            <li><i class="bi bi-envelope"></i><a href="mailto:${CONTACT.email}">${CONTACT.email}</a></li>
+            <li><i class="bi bi-clock"></i><span>${CONTACT.hours.ar}</span></li>
+          </ul>
+          <a class="btn btn-brand footer-cta" href="consultation.html">اطلب عرض سعر</a>
+        </div>
       </div>
-      <div class="footer-bottom"><span>جميع الحقوق محفوظة © 2008–2026 لمؤسسة بياناتك لتقنية المعلومات</span><span>المملكة العربية السعودية</span></div>
+      <div class="footer-bottom">
+        <span>جميع الحقوق محفوظة © 2008–2026 لمؤسسة بياناتك لتقنية المعلومات</span>
+        <span>المدينة المنورة، المملكة العربية السعودية</span>
+      </div>
     </div>
   </footer>
 `;
   }
   return `
   <footer class="site-footer">
+    <div class="footer-glow" aria-hidden="true"></div>
     <div class="container">
-      <div class="row g-5">
-        <div class="col-lg-4">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
           <div class="footer-brand"><img src="../assets/img/logo.png" class="logo-full" height="48" alt="Bayanatech"></div>
-          <p class="small mb-3">Trusted digital transformation and IT solutions partner for businesses in Saudi Arabia.</p>
-          <div class="social-links"><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a><a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a><a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a></div>
+          <p class="footer-tagline">Trusted digital transformation and IT solutions partner for businesses in Saudi Arabia.</p>
+          <div class="social-links" aria-label="Social media">
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
         </div>
-        <div class="col-6 col-md-3 col-lg-2"><h5>Company</h5><ul><li><a href="about.html">About</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="resources.html">Resources</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-        <div class="col-6 col-md-3 col-lg-2"><h5>Solutions</h5><ul><li><a href="solutions.html">Networking</a></li><li><a href="solutions.html#cybersecurity">Cybersecurity</a></li><li><a href="solutions.html#cloud">Cloud</a></li><li><a href="products.html">Products</a></li></ul></div>
-        <div class="col-6 col-md-3 col-lg-2"><h5>Industries</h5><ul><li><a href="industries.html#hospitality">Hospitality</a></li><li><a href="industries.html#education">Education</a></li><li><a href="industries.html#government">Government</a></li><li><a href="industries.html#healthcare">Healthcare</a></li></ul></div>
-        <div class="col-6 col-md-3 col-lg-2"><h5>Support</h5><ul><li><a href="contact.html">Technical Support</a></li><li><a href="consultation.html">Consultation</a></li><li><a href="mailto:info@bayanatech.com.sa">Email</a></li><li><a href="tel:0503326610">050 332 6610</a></li></ul></div>
-      </div>
-      <div class="row mt-4">
-        <div class="col-lg-6">
-          <h5>Newsletter</h5>
-          <form class="newsletter-form row g-2" data-newsletter>
-            <div class="col-sm-8"><label class="visually-hidden" for="newsEmail">Email</label><input class="form-control" id="newsEmail" type="email" name="email" placeholder="Work email" required></div>
-            <div class="col-sm-4"><button class="btn btn-brand w-100" type="submit">Subscribe</button></div>
-            <p class="small mt-2 mb-0" data-newsletter-msg hidden>Thank you — you’re on the list.</p>
-          </form>
+        <div>
+          <h5>Explore</h5>
+          <ul>
+            <li><a href="solutions.html">Solutions</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="industries.html">Industries</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resources.html">Resources</a></li>
+          </ul>
         </div>
-        <div class="col-lg-6"><h5>Contact</h5><p class="small mb-1"><a href="mailto:info@bayanatech.com.sa">info@bayanatech.com.sa</a></p><p class="small mb-0"><a href="tel:0503326610">050 332 6610</a></p></div>
+        <div>
+          <h5>Solutions</h5>
+          <ul>
+            <li><a href="solutions.html#networking">Networking</a></li>
+            <li><a href="solutions.html#cybersecurity">Cybersecurity</a></li>
+            <li><a href="solutions.html#cloud">Cloud</a></li>
+            <li><a href="solutions.html#managed">Managed IT</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact-col">
+          <h5>Contact</h5>
+          <ul class="footer-contact-list">
+            <li><i class="bi bi-geo-alt"></i><span>${CONTACT.address.en}</span></li>
+            <li><i class="bi bi-telephone"></i><a href="tel:${CONTACT.phone}" dir="ltr">${CONTACT.phoneDisplay}</a></li>
+            <li><i class="bi bi-whatsapp"></i><a href="${wa}" target="_blank" rel="noopener" dir="ltr">${CONTACT.whatsappDisplay}</a></li>
+            <li><i class="bi bi-envelope"></i><a href="mailto:${CONTACT.email}">${CONTACT.email}</a></li>
+            <li><i class="bi bi-clock"></i><span>${CONTACT.hours.en}</span></li>
+          </ul>
+          <a class="btn btn-brand footer-cta" href="consultation.html">Request Consultation</a>
+        </div>
       </div>
-      <div class="footer-bottom"><span>© 2008–2026 Bayanatech for Information Technology. All rights reserved.</span><span>Kingdom of Saudi Arabia</span></div>
+      <div class="footer-bottom">
+        <span>© 2008–2026 Bayanatech for Information Technology. All rights reserved.</span>
+        <span>Madinah, Kingdom of Saudi Arabia</span>
+      </div>
     </div>
   </footer>
 `;
@@ -225,18 +310,20 @@ function footer(lang) {
 
 function chromeEnd(lang) {
   const isAr = lang === "ar";
+  const wa = `https://wa.me/${CONTACT.whatsapp}`;
   return `
   <div class="fab-contact">
-    <a class="fab-btn fab-whatsapp" href="https://wa.me/966503326610" target="_blank" rel="noopener" aria-label="${isAr ? "واتساب" : "WhatsApp"}"><i class="bi bi-whatsapp"></i></a>
-    <a class="fab-btn fab-consult" href="consultation.html"><i class="bi bi-calendar-check"></i><span>${isAr ? "استشارة مجانية" : "Free consultation"}</span></a>
+    <a class="fab-btn fab-whatsapp" href="${wa}" target="_blank" rel="noopener" aria-label="${isAr ? "واتساب" : "WhatsApp"}"><i class="bi bi-whatsapp"></i></a>
+    <a class="fab-btn fab-consult" href="consultation.html"><i class="bi bi-calendar-check"></i><span>${isAr ? "اطلب عرض سعر" : "Free consultation"}</span></a>
   </div>
-  <div class="sticky-cta-bar" role="region" aria-label="${isAr ? "استشارة سريعة" : "Quick consultation"}">
+  <div class="sticky-cta-bar" role="region" aria-label="${isAr ? "تواصل سريع" : "Quick consultation"}">
     <div class="container d-flex flex-wrap align-items-center justify-content-between gap-2">
       <span class="small mb-0">${isAr ? "جاهز للحديث مع خبير؟" : "Ready to talk with an expert?"}</span>
-      <a class="btn btn-brand" href="consultation.html">${isAr ? "اطلب استشارة" : "Request Consultation"}</a>
+      <a class="btn btn-brand" href="consultation.html">${isAr ? "اطلب عرض سعر" : "Request Consultation"}</a>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"><\/script>
+  <script src="../assets/js/config.js"><\/script>
   <script src="../assets/js/products.js"><\/script>
   <script src="../assets/js/i18n.js"><\/script>
   <script src="../assets/js/main.js"><\/script>
@@ -571,7 +658,7 @@ function resourcesBody(lang) {
   return (
     pageHero(
       lang,
-      [{ href: "resources.html", label: isAr ? "الموارد" : "Resources" }],
+      [{ href: "resources.html", label: isAr ? "المدونة" : "Resources" }],
       isAr ? "رؤى وأخبار تقنية" : "Insights & technology news",
       isAr ? "مقالات قصيرة للقادة حول الأمن والسحابة وتخطيط الموارد والعمليات." : "Short leadership articles on security, cloud, ERP, and operations."
     ) +
@@ -600,32 +687,37 @@ function resourcesBody(lang) {
 
 function contactBody(lang) {
   const isAr = lang === "ar";
+  const wa = `https://wa.me/${CONTACT.whatsapp}`;
   return (
     pageHero(
       lang,
-      [{ href: "contact.html", label: isAr ? "اتصل بنا" : "Contact" }],
+      [{ href: "contact.html", label: isAr ? "تواصل معنا" : "Contact" }],
       isAr ? "تواصل مع بياناتك" : "Contact Bayanatech",
       isAr ? "فريقنا جاهز لمساعدتك في الاستشارات والدعم وطلبات العروض." : "Our team is ready to help with consulting, support, and proposals."
     ) +
     `
     <section class="section"><div class="container"><div class="row g-5">
       <div class="col-lg-5 reveal">
-        <div class="contact-info-item"><div class="icon"><i class="bi bi-telephone"></i></div><div><h6>${isAr ? "الهاتف" : "Phone"}</h6><p><a href="tel:0503326610">050 332 6610</a></p></div></div>
-        <div class="contact-info-item"><div class="icon"><i class="bi bi-envelope"></i></div><div><h6>${isAr ? "البريد" : "Email"}</h6><p><a href="mailto:info@bayanatech.com.sa">info@bayanatech.com.sa</a></p></div></div>
-        <div class="contact-info-item"><div class="icon"><i class="bi bi-geo-alt"></i></div><div><h6>${isAr ? "الموقع" : "Location"}</h6><p>${isAr ? "المملكة العربية السعودية (تفاصيل العنوان عند التأكيد)" : "Kingdom of Saudi Arabia (address details pending confirmation)"}</p></div></div>
-        <div class="contact-info-item"><div class="icon"><i class="bi bi-whatsapp"></i></div><div><h6>WhatsApp</h6><p><a href="https://wa.me/966503326610" target="_blank" rel="noopener">+966 50 332 6610</a></p></div></div>
+        <div class="contact-info-item"><div class="icon"><i class="bi bi-geo-alt"></i></div><div><h6>${isAr ? "العنوان" : "Address"}</h6><p>${isAr ? CONTACT.address.ar : CONTACT.address.en}</p></div></div>
+        <div class="contact-info-item"><div class="icon"><i class="bi bi-telephone"></i></div><div><h6>${isAr ? "الهاتف" : "Phone"}</h6><p><a href="tel:${CONTACT.phone}" dir="ltr">${CONTACT.phoneDisplay}</a></p></div></div>
+        <div class="contact-info-item"><div class="icon"><i class="bi bi-whatsapp"></i></div><div><h6>WhatsApp</h6><p><a href="${wa}" target="_blank" rel="noopener" dir="ltr">${CONTACT.whatsappDisplay}</a></p></div></div>
+        <div class="contact-info-item"><div class="icon"><i class="bi bi-envelope"></i></div><div><h6>${isAr ? "البريد" : "Email"}</h6><p><a href="mailto:${CONTACT.email}">${CONTACT.email}</a></p></div></div>
+        <div class="contact-info-item"><div class="icon"><i class="bi bi-clock"></i></div><div><h6>${isAr ? "ساعات العمل" : "Working hours"}</h6><p>${isAr ? CONTACT.hours.ar : CONTACT.hours.en}</p></div></div>
       </div>
       <div class="col-lg-7 reveal">
         <div class="form-card">
           <h2 class="h4 text-brand mb-3">${isAr ? "أرسل رسالة" : "Send a message"}</h2>
           <div class="alert alert-success d-none" tabindex="-1" data-form-success role="status">${isAr ? "شكراً لك! تم استلام رسالتك." : "Thank you! Your message has been received."}</div>
-          <form class="needs-validation" novalidate data-endpoint="">
+          <div class="alert alert-danger d-none" tabindex="-1" data-form-error role="alert">${isAr ? "تعذّر الإرسال. حاول مرة أخرى." : "Could not send. Please try again."}</div>
+          <form class="needs-validation" novalidate data-form="contact">
+            <input type="hidden" name="_subject" value="Bayanatech contact form">
             <div class="row g-3">
               <div class="col-md-6"><label class="form-label" for="cName">${isAr ? "الاسم" : "Name"}</label><input class="form-control" id="cName" name="name" required><div class="invalid-feedback">${isAr ? "مطلوب" : "Required"}</div></div>
               <div class="col-md-6"><label class="form-label" for="cCompany">${isAr ? "الشركة" : "Company"}</label><input class="form-control" id="cCompany" name="company"></div>
               <div class="col-md-6"><label class="form-label" for="cEmail">${isAr ? "البريد" : "Email"}</label><input class="form-control" id="cEmail" type="email" name="email" required><div class="invalid-feedback">${isAr ? "بريد صالح مطلوب" : "Valid email required"}</div></div>
               <div class="col-md-6"><label class="form-label" for="cPhone">${isAr ? "الجوال" : "Phone"}</label><input class="form-control" id="cPhone" type="tel" name="phone" required><div class="invalid-feedback">${isAr ? "مطلوب" : "Required"}</div></div>
               <div class="col-12"><label class="form-label" for="cMsg">${isAr ? "الرسالة" : "Message"}</label><textarea class="form-control" id="cMsg" name="message" rows="4" required></textarea><div class="invalid-feedback">${isAr ? "مطلوب" : "Required"}</div></div>
+              <div class="col-12"><div data-recaptcha></div><p class="small text-danger d-none mb-0" data-recaptcha-error>${isAr ? "يرجى إكمال التحقق." : "Please complete the captcha."}</p></div>
               <div class="col-12"><button class="btn btn-brand" type="submit">${isAr ? "إرسال" : "Send message"}</button></div>
             </div>
           </form>
@@ -637,18 +729,21 @@ function contactBody(lang) {
 
 function consultationBody(lang) {
   const isAr = lang === "ar";
+  const wa = `https://wa.me/${CONTACT.whatsapp}`;
   return (
     pageHero(
       lang,
-      [{ href: "consultation.html", label: isAr ? "استشارة" : "Consultation" }],
-      isAr ? "احجز استشارة مجانية" : "Book a free consultation",
+      [{ href: "consultation.html", label: isAr ? "عرض سعر" : "Consultation" }],
+      isAr ? "اطلب عرض سعر" : "Book a free consultation",
       isAr ? "أخبرنا عن احتياجك وسنقترح مساراً واضحاً للبنية والأمان أو التحول الرقمي." : "Tell us about your needs and we’ll propose a clear path for infrastructure, security, or digital transformation."
     ) +
     `
     <section class="section"><div class="container"><div class="row justify-content-center"><div class="col-lg-8">
       <div class="form-card reveal">
         <div class="alert alert-success d-none" tabindex="-1" data-form-success role="status">${isAr ? "تم استلام طلبك. سنتواصل قريباً." : "Request received. We’ll be in touch shortly."}</div>
-        <form class="needs-validation" novalidate data-endpoint="">
+        <div class="alert alert-danger d-none" tabindex="-1" data-form-error role="alert">${isAr ? "تعذّر الإرسال. حاول مرة أخرى." : "Could not send. Please try again."}</div>
+        <form class="needs-validation" novalidate data-form="consultation">
+          <input type="hidden" name="_subject" value="Bayanatech consultation request">
           <div class="row g-3">
             <div class="col-md-6"><label class="form-label" for="qName">${isAr ? "الاسم الكامل" : "Full name"}</label><input class="form-control" id="qName" name="name" required><div class="invalid-feedback">${isAr ? "مطلوب" : "Required"}</div></div>
             <div class="col-md-6"><label class="form-label" for="qCompany">${isAr ? "الشركة / الجهة" : "Company / Organization"}</label><input class="form-control" id="qCompany" name="company" required><div class="invalid-feedback">${isAr ? "مطلوب" : "Required"}</div></div>
@@ -668,10 +763,11 @@ function consultationBody(lang) {
               <div class="invalid-feedback">${isAr ? "مطلوب" : "Required"}</div>
             </div>
             <div class="col-12"><label class="form-label" for="qMsg">${isAr ? "نبذة عن الاحتياج" : "Brief description"}</label><textarea class="form-control" id="qMsg" name="message" rows="5" required></textarea><div class="invalid-feedback">${isAr ? "مطلوب" : "Required"}</div></div>
-            <div class="col-12 form-check ms-1"><input class="form-check-input" type="checkbox" id="qConsent" required><label class="form-check-label" for="qConsent">${isAr ? "أوافق على التواصل بشأن طلبي." : "I agree to be contacted about this request."}</label><div class="invalid-feedback">${isAr ? "الموافقة مطلوبة" : "Consent required"}</div></div>
+            <div class="col-12 form-check ms-1"><input class="form-check-input" type="checkbox" id="qConsent" name="consent" value="yes" required><label class="form-check-label" for="qConsent">${isAr ? "أوافق على التواصل بشأن طلبي." : "I agree to be contacted about this request."}</label><div class="invalid-feedback">${isAr ? "الموافقة مطلوبة" : "Consent required"}</div></div>
+            <div class="col-12"><div data-recaptcha></div><p class="small text-danger d-none mb-0" data-recaptcha-error>${isAr ? "يرجى إكمال التحقق." : "Please complete the captcha."}</p></div>
             <div class="col-12 d-flex flex-wrap gap-2">
-              <button class="btn btn-brand" type="submit">${isAr ? "إرسال طلب الاستشارة" : "Submit consultation request"}</button>
-              <a class="btn btn-brand-outline" href="https://wa.me/966503326610" target="_blank" rel="noopener">${isAr ? "واتساب مباشر" : "WhatsApp us"}</a>
+              <button class="btn btn-brand" type="submit">${isAr ? "إرسال الطلب" : "Submit consultation request"}</button>
+              <a class="btn btn-brand-outline" href="${wa}" target="_blank" rel="noopener">${isAr ? "واتساب مباشر" : "WhatsApp us"}</a>
             </div>
           </div>
         </form>
@@ -689,9 +785,9 @@ function consultationBody(lang) {
   writePage(lang, "industries.html", "industries", `${lang === "ar" ? "القطاعات" : "Industries"} | ${brand}`, lang === "ar" ? "قطاعات نخدمها" : "Industries we serve", industriesBody(lang));
   writePage(lang, "about.html", "about", `${lang === "ar" ? "من نحن" : "About"} | ${brand}`, lang === "ar" ? "عن بياناتك" : "About Bayanatech", aboutBody(lang));
   writePage(lang, "case-studies.html", "case-studies", `${lang === "ar" ? "قصص النجاح" : "Case Studies"} | ${brand}`, lang === "ar" ? "قصص نجاح العملاء" : "Customer success stories", casesBody(lang));
-  writePage(lang, "resources.html", "resources", `${lang === "ar" ? "الموارد" : "Resources"} | ${brand}`, lang === "ar" ? "رؤى ومقالات" : "Insights and articles", resourcesBody(lang));
-  writePage(lang, "contact.html", "contact", `${lang === "ar" ? "اتصل بنا" : "Contact"} | ${brand}`, lang === "ar" ? "تواصل مع بياناتك" : "Contact Bayanatech", contactBody(lang));
-  writePage(lang, "consultation.html", "consultation", `${lang === "ar" ? "استشارة" : "Consultation"} | ${brand}`, lang === "ar" ? "احجز استشارة" : "Book a consultation", consultationBody(lang));
+  writePage(lang, "resources.html", "resources", `${lang === "ar" ? "المدونة" : "Resources"} | ${brand}`, lang === "ar" ? "رؤى ومقالات" : "Insights and articles", resourcesBody(lang));
+  writePage(lang, "contact.html", "contact", `${lang === "ar" ? "تواصل معنا" : "Contact"} | ${brand}`, lang === "ar" ? "تواصل مع بياناتك" : "Contact Bayanatech", contactBody(lang));
+  writePage(lang, "consultation.html", "consultation", `${lang === "ar" ? "عرض سعر" : "Consultation"} | ${brand}`, lang === "ar" ? "اطلب عرض سعر" : "Book a consultation", consultationBody(lang));
 });
 
 console.log("Done.");

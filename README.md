@@ -45,5 +45,6 @@ Home, Solutions, Products, Product Detail, Industries, About, Case Studies, Reso
 
 ## Notes
 
-- Wire forms to Formspree (or similar) via `data-endpoint` on forms.
+- Forms send to `mahmoudsmohammed24@gmail.com` via FormSubmit (`assets/js/config.js`). Confirm the first submission email in that inbox.
+- Set `recaptchaSiteKey` in `assets/js/config.js` to your Google reCAPTCHA v2 **site key** from [reCAPTCHA Admin](https://www.google.com/recaptcha/admin) (register your domain). Do not use Google’s public test key.
 - Re-run `node scripts/generate-pages.js` after editing the generator to refresh inner pages. Homepages are hand-authored.

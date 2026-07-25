@@ -69,7 +69,7 @@
         <a class="nav-link" href="index.html">الرئيسية</a>
         <div class="accordion accordion-flush" id="mobAcc">
           <div class="accordion-item border-0">
-            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobSol">الحلول</button></h3>
+            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobSol">خدماتنا</button></h3>
             <div id="mobSol" class="accordion-collapse collapse" data-bs-parent="#mobAcc">
               <div class="accordion-body">
                 <a class="nav-link" href="solutions.html">كل الحلول</a>
@@ -249,18 +249,23 @@
               <span class="section-eyebrow">ابدأ مشروعك</span>
               <h2>دعنا نبني الحل التقني المناسب لأعمالك</h2>
               <p>شاركنا احتياجك وسيتواصل معك أحد متخصصينا لمناقشة أفضل مسار للتنفيذ.</p>
-              <div class="contact-direct"><a href="tel:0503326610"><i class="bi bi-telephone"></i><span>اتصل بنا<strong dir="ltr">050 332 6610</strong></span></a><a href="https://wa.me/966503326610" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i><span>تواصل عبر<strong>واتساب</strong></span></a></div>
+              <div class="contact-direct">
+                <a href="tel:0503326610"><i class="bi bi-telephone"></i><span>اتصل بنا<strong dir="ltr">050 332 6610</strong></span></a>
+                <a href="https://wa.me/966568587099" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i><span>تواصل عبر<strong dir="ltr">056 858 7099</strong></span></a>
+              </div>
             </div>
             <div class="col-lg-7">
-              <form class="quick-form needs-validation reveal" novalidate>
+              <form class="quick-form needs-validation reveal" novalidate data-form="home-quote">
+                <input type="hidden" name="_subject" value="Bayanatech homepage quote request">
                 <div class="row g-3">
                   <div class="col-md-6"><label class="form-label" for="quickName">الاسم</label><input class="form-control" id="quickName" name="name" required><div class="invalid-feedback">يرجى إدخال الاسم.</div></div>
                   <div class="col-md-6"><label class="form-label" for="quickCompany">اسم المنشأة</label><input class="form-control" id="quickCompany" name="company"></div>
                   <div class="col-md-6"><label class="form-label" for="quickPhone">رقم الجوال</label><input class="form-control" id="quickPhone" name="phone" type="tel" required><div class="invalid-feedback">يرجى إدخال رقم التواصل.</div></div>
                   <div class="col-md-6"><label class="form-label" for="quickService">الخدمة المطلوبة</label><select class="form-select" id="quickService" name="service" required><option value="">اختر الخدمة</option><option>الشبكات</option><option>السيرفرات</option><option>كاميرات المراقبة</option><option>السنترالات</option><option>أمن المعلومات</option><option>عقود الصيانة</option><option>تعمير ERP</option></select><div class="invalid-feedback">يرجى اختيار الخدمة.</div></div>
                   <div class="col-12"><label class="form-label" for="quickMessage">كيف يمكننا مساعدتك؟</label><textarea class="form-control" id="quickMessage" name="message" rows="3"></textarea></div>
+                  <div class="col-12"><div data-recaptcha></div><p class="small text-danger d-none mb-0" data-recaptcha-error>يرجى إكمال التحقق.</p></div>
                   <div class="col-12 d-flex flex-wrap align-items-center gap-3"><button class="btn btn-brand btn-lg" type="submit">إرسال الطلب <i class="bi bi-arrow-left"></i></button><span class="form-note"><i class="bi bi-lock"></i> بياناتك محفوظة ولن تتم مشاركتها</span></div>
-                  <div class="col-12"><div class="alert alert-success d-none mb-0" tabindex="-1" data-form-success>تم استلام طلبك بنجاح، وسنتواصل معك قريباً.</div></div>
+                  <div class="col-12"><div class="alert alert-success d-none mb-0" tabindex="-1" data-form-success>تم استلام طلبك بنجاح، وسنتواصل معك قريباً.</div><div class="alert alert-danger d-none mb-0" tabindex="-1" data-form-error>تعذّر الإرسال. حاول مرة أخرى.</div></div>
                 </div>
               </form>
             </div>
@@ -271,50 +276,70 @@
   </main>
 
   <footer class="site-footer">
+    <div class="footer-glow" aria-hidden="true"></div>
     <div class="container">
-      <div class="row g-5">
-        <div class="col-lg-4">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
           <div class="footer-brand"><img src="../assets/img/logo.png" class="logo-full" height="48" alt="بياناتك Bayanatech"></div>
-          <p class="small mb-3">شريك موثوق للتحول الرقمي وحلول تقنية المعلومات للشركات في المملكة العربية السعودية.</p>
+          <p class="footer-tagline">شريك موثوق للتحول الرقمي وحلول تقنية المعلومات للشركات في المملكة العربية السعودية.</p>
           <div class="social-links" aria-label="وسائل التواصل">
             <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
             <a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a>
             <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
           </div>
         </div>
-        <div class="col-6 col-md-3 col-lg-2"><h5>الشركة</h5><ul><li><a href="about.html">من نحن</a></li><li><a href="case-studies.html">قصص النجاح</a></li><li><a href="resources.html">الموارد</a></li><li><a href="contact.html">اتصل بنا</a></li></ul></div>
-        <div class="col-6 col-md-3 col-lg-2"><h5>الحلول</h5><ul><li><a href="solutions.html#networking">الشبكات</a></li><li><a href="solutions.html#cybersecurity">الأمن</a></li><li><a href="solutions.html#cloud">السحابة</a></li><li><a href="solutions.html#managed">الإدارة</a></li></ul></div>
-        <div class="col-6 col-md-3 col-lg-2"><h5>القطاعات</h5><ul><li><a href="industries.html#hospitality">الضيافة</a></li><li><a href="industries.html#education">التعليم</a></li><li><a href="industries.html#government">الحكومي</a></li><li><a href="industries.html#healthcare">الصحة</a></li></ul></div>
-        <div class="col-6 col-md-3 col-lg-2"><h5>الدعم</h5><ul><li><a href="contact.html">الدعم الفني</a></li><li><a href="consultation.html">الاستشارة</a></li><li><a href="products.html">المنتجات</a></li><li><a href="tel:0503326610">050 332 6610</a></li></ul></div>
-      </div>
-      <div class="row mt-4">
-        <div class="col-lg-6">
-          <h5>النشرة البريدية</h5>
-          <form class="newsletter-form row g-2" data-newsletter>
-            <div class="col-sm-8"><label class="visually-hidden" for="newsEmail">البريد</label><input class="form-control" id="newsEmail" type="email" name="email" placeholder="البريد المهني" required></div>
-            <div class="col-sm-4"><button class="btn btn-brand w-100" type="submit">اشترك</button></div>
-            <p class="small mt-2 mb-0" data-newsletter-msg hidden>شكراً لك — تم الاشتراك.</p>
-          </form>
+        <div>
+          <h5>استكشف</h5>
+          <ul>
+            <li><a href="solutions.html">خدماتنا</a></li>
+            <li><a href="products.html">المنتجات</a></li>
+            <li><a href="case-studies.html">أعمالنا</a></li>
+            <li><a href="about.html">من نحن</a></li>
+            <li><a href="resources.html">المدونة</a></li>
+          </ul>
         </div>
-        <div class="col-lg-6"><h5>تواصل</h5><p class="small mb-1"><a href="mailto:info@bayanatech.com.sa">info@bayanatech.com.sa</a></p><p class="small mb-0"><a href="tel:0503326610">050 332 6610</a></p></div>
+        <div>
+          <h5>خدماتنا</h5>
+          <ul>
+            <li><a href="solutions.html#networking">الشبكات</a></li>
+            <li><a href="solutions.html#cybersecurity">الأمن السيبراني</a></li>
+            <li><a href="solutions.html#cloud">السحابة</a></li>
+            <li><a href="solutions.html#managed">عقود الصيانة</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact-col">
+          <h5>تواصل معنا</h5>
+          <ul class="footer-contact-list">
+            <li><i class="bi bi-geo-alt"></i><span>مؤسسة بياناتك لتقنية المعلومات - المدينة المنورة - شارع خالد ابن الوليد - دوار القبلتين - مقابل محطة نفط</span></li>
+            <li><i class="bi bi-telephone"></i><a href="tel:0503326610" dir="ltr">050 332 6610</a></li>
+            <li><i class="bi bi-whatsapp"></i><a href="https://wa.me/966568587099" target="_blank" rel="noopener" dir="ltr">056 858 7099</a></li>
+            <li><i class="bi bi-envelope"></i><a href="mailto:info@bayanatech.com.sa">info@bayanatech.com.sa</a></li>
+            <li><i class="bi bi-clock"></i><span>السبت - الخميس 09:00 - 19:00</span></li>
+          </ul>
+          <a class="btn btn-brand footer-cta" href="consultation.html">اطلب عرض سعر</a>
+        </div>
       </div>
-      <div class="footer-bottom"><span>جميع الحقوق محفوظة © 2008–2026 لمؤسسة بياناتك لتقنية المعلومات</span><span>المملكة العربية السعودية</span></div>
+      <div class="footer-bottom">
+        <span>جميع الحقوق محفوظة © 2008–2026 لمؤسسة بياناتك لتقنية المعلومات</span>
+        <span>المدينة المنورة، المملكة العربية السعودية</span>
+      </div>
     </div>
   </footer>
 
   <div class="fab-contact">
-    <a class="fab-btn fab-whatsapp" href="https://wa.me/966503326610" target="_blank" rel="noopener" aria-label="واتساب"><i class="bi bi-whatsapp"></i></a>
-    <a class="fab-btn fab-consult" href="consultation.html"><i class="bi bi-calendar-check"></i><span>استشارة مجانية</span></a>
+    <a class="fab-btn fab-whatsapp" href="https://wa.me/966568587099" target="_blank" rel="noopener" aria-label="واتساب"><i class="bi bi-whatsapp"></i></a>
+    <a class="fab-btn fab-consult" href="consultation.html"><i class="bi bi-calendar-check"></i><span>اطلب عرض سعر</span></a>
   </div>
 
-  <div class="sticky-cta-bar" role="region" aria-label="استشارة سريعة">
+  <div class="sticky-cta-bar" role="region" aria-label="تواصل سريع">
     <div class="container d-flex flex-wrap align-items-center justify-content-between gap-2">
       <span class="small mb-0">جاهز للحديث مع خبير؟</span>
-      <a class="btn btn-brand" href="consultation.html">اطلب استشارة</a>
+      <a class="btn btn-brand" href="consultation.html">اطلب عرض سعر</a>
     </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/config.js"></script>
   <script src="../assets/js/products.js"></script>
   <script src="../assets/js/i18n.js"></script>
   <script src="../assets/js/main.js"></script>

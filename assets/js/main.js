@@ -252,33 +252,159 @@
       .join("");
   }
 
-  /* Bootstrap form validation */
+  function getConfig() {
+    return window.BAYANATECH_CONFIG || {};
+  }
+
+  /* Google reCAPTCHA v2 — renders into [data-recaptcha] slots */
+  function initRecaptcha() {
+    const cfg = getConfig();
+    const siteKey = (cfg.recaptchaSiteKey || "").trim();
+    const slots = document.querySelectorAll("[data-recaptcha]");
+    if (!slots.length) return;
+
+    if (!siteKey) {
+      slots.forEach((slot) => {
+        slot.innerHTML = `<p class="recaptcha-setup-note">${
+          lang === "ar"
+            ? "أضف مفتاح reCAPTCHA في ملف assets/js/config.js لتفعيل التحقق."
+            : "Add your reCAPTCHA site key in assets/js/config.js to enable verification."
+        }</p>`;
+      });
+      return;
+    }
+
+    window.__bayanRecaptchaWidgets = window.__bayanRecaptchaWidgets || [];
+
+    const renderAll = () => {
+      if (!window.grecaptcha || !window.grecaptcha.render) return;
+      slots.forEach((slot) => {
+        if (slot.dataset.rendered === "1") return;
+        slot.innerHTML = "";
+        const id = window.grecaptcha.render(slot, { sitekey: siteKey });
+        slot.dataset.rendered = "1";
+        window.__bayanRecaptchaWidgets.push({ el: slot, id });
+      });
+    };
+
+    if (window.grecaptcha && window.grecaptcha.render) {
+      renderAll();
+      return;
+    }
+
+    const existing = document.querySelector("script[data-bayan-recaptcha]");
+    if (existing) {
+      existing.addEventListener("load", renderAll);
+      return;
+    }
+
+    window.__bayanOnRecaptchaLoad = renderAll;
+    const script = document.createElement("script");
+    script.src = `https://www.google.com/recaptcha/api.js?onload=__bayanOnRecaptchaLoad&render=explicit&hl=${lang}`;
+    script.async = true;
+    script.defer = true;
+    script.dataset.bayanRecaptcha = "1";
+    document.head.appendChild(script);
+  }
+
+  function getRecaptchaResponse(form) {
+    const slot = form.querySelector("[data-recaptcha]");
+    if (!slot) return "";
+    const cfg = getConfig();
+    if (!(cfg.recaptchaSiteKey || "").trim()) return "setup-pending";
+    const widget = (window.__bayanRecaptchaWidgets || []).find((w) => w.el === slot);
+    if (!widget || !window.grecaptcha) return "";
+    return window.grecaptcha.getResponse(widget.id) || "";
+  }
+
+  function resetRecaptcha(form) {
+    const slot = form.querySelector("[data-recaptcha]");
+    if (!slot || !window.grecaptcha) return;
+    const widget = (window.__bayanRecaptchaWidgets || []).find((w) => w.el === slot);
+    if (widget) window.grecaptcha.reset(widget.id);
+  }
+
+  /* Bootstrap form validation + email delivery via FormSubmit */
   function initForms() {
     document.querySelectorAll("form.needs-validation").forEach((form) => {
-      form.addEventListener("submit", (event) => {
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+
+        const success =
+          form.querySelector("[data-form-success]") ||
+          form.parentElement?.querySelector("[data-form-success]");
+        const errorEl =
+          form.querySelector("[data-form-error]") ||
+          form.parentElement?.querySelector("[data-form-error]");
+        const captchaError = form.querySelector("[data-recaptcha-error]");
+        const submitBtn = form.querySelector('[type="submit"]');
+
+        if (success) success.classList.add("d-none");
+        if (errorEl) errorEl.classList.add("d-none");
+        if (captchaError) captchaError.classList.add("d-none");
+
         if (!form.checkValidity()) {
-          event.preventDefault();
-          event.stopPropagation();
-        } else {
-          event.preventDefault();
-          const success = form.querySelector("[data-form-success]");
-          const endpoint = form.getAttribute("data-endpoint");
+          form.classList.add("was-validated");
+          return;
+        }
+
+        const captcha = getRecaptchaResponse(form);
+        const cfg = getConfig();
+        const siteKey = (cfg.recaptchaSiteKey || "").trim();
+        if (siteKey && !captcha) {
+          if (captchaError) captchaError.classList.remove("d-none");
+          form.classList.add("was-validated");
+          return;
+        }
+
+        form.classList.add("was-validated");
+        const endpoint = cfg.formEndpoint || `https://formsubmit.co/ajax/${cfg.formRecipient || "mahmoudsmohammed24@gmail.com"}`;
+        const data = new FormData(form);
+        data.append("_template", "table");
+        data.append("_captcha", "false");
+        if (!data.get("_subject")) {
+          data.append("_subject", `Bayanatech ${form.dataset.form || "form"} submission`);
+        }
+        const reply = data.get("email");
+        if (reply) data.append("_replyto", reply);
+        if (captcha && captcha !== "setup-pending") {
+          data.append("g-recaptcha-response", captcha);
+        }
+
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.dataset.originalText = submitBtn.innerHTML;
+          submitBtn.innerHTML = lang === "ar" ? "جاري الإرسال..." : "Sending...";
+        }
+
+        try {
+          const res = await fetch(endpoint, {
+            method: "POST",
+            body: data,
+            headers: { Accept: "application/json" }
+          });
+          if (!res.ok) throw new Error("send failed");
           if (success) {
             success.classList.remove("d-none");
-            form.reset();
-            form.classList.remove("was-validated");
             success.focus?.();
           }
-          // Formspree-ready: set data-endpoint="https://formspree.io/f/xxxx" to enable
-          if (endpoint && endpoint.startsWith("http")) {
-            fetch(endpoint, {
-              method: "POST",
-              body: new FormData(form),
-              headers: { Accept: "application/json" }
-            }).catch(() => {});
+          form.reset();
+          form.classList.remove("was-validated");
+          resetRecaptcha(form);
+        } catch (_) {
+          if (errorEl) {
+            errorEl.classList.remove("d-none");
+            errorEl.focus?.();
+          }
+        } finally {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            if (submitBtn.dataset.originalText) {
+              submitBtn.innerHTML = submitBtn.dataset.originalText;
+            }
           }
         }
-        form.classList.add("was-validated");
       });
     });
   }
@@ -326,6 +452,7 @@
     initFeaturedProducts();
     initReveal();
     initCounters();
+    initRecaptcha();
     initForms();
     initStickyCta();
     initNewsletter();
