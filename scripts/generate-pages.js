@@ -8,20 +8,34 @@ const path = require("path");
 const ROOT = path.join(__dirname, "..");
 
 const CONTACT = {
-  phone: "0503326610",
-  phoneDisplay: "050 332 6610",
-  whatsapp: "966568587099",
-  whatsappDisplay: "056 858 7099",
+  phone: "0568587099",
+  phoneDisplay: "056 858 7099",
+  whatsapp: "966503326610",
+  whatsappDisplay: "050 332 6610",
   email: "info@bayanatech.com.sa",
   address: {
-    ar: "مؤسسة بياناتك لتقنية المعلومات - المدينة المنورة - شارع خالد ابن الوليد - دوار القبلتين - مقابل محطة نفط",
-    en: "Bayanatech for Information Technology — Madinah, Khalid Ibn Al-Walid St., Al-Qiblatain Roundabout, opposite Naft station"
+    ar: "شارع خالدة بنت الأسود، حي طيبة، مقابل جامعة طيبة",
+    en: "Khalidah bint Al-Aswad St., Taybah District, opposite Taibah University"
   },
   hours: {
     ar: "السبت - الخميس 09:00 - 19:00",
     en: "Saturday – Thursday, 09:00 – 19:00"
   }
 };
+
+const SOCIAL = [
+  ["https://www.facebook.com/Bayanatech", "Facebook", "bi-facebook"],
+  ["https://www.twitter.com/Bayanatech", "X", "bi-twitter-x"],
+  ["https://www.youtube.com/channel/UCTb3AivjT1Vp7ZkZFLgb_TQ", "YouTube", "bi-youtube"]
+];
+
+function socialLinks(label) {
+  const items = SOCIAL.map(
+    ([href, name, icon]) =>
+      `\n            <a href="${href}" target="_blank" rel="noopener" aria-label="${name}"><i class="bi ${icon}"></i></a>`
+  ).join("");
+  return `<div class="social-links" aria-label="${label}">${items}\n          </div>`;
+}
 
 function head({ lang, title, description, active }) {
   const rtl = lang === "ar";
@@ -38,7 +52,7 @@ function head({ lang, title, description, active }) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="${description}">
   <title>${title}</title>
-  <link rel="icon" href="../assets/img/logo-mark.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/img/logo.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="${fonts}" rel="stylesheet">
@@ -69,7 +83,6 @@ function header(lang, active) {
         midHref: "case-studies.html",
         midKey: "case-studies",
         about: "من نحن",
-        resources: "المدونة",
         contact: "تواصل معنا",
         consult: "اطلب عرض سعر",
         menu: "القائمة",
@@ -94,7 +107,6 @@ function header(lang, active) {
         midHref: "industries.html",
         midKey: "industries",
         about: "About",
-        resources: "Resources",
         contact: "Contact",
         consult: "Request Consultation",
         menu: "Menu",
@@ -149,7 +161,6 @@ function header(lang, active) {
             <li class="nav-item"><a class="nav-link nav-link-main${act("products")}" href="products.html">${t.products}</a></li>
             <li class="nav-item"><a class="nav-link nav-link-main${act(t.midKey)}" href="${t.midHref}">${t.midLabel}</a></li>
             <li class="nav-item"><a class="nav-link nav-link-main${act("about")}" href="about.html">${t.about}</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-main${act("resources")}" href="resources.html">${t.resources}</a></li>
             <li class="nav-item"><a class="nav-link nav-link-main${act("contact")}" href="contact.html">${t.contact}</a></li>
           </ul>
           <div class="d-flex align-items-center gap-2">
@@ -187,7 +198,6 @@ function header(lang, active) {
         <a class="nav-link" href="products.html">${t.products}</a>
         ${mobileMid}
         <a class="nav-link" href="about.html">${t.about}</a>
-        <a class="nav-link" href="resources.html">${t.resources}</a>
         <a class="nav-link" href="contact.html">${t.contact}</a>
         <a class="btn btn-brand w-100 mt-3" href="consultation.html">${t.consult}</a>
         <a class="lang-switch d-inline-block mt-3" href="../${other}/${switchFile}.html" data-switch-lang="${other}">${otherLabel}</a>
@@ -209,11 +219,7 @@ function footer(lang) {
         <div class="footer-brand-col">
           <div class="footer-brand"><img src="../assets/img/logo.png" class="logo-full" height="48" alt="بياناتك Bayanatech"></div>
           <p class="footer-tagline">شريك موثوق للتحول الرقمي وحلول تقنية المعلومات للشركات في المملكة العربية السعودية.</p>
-          <div class="social-links" aria-label="وسائل التواصل">
-            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-            <a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a>
-            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-          </div>
+          ${socialLinks("وسائل التواصل")}
         </div>
         <div>
           <h5>استكشف</h5>
@@ -222,7 +228,6 @@ function footer(lang) {
             <li><a href="products.html">المنتجات</a></li>
             <li><a href="case-studies.html">أعمالنا</a></li>
             <li><a href="about.html">من نحن</a></li>
-            <li><a href="resources.html">المدونة</a></li>
           </ul>
         </div>
         <div>
@@ -262,11 +267,7 @@ function footer(lang) {
         <div class="footer-brand-col">
           <div class="footer-brand"><img src="../assets/img/logo.png" class="logo-full" height="48" alt="Bayanatech"></div>
           <p class="footer-tagline">Trusted digital transformation and IT solutions partner for businesses in Saudi Arabia.</p>
-          <div class="social-links" aria-label="Social media">
-            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-            <a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a>
-            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-          </div>
+          ${socialLinks("Social media")}
         </div>
         <div>
           <h5>Explore</h5>
@@ -275,7 +276,6 @@ function footer(lang) {
             <li><a href="products.html">Products</a></li>
             <li><a href="industries.html">Industries</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="resources.html">Resources</a></li>
           </ul>
         </div>
         <div>
@@ -635,56 +635,6 @@ function casesBody(lang) {
   );
 }
 
-function resourcesBody(lang) {
-  const isAr = lang === "ar";
-  const posts = isAr
-    ? [
-        ["الأمن السيبراني", "bi-shield-lock", "خمسة ضوابط تقلل مخاطر الفدية", "خطوات عملية للمؤسسات المتوسطة."],
-        ["السحابة", "bi-cloud", "متى تتفوق السحابة الهجينة؟", "إطار قرار بين السيطرة والمرونة."],
-        ["تخطيط الموارد", "bi-boxes", "رقمنة المكاتب الهندسية", "أين يظهر العائد أولاً."],
-        ["الشبكات", "bi-diagram-3", "ربط الفروع بثقة", "خيارات WAN التي تناسب نموك."],
-        ["العمليات", "bi-headset", "عقود الدعم التي تنجح", "كيف تصمم SLA يخدم الأعمال."],
-        ["التحول", "bi-lightning", "من الورق إلى الرقمي", "خارطة طريق قصيرة للقيادات."]
-      ]
-    : [
-        ["Cybersecurity", "bi-shield-lock", "Five controls that reduce ransomware risk", "Practical steps for mid-size enterprises."],
-        ["Cloud", "bi-cloud", "When hybrid cloud beats all-in migration", "A decision framework for control vs agility."],
-        ["ERP", "bi-boxes", "Digitizing engineering offices", "Where ROI shows up first."],
-        ["Networking", "bi-diagram-3", "Linking branches with confidence", "WAN options that match your growth."],
-        ["Operations", "bi-headset", "Support contracts that work", "Designing SLAs that serve the business."],
-        ["Transformation", "bi-lightning", "From paper to digital", "A short roadmap for leadership teams."]
-      ];
-
-  return (
-    pageHero(
-      lang,
-      [{ href: "resources.html", label: isAr ? "المدونة" : "Resources" }],
-      isAr ? "رؤى وأخبار تقنية" : "Insights & technology news",
-      isAr ? "مقالات قصيرة للقادة حول الأمن والسحابة وتخطيط الموارد والعمليات." : "Short leadership articles on security, cloud, ERP, and operations."
-    ) +
-    `<section class="section"><div class="container"><div class="row g-4">` +
-    posts
-      .map(
-        ([cat, icon, title, desc]) => `
-      <div class="col-md-6 col-lg-4 reveal">
-        <article class="card-soft blog-card h-100">
-          <div class="blog-thumb"><i class="bi ${icon}"></i></div>
-          <div class="blog-body">
-            <div class="blog-cat">${cat}</div>
-            <h2 class="h5 mt-2">${title}</h2>
-            <p class="text-muted small">${desc}</p>
-            <a class="btn-link-more" href="consultation.html">${isAr ? "ناقش الموضوع مع خبير" : "Discuss with an expert"} <i class="bi bi-arrow-${isAr ? "left" : "right"}"></i></a>
-          </div>
-        </article>
-      </div>`
-      )
-      .join("") +
-    `</div>
-    <div class="text-center mt-5"><a class="btn btn-brand-outline" href="#">${isAr ? "تحميل الكتيب (قريباً)" : "Download brochure (coming soon)"}</a></div>
-    </div></section>`
-  );
-}
-
 function contactBody(lang) {
   const isAr = lang === "ar";
   const wa = `https://wa.me/${CONTACT.whatsapp}`;
@@ -785,7 +735,6 @@ function consultationBody(lang) {
   writePage(lang, "industries.html", "industries", `${lang === "ar" ? "القطاعات" : "Industries"} | ${brand}`, lang === "ar" ? "قطاعات نخدمها" : "Industries we serve", industriesBody(lang));
   writePage(lang, "about.html", "about", `${lang === "ar" ? "من نحن" : "About"} | ${brand}`, lang === "ar" ? "عن بياناتك" : "About Bayanatech", aboutBody(lang));
   writePage(lang, "case-studies.html", "case-studies", `${lang === "ar" ? "قصص النجاح" : "Case Studies"} | ${brand}`, lang === "ar" ? "قصص نجاح العملاء" : "Customer success stories", casesBody(lang));
-  writePage(lang, "resources.html", "resources", `${lang === "ar" ? "المدونة" : "Resources"} | ${brand}`, lang === "ar" ? "رؤى ومقالات" : "Insights and articles", resourcesBody(lang));
   writePage(lang, "contact.html", "contact", `${lang === "ar" ? "تواصل معنا" : "Contact"} | ${brand}`, lang === "ar" ? "تواصل مع بياناتك" : "Contact Bayanatech", contactBody(lang));
   writePage(lang, "consultation.html", "consultation", `${lang === "ar" ? "عرض سعر" : "Consultation"} | ${brand}`, lang === "ar" ? "اطلب عرض سعر" : "Book a consultation", consultationBody(lang));
 });

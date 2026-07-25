@@ -15,14 +15,19 @@ window.BAYANATECH_CONFIG = {
    * (do not use Google’s public test key — it shows a red warning banner).
    */
   recaptchaSiteKey: "6LcKx2QtAAAAACWl5RFuaeNee1KRKf0MHRQj65Mz",
-  phone: "0503326610",
-  phoneDisplay: "050 332 6610",
-  whatsapp: "966568587099",
-  whatsappDisplay: "056 858 7099",
+  phone: "0568587099",
+  phoneDisplay: "056 858 7099",
+  whatsapp: "966503326610",
+  whatsappDisplay: "050 332 6610",
   email: "info@bayanatech.com.sa",
+  social: {
+    facebook: "https://www.facebook.com/Bayanatech",
+    twitter: "https://www.twitter.com/Bayanatech",
+    youtube: "https://www.youtube.com/channel/UCTb3AivjT1Vp7ZkZFLgb_TQ",
+  },
   address: {
-    ar: "مؤسسة بياناتك لتقنية المعلومات - المدينة المنورة - شارع خالد ابن الوليد - دوار القبلتين - مقابل محطة نفط",
-    en: "Bayanatech for Information Technology — Madinah, Khalid Ibn Al-Walid St., Al-Qiblatain Roundabout, opposite Naft station",
+    ar: "شارع خالدة بنت الأسود، حي طيبة، مقابل جامعة طيبة",
+    en: "Khalidah bint Al-Aswad St., Taybah District, opposite Taibah University",
   },
   hours: {
     ar: "السبت - الخميس 09:00 - 19:00",

@@ -2213,6 +2213,48 @@ body.is-ready [data-hero-item]:nth-child(2) {
   transform: translateX(-4px);
 }
 
+.service-includes {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 0.4rem;
+  padding: 0;
+  margin: 0 0 1.3rem;
+  list-style: none;
+  color: var(--text-muted);
+  font-size: var(--fs-xs);
+}
+
+.service-includes li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.service-includes li::before {
+  content: "";
+  flex: 0 0 5px;
+  height: 5px;
+  margin-top: 0.52rem;
+  border-radius: 50%;
+  background: var(--brand-secondary);
+}
+
+/* Cards that list what the service includes grow taller, so the link is pinned low */
+.service-card:has(.service-includes) {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:has(.service-includes) p {
+  min-height: 0;
+  margin-bottom: 1rem;
+}
+
+.service-card:has(.service-includes) .service-link {
+  margin-top: auto;
+}
+
 .why-v2 {
   background:
     radial-gradient(circle at 95% 0%, rgba(0, 87, 184, 0.1), transparent 28%),
