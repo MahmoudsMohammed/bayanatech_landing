@@ -774,7 +774,8 @@ html[lang="ar"] .product-duo .erp-window {
   box-shadow: var(--shadow-sm);
 }
 
-.product-metric strong {
+.product-metric strong,
+.product-metric .product-metric-value {
   color: var(--brand-primary);
   font-family: var(--font);
   font-size: clamp(1.8rem, 3vw, 2.5rem);
@@ -782,7 +783,20 @@ html[lang="ar"] .product-duo .erp-window {
   line-height: 1;
 }
 
-.product-metric span {
+.product-metric-value {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28em;
+}
+
+.product-metric .sar-symbol {
+  display: block;
+  width: 0.78em;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.product-metric > span {
   margin-top: 0.65rem;
   color: var(--text-muted);
   font-size: var(--fs-sm);

@@ -230,8 +230,6 @@ function footer(lang) {
           <h5>خدماتنا</h5>
           <ul>
             <li><a href="solutions.html#networking">الشبكات</a></li>
-            <li><a href="solutions.html#cybersecurity">الأمن السيبراني</a></li>
-            <li><a href="solutions.html#cloud">السحابة</a></li>
             <li><a href="solutions.html#managed">عقود الصيانة</a></li>
           </ul>
         </div>
@@ -278,8 +276,6 @@ function footer(lang) {
           <h5>Our Services</h5>
           <ul>
             <li><a href="solutions.html#networking">Networking</a></li>
-            <li><a href="solutions.html#cybersecurity">Cybersecurity</a></li>
-            <li><a href="solutions.html#cloud">Cloud</a></li>
             <li><a href="solutions.html#managed">Maintenance contracts</a></li>
           </ul>
         </div>

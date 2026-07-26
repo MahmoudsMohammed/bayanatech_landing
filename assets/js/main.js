@@ -90,11 +90,18 @@
     const startTime = performance.now();
     const suffix = el.dataset.suffix || "";
     const prefix = el.dataset.prefix || "";
+    /* Prefer Latin digits when data-digits="latn" (e.g. product stats). */
+    const locale =
+      el.dataset.digits === "latn"
+        ? "en-US"
+        : lang === "ar"
+          ? "ar-SA"
+          : "en-US";
     function frame(now) {
       const t = Math.min(1, (now - startTime) / duration);
       const eased = 1 - Math.pow(1 - t, 3);
       const value = Math.round(start + (target - start) * eased);
-      el.textContent = prefix + value.toLocaleString(lang === "ar" ? "ar-SA" : "en-US") + suffix;
+      el.textContent = prefix + value.toLocaleString(locale) + suffix;
       if (t < 1) requestAnimationFrame(frame);
     }
     requestAnimationFrame(frame);
