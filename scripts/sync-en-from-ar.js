@@ -242,13 +242,14 @@ const phrases = [
   ],
   ["من أعمالنا", "From our work"],
   ["القطاع الصحي", "Healthcare sector"],
-  ["تطوير نظام تكامل لإدارة الموارد الذاتية", "Developing an integration system for self-resources management"],
   [
-    "تشكر المديرية العامة للشؤون الصحية بمنطقة المدينة المنورة ممثلة في إدارة الموارد الذاتية مؤسسة بياناتك لتقنية المعلومات على أدائها المتميز في تطوير نظام تكامل لإدارة الموارد الذاتية وذلك للعام الثالث على التوالي. متنمنين لهم المزيد من التقدم والإبداع ،،،",
-    "The General Directorate of Health Affairs in Madinah Region, represented by the Self-Resources Department, thanks Bayanatech for its outstanding performance in developing an integration system for self-resources management—for the third consecutive year. Wishing them continued progress and creativity."
+    "إدارة التدريب والابتعاث وإدارة الموارد الذاتية بمنطقة المدينة المنورة",
+    "Training & Scholarship Administration and Self-Resources Management in Madinah Region"
   ],
-  ["مدير إدارة الموارد الذاتية", "Director of Self-Resources Department"],
-  ["بليغ بن محمد سطيح", "Baligh bin Mohammed Sateeh"],
+  [
+    "قدمت مؤسسة بياناتك لتقنية المعلومات حلولًا تقنية متكاملة لإدارة التدريب والابتعاث وإدارة الموارد الذاتية، تضمنت إنشاء البنية التحتية لشبكات الحاسب الآلي، وتطوير الأنظمة والمنصات الإلكترونية، وأتمتة إجراءات العمل، بما أسهم في تحسين كفاءة الأداء، وتطوير الخدمات الرقمية، وتوفير تجربة إلكترونية متكاملة للمستفيدين.",
+    "Bayanatech delivered integrated technical solutions for training and scholarship administration and self-resources management, including computer network infrastructure, electronic systems and platforms, and workflow automation—improving performance efficiency, advancing digital services, and providing a complete electronic experience for beneficiaries."
+  ],
   ["عميل من القطاع غير الربحي", "Non-profit sector client"],
   ["القطاع غير الربحي", "Non-profit sector"],
   ["تطوير شبكة ونظم معلومات وقف خيري", "Developing network and information systems for a charitable endowment"],
@@ -263,9 +264,26 @@ const phrases = [
   ],
   ["وقف الملك عبدالله", "King Abdullah Endowment"],
   ["فارسي القابضة", "Farsi Holding"],
+  ["وزارة الصحة", "Ministry of Health"],
   ["منازلي للفنادق", "Manazeli Hotels"],
   ["مكارم المدينة", "Makarem Al Madinah"],
   ["مجموعة الشهباء", "Al Shahba Group"],
+  ["جمعية التنمية الأسرية (أسرتي)", "Osraty Family Development"],
+  ["مجمع العقالي الطبي", "Al-Ogaly Medical Complex"],
+  ["فندق جوهرة الرشيد", "Jawharat Al-Rasheed Hotel"],
+  ["مركز البيان لتدبر معاني القرآن", "Al-Bayan Quran Center"],
+  ["مأرز العقارية", "Marz Real Estate"],
+  ["أسرتي", "Osraty"],
+  ["تمنكو", "TMNCO"],
+  ["طراز المعماريون", "Terraze"],
+  ["الاختبارات", "Ektbarat"],
+  ["المحدد", "AL Mohadded"],
+  ["أماكن", "Amakin"],
+  ["أبعاد", "Dimensions"],
+  ["الإحتراف", "Professionalism"],
+  ["نوافذ الهندسة", "Engineering Windows"],
+  ["رواسم", "Rawasem"],
+  ["مكتب الحكمي", "Hakami"],
   ["القطاع التعليمي", "Education sector"],
   ["المنشآت التجارية", "Commercial enterprises"],
   ["شهادات نعتز بها", "Testimonials we value"],
@@ -279,6 +297,7 @@ const phrases = [
   ["الشهادة الثالثة", "Testimonial 3"],
   ["الشهادة الرابعة", "Testimonial 4"],
   ["الشهادة الخامسة", "Testimonial 5"],
+  ["الشهادة السادسة", "Testimonial 6"],
   ["الشهادة السابقة", "Previous testimonial"],
   ["الشهادة التالية", "Next testimonial"],
   ["شعار وقف الملك عبدالله", "King Abdullah Endowment logo"],
@@ -313,6 +332,16 @@ const phrases = [
   [
     "تشهد مجموعة مكارم المدينة الفندقية بأن مؤسسة بياناتك لتقنية المعلومات قامت بخدمات الربط الإلكتروني عبر تقنية الشبكات اللاسلكية وتقديم الدعم الفني، فلهم جزيل الشكر والتقدير على جهودهم الطيبة.",
     "Makarem Al Madinah Hospitality Group certifies that Bayanatech provided electronic connectivity via wireless networking and technical support—with sincere thanks and appreciation for their fine efforts."
+  ],
+  [
+    "شعار وزارة الصحة، المديرية العامة للشؤون الصحية بمنطقة المدينة المنورة",
+    "Ministry of Health, General Directorate of Health Affairs in Madinah Region logo"
+  ],
+  ["بليغ بن محمد سطيح", "Baligh bin Muhammad Satih"],
+  ["مدير إدارة الموارد الذاتية", "Director of Self-Resources Management"],
+  [
+    "تشكر المديرية العامة للشؤون الصحية بمنطقة المدينة المنورة ممثلة في إدارة الموارد الذاتية مؤسسة بياناتك لتقنية المعلومات على أدائها المتميز في تطوير نظام تكامل لإدارة الموارد الذاتية وذلك للعام الثالث على التوالي. متمنين لهم المزيد من التقدم والإبداع.",
+    "The General Directorate of Health Affairs in Madinah Region, represented by the Self-Resources Management Department, thanks Bayanatech for its distinguished performance in developing the Takamol system for self-resources management—for the third consecutive year. Wishing them further progress and creativity."
   ],
   ["هل لديك مشروع أو احتياج تقني؟", "Have a project or technology need?"],
   [
