@@ -101,26 +101,25 @@ function header(lang, active) {
       }
     : {
         navAria: "Primary",
-        solutions: "Solutions",
+        solutions: "Our Services",
         products: "Products",
-        midLabel: "Industries",
-        midHref: "industries.html",
-        midKey: "industries",
+        midLabel: "Our Work",
+        midHref: "case-studies.html",
+        midKey: "case-studies",
         about: "About",
         contact: "Contact",
-        consult: "Request Consultation",
+        consult: "Request a Quote",
         menu: "Menu",
         close: "Close",
         home: "Home",
-        allSol: "All Solutions",
-        cases: "Case Studies",
+        allSol: "All Services",
         mega: [
-          ["#infrastructure", "bi-hdd-network", "IT Infrastructure", "Resilient foundations that scale with your business"],
+          ["#infrastructure", "bi-hdd-network", "Infrastructure", "Resilient foundations that scale with your business"],
           ["#cybersecurity", "bi-shield-check", "Cybersecurity", "Protect data, networks, and continuity"],
           ["#cloud", "bi-cloud", "Cloud Services", "Agility without compromising control"],
           ["#networking", "bi-diagram-3", "Networking", "LAN, WAN, and wireless that perform"],
           ["#managed", "bi-headset", "Managed IT", "Proactive support with clear SLAs"],
-          ["#software", "bi-grid-1x2", "Business Software", "ERP and workplace systems that deliver ROI"]
+          ["#software", "bi-grid-1x2", "Business Software", "Systems that deliver tangible ROI"]
         ],
         offcanvas: "end"
       };
@@ -136,10 +135,7 @@ function header(lang, active) {
     )
     .join("");
 
-  const mobileMid = isAr
-    ? `<a class="nav-link" href="case-studies.html">${t.midLabel}</a>`
-    : `<a class="nav-link" href="industries.html">${t.midLabel}</a>
-        <a class="nav-link" href="case-studies.html">${t.cases}</a>`;
+  const mobileMid = `<a class="nav-link" href="case-studies.html">${t.midLabel}</a>`;
 
   return `
   <header class="site-header">
@@ -272,19 +268,19 @@ function footer(lang) {
         <div>
           <h5>Explore</h5>
           <ul>
-            <li><a href="solutions.html">Solutions</a></li>
+            <li><a href="solutions.html">Our Services</a></li>
             <li><a href="products.html">Products</a></li>
-            <li><a href="industries.html">Industries</a></li>
+            <li><a href="case-studies.html">Our Work</a></li>
             <li><a href="about.html">About</a></li>
           </ul>
         </div>
         <div>
-          <h5>Solutions</h5>
+          <h5>Our Services</h5>
           <ul>
             <li><a href="solutions.html#networking">Networking</a></li>
             <li><a href="solutions.html#cybersecurity">Cybersecurity</a></li>
             <li><a href="solutions.html#cloud">Cloud</a></li>
-            <li><a href="solutions.html#managed">Managed IT</a></li>
+            <li><a href="solutions.html#managed">Maintenance contracts</a></li>
           </ul>
         </div>
         <div class="footer-contact-col">
@@ -296,7 +292,7 @@ function footer(lang) {
             <li><i class="bi bi-envelope"></i><a href="mailto:${CONTACT.email}">${CONTACT.email}</a></li>
             <li><i class="bi bi-clock"></i><span>${CONTACT.hours.en}</span></li>
           </ul>
-          <a class="btn btn-brand footer-cta" href="consultation.html">Request Consultation</a>
+          <a class="btn btn-brand footer-cta" href="consultation.html">Request a Quote</a>
         </div>
       </div>
       <div class="footer-bottom">
@@ -314,12 +310,12 @@ function chromeEnd(lang) {
   return `
   <div class="fab-contact">
     <a class="fab-btn fab-whatsapp" href="${wa}" target="_blank" rel="noopener" aria-label="${isAr ? "واتساب" : "WhatsApp"}"><i class="bi bi-whatsapp"></i></a>
-    <a class="fab-btn fab-consult" href="consultation.html"><i class="bi bi-calendar-check"></i><span>${isAr ? "اطلب عرض سعر" : "Free consultation"}</span></a>
+    <a class="fab-btn fab-consult" href="consultation.html"><i class="bi bi-calendar-check"></i><span>${isAr ? "اطلب عرض سعر" : "Request a Quote"}</span></a>
   </div>
-  <div class="sticky-cta-bar" role="region" aria-label="${isAr ? "تواصل سريع" : "Quick consultation"}">
+  <div class="sticky-cta-bar" role="region" aria-label="${isAr ? "تواصل سريع" : "Quick quote"}">
     <div class="container d-flex flex-wrap align-items-center justify-content-between gap-2">
       <span class="small mb-0">${isAr ? "جاهز للحديث مع خبير؟" : "Ready to talk with an expert?"}</span>
-      <a class="btn btn-brand" href="consultation.html">${isAr ? "اطلب عرض سعر" : "Request Consultation"}</a>
+      <a class="btn btn-brand" href="consultation.html">${isAr ? "اطلب عرض سعر" : "Request a Quote"}</a>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"><\/script>
@@ -683,14 +679,16 @@ function consultationBody(lang) {
   return (
     pageHero(
       lang,
-      [{ href: "consultation.html", label: isAr ? "عرض سعر" : "Consultation" }],
-      isAr ? "اطلب عرض سعر" : "Book a free consultation",
-      isAr ? "أخبرنا عن احتياجك وسنقترح مساراً واضحاً للبنية والأمان أو التحول الرقمي." : "Tell us about your needs and we’ll propose a clear path for infrastructure, security, or digital transformation."
+      [{ href: "consultation.html", label: isAr ? "عرض سعر" : "Quote" }],
+      isAr ? "اطلب عرض سعر" : "Request a Quote",
+      isAr
+        ? "أخبرنا عن احتياجك وسنقترح مساراً واضحاً للبنية والأمان أو التحول الرقمي."
+        : "Tell us about your need and we’ll propose a clear path for infrastructure, security, or digital transformation."
     ) +
     `
     <section class="section"><div class="container"><div class="row justify-content-center"><div class="col-lg-8">
       <div class="form-card reveal">
-        <div class="alert alert-success d-none" tabindex="-1" data-form-success role="status">${isAr ? "تم استلام طلبك. سنتواصل قريباً." : "Request received. We’ll be in touch shortly."}</div>
+        <div class="alert alert-success d-none" tabindex="-1" data-form-success role="status">${isAr ? "تم استلام طلبك. سنتواصل قريباً." : "Your request was received. We’ll be in touch shortly."}</div>
         <div class="alert alert-danger d-none" tabindex="-1" data-form-error role="alert">${isAr ? "تعذّر الإرسال. حاول مرة أخرى." : "Could not send. Please try again."}</div>
         <form class="needs-validation" novalidate data-form="consultation">
           <input type="hidden" name="_subject" value="Bayanatech consultation request">
@@ -698,26 +696,26 @@ function consultationBody(lang) {
             <div class="col-md-6"><label class="form-label" for="qName">${isAr ? "الاسم الكامل" : "Full name"}</label><input class="form-control" id="qName" name="name" required><div class="invalid-feedback">${isAr ? "مطلوب" : "Required"}</div></div>
             <div class="col-md-6"><label class="form-label" for="qCompany">${isAr ? "الشركة / الجهة" : "Company / Organization"}</label><input class="form-control" id="qCompany" name="company" required><div class="invalid-feedback">${isAr ? "مطلوب" : "Required"}</div></div>
             <div class="col-md-6"><label class="form-label" for="qEmail">${isAr ? "البريد المهني" : "Work email"}</label><input class="form-control" id="qEmail" type="email" name="email" required><div class="invalid-feedback">${isAr ? "بريد صالح مطلوب" : "Valid email required"}</div></div>
-            <div class="col-md-6"><label class="form-label" for="qPhone">${isAr ? "الجوال" : "Phone"}</label><input class="form-control" id="qPhone" type="tel" name="phone" required><div class="invalid-feedback">${isAr ? "مطلوب" : "Required"}</div></div>
-            <div class="col-12"><label class="form-label" for="qService">${isAr ? "مجال الاهتمام" : "Service interest"}</label>
+            <div class="col-md-6"><label class="form-label" for="qPhone">${isAr ? "الجوال" : "Mobile"}</label><input class="form-control" id="qPhone" type="tel" name="phone" required><div class="invalid-feedback">${isAr ? "مطلوب" : "Required"}</div></div>
+            <div class="col-12"><label class="form-label" for="qService">${isAr ? "مجال الاهتمام" : "Area of interest"}</label>
               <select class="form-select" id="qService" name="service" required>
                 <option value="">${isAr ? "اختر..." : "Select..."}</option>
-                <option>${isAr ? "البنية التحتية" : "IT Infrastructure"}</option>
+                <option>${isAr ? "البنية التحتية" : "Infrastructure"}</option>
                 <option>${isAr ? "الأمن السيبراني" : "Cybersecurity"}</option>
                 <option>${isAr ? "السحابة" : "Cloud"}</option>
                 <option>${isAr ? "الشبكات" : "Networking"}</option>
-                <option>${isAr ? "تخطيط الموارد / تعمير" : "ERP / Taameer"}</option>
-                <option>${isAr ? "عقود الدعم" : "Managed IT"}</option>
+                <option>${isAr ? "تخطيط الموارد / تعمير" : "ERP / Tameer"}</option>
+                <option>${isAr ? "عقود الدعم" : "Support contracts"}</option>
                 <option>${isAr ? "أخرى" : "Other"}</option>
               </select>
               <div class="invalid-feedback">${isAr ? "مطلوب" : "Required"}</div>
             </div>
-            <div class="col-12"><label class="form-label" for="qMsg">${isAr ? "نبذة عن الاحتياج" : "Brief description"}</label><textarea class="form-control" id="qMsg" name="message" rows="5" required></textarea><div class="invalid-feedback">${isAr ? "مطلوب" : "Required"}</div></div>
-            <div class="col-12 form-check ms-1"><input class="form-check-input" type="checkbox" id="qConsent" name="consent" value="yes" required><label class="form-check-label" for="qConsent">${isAr ? "أوافق على التواصل بشأن طلبي." : "I agree to be contacted about this request."}</label><div class="invalid-feedback">${isAr ? "الموافقة مطلوبة" : "Consent required"}</div></div>
-            <div class="col-12"><div data-recaptcha></div><p class="small text-danger d-none mb-0" data-recaptcha-error>${isAr ? "يرجى إكمال التحقق." : "Please complete the captcha."}</p></div>
+            <div class="col-12"><label class="form-label" for="qMsg">${isAr ? "نبذة عن الاحتياج" : "Brief description of your need"}</label><textarea class="form-control" id="qMsg" name="message" rows="5" required></textarea><div class="invalid-feedback">${isAr ? "مطلوب" : "Required"}</div></div>
+            <div class="col-12 form-check ms-1"><input class="form-check-input optional-consent" type="checkbox" id="qConsent" name="consent" value="yes"><label class="form-check-label" for="qConsent">${isAr ? "أوافق على التواصل بشأن طلبي." : "I agree to be contacted about this request."}</label></div>
+            <div class="col-12"><div data-recaptcha></div><p class="small text-danger d-none mb-0" data-recaptcha-error>${isAr ? "يرجى إكمال التحقق." : "Please complete verification."}</p></div>
             <div class="col-12 d-flex flex-wrap gap-2">
-              <button class="btn btn-brand" type="submit">${isAr ? "إرسال الطلب" : "Submit consultation request"}</button>
-              <a class="btn btn-brand-outline" href="${wa}" target="_blank" rel="noopener">${isAr ? "واتساب مباشر" : "WhatsApp us"}</a>
+              <button class="btn btn-brand" type="submit">${isAr ? "إرسال الطلب" : "Submit request"}</button>
+              <a class="btn btn-brand-outline" href="${wa}" target="_blank" rel="noopener">${isAr ? "واتساب مباشر" : "Direct WhatsApp"}</a>
             </div>
           </div>
         </form>
