@@ -77,7 +77,6 @@ function header(lang, active) {
   const t = isAr
     ? {
         navAria: "الرئيسية",
-        solutions: "خدماتنا",
         products: "المنتجات",
         midLabel: "أعمالنا",
         midHref: "case-studies.html",
@@ -88,20 +87,10 @@ function header(lang, active) {
         menu: "القائمة",
         close: "إغلاق",
         home: "الرئيسية",
-        allSol: "كل الخدمات",
-        mega: [
-          ["#infrastructure", "bi-hdd-network", "البنية التحتية", "أسس تقنية قوية قابلة للتوسع"],
-          ["#cybersecurity", "bi-shield-check", "الأمن السيبراني", "حماية البيانات والشبكات واستمرارية الأعمال"],
-          ["#cloud", "bi-cloud", "الخدمات السحابية", "مرونة دون التخلي عن السيطرة"],
-          ["#networking", "bi-diagram-3", "الشبكات", "LAN وWAN ولاسلكي بأداء عالٍ"],
-          ["#managed", "bi-headset", "إدارة تقنية المعلومات", "دعم استباقي باتفاقيات واضحة"],
-          ["#software", "bi-grid-1x2", "برمجيات الأعمال", "أنظمة تحقق عائداً ملموساً"]
-        ],
         offcanvas: "start"
       }
     : {
         navAria: "Primary",
-        solutions: "Our Services",
         products: "Products",
         midLabel: "Our Work",
         midHref: "case-studies.html",
@@ -112,28 +101,10 @@ function header(lang, active) {
         menu: "Menu",
         close: "Close",
         home: "Home",
-        allSol: "All Services",
-        mega: [
-          ["#infrastructure", "bi-hdd-network", "Infrastructure", "Resilient foundations that scale with your business"],
-          ["#cybersecurity", "bi-shield-check", "Cybersecurity", "Protect data, networks, and continuity"],
-          ["#cloud", "bi-cloud", "Cloud Services", "Agility without compromising control"],
-          ["#networking", "bi-diagram-3", "Networking", "LAN, WAN, and wireless that perform"],
-          ["#managed", "bi-headset", "Managed IT", "Proactive support with clear SLAs"],
-          ["#software", "bi-grid-1x2", "Business Software", "Systems that deliver tangible ROI"]
-        ],
         offcanvas: "end"
       };
 
   const act = (key) => (active === key ? " active" : "");
-
-  const megaItems = t.mega
-    .map(
-      ([hash, icon, title, desc]) => `
-                    <div class="col-md-4">
-                      <a class="mega-item" href="solutions.html${hash}"><span class="mega-icon"><i class="bi ${icon}"></i></span><div><h6>${title}</h6><p>${desc}</p></div></a>
-                    </div>`
-    )
-    .join("");
 
   const mobileMid = `<a class="nav-link" href="case-studies.html">${t.midLabel}</a>`;
 
@@ -150,10 +121,7 @@ function header(lang, active) {
         </button>
         <div class="collapse navbar-collapse d-none d-lg-flex">
           <ul class="navbar-nav mx-auto align-items-lg-center">
-            <li class="nav-item nav-item-mega position-static">
-              <a class="nav-link nav-link-main${act("solutions")}" href="solutions.html" aria-expanded="false" aria-haspopup="true">${t.solutions}</a>
-              <div class="mega-menu" role="region"><div class="container"><div class="row g-3">${megaItems}</div></div></div>
-            </li>
+            <li class="nav-item"><a class="nav-link nav-link-main${act("home")}" href="index.html">${t.home}</a></li>
             <li class="nav-item"><a class="nav-link nav-link-main${act("products")}" href="products.html">${t.products}</a></li>
             <li class="nav-item"><a class="nav-link nav-link-main${act(t.midKey)}" href="${t.midHref}">${t.midLabel}</a></li>
             <li class="nav-item"><a class="nav-link nav-link-main${act("about")}" href="about.html">${t.about}</a></li>
@@ -176,21 +144,6 @@ function header(lang, active) {
     <div class="offcanvas-body">
       <nav aria-label="${isAr ? "الجوال" : "Mobile"}">
         <a class="nav-link" href="index.html">${t.home}</a>
-        <div class="accordion accordion-flush" id="mobAcc">
-          <div class="accordion-item border-0">
-            <h3 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobSol">${t.solutions}</button>
-            </h3>
-            <div id="mobSol" class="accordion-collapse collapse" data-bs-parent="#mobAcc">
-              <div class="accordion-body">
-                <a class="nav-link" href="solutions.html">${t.allSol}</a>
-                <a class="nav-link" href="solutions.html#infrastructure">${t.mega[0][2]}</a>
-                <a class="nav-link" href="solutions.html#cybersecurity">${t.mega[1][2]}</a>
-                <a class="nav-link" href="solutions.html#cloud">${t.mega[2][2]}</a>
-              </div>
-            </div>
-          </div>
-        </div>
         <a class="nav-link" href="products.html">${t.products}</a>
         ${mobileMid}
         <a class="nav-link" href="about.html">${t.about}</a>
@@ -220,17 +173,10 @@ function footer(lang) {
         <div>
           <h5>استكشف</h5>
           <ul>
-            <li><a href="solutions.html">خدماتنا</a></li>
             <li><a href="products.html">المنتجات</a></li>
             <li><a href="case-studies.html">أعمالنا</a></li>
             <li><a href="about.html">من نحن</a></li>
-          </ul>
-        </div>
-        <div>
-          <h5>خدماتنا</h5>
-          <ul>
-            <li><a href="solutions.html#networking">الشبكات</a></li>
-            <li><a href="solutions.html#managed">عقود الصيانة</a></li>
+            <li><a href="contact.html">تواصل معنا</a></li>
           </ul>
         </div>
         <div class="footer-contact-col">
@@ -266,17 +212,10 @@ function footer(lang) {
         <div>
           <h5>Explore</h5>
           <ul>
-            <li><a href="solutions.html">Our Services</a></li>
             <li><a href="products.html">Products</a></li>
             <li><a href="case-studies.html">Our Work</a></li>
             <li><a href="about.html">About</a></li>
-          </ul>
-        </div>
-        <div>
-          <h5>Our Services</h5>
-          <ul>
-            <li><a href="solutions.html#networking">Networking</a></li>
-            <li><a href="solutions.html#managed">Maintenance contracts</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div class="footer-contact-col">
@@ -356,99 +295,124 @@ function writePage(lang, filename, active, title, description, mainHtml) {
 
 /* ========== PAGE BODIES ========== */
 
-function solutionsBody(lang) {
-  const isAr = lang === "ar";
-  const items = isAr
-    ? [
-        ["infrastructure", "bi-hdd-network", "البنية التحتية لتقنية المعلومات", "أسس خوادم وتخزين وبيئة عمل تقلل التوقف وتدعم النمو.", "موثوقية أعلى", "تكلفة تشغيل أوضح", "جاهزية للتوسع"],
-        ["cybersecurity", "bi-shield-check", "الأمن السيبراني", "طبقات حماية للشبكات والبيانات تقلل مخاطر التوقف والاختراق.", "تقليل المخاطر", "استمرارية الأعمال", "ثقة أصحاب المصلحة"],
-        ["cloud", "bi-cloud", "الخدمات السحابية", "ترحيل وتشغيل أحمال العمل بمرونة مع تحكم بالأمان والتكلفة.", "سرعة النشر", "قابلية التوسع", "كفاءة التكلفة"],
-        ["networking", "bi-diagram-3", "الشبكات", "LAN وWAN ولاسلكي يربط المواقع والمستخدمين بأداء متوقع.", "اتصال مستقر", "ربط الفروع", "تجربة مستخدم أفضل"],
-        ["erp", "bi-boxes", "حلول تخطيط الموارد", "أتمتة الإدارية والمالية والفنية لرفع كفاءة التسليم.", "دورة عمل أقصر", "دقة أعلى", "خدمة عملاء أفضل"],
-        ["managed", "bi-headset", "إدارة تقنية المعلومات", "عقود صيانة ودعم فني استباقي باتفاقيات مستوى خدمة واضحة.", "استجابة أسرع", "صيانة وقائية", "تركيز على الأعمال"],
-        ["surveillance", "bi-camera-video", "المراقبة", "كاميرات IP وNVR لحماية المواقع والأصول مع مشاهدة عن بُعد.", "رؤية أشمل", "أدلة عند الحاجة", "طمأنينة تشغيلية"],
-        ["software", "bi-grid-1x2", "برمجيات الأعمال", "أنظمة مكان العمل والقطاعات التي تحول الورق إلى رقمية.", "إنتاجية أعلى", "أتمتة", "عائد ملموس"]
-      ]
-    : [
-        ["infrastructure", "bi-hdd-network", "IT Infrastructure", "Server, storage, and workplace foundations that reduce downtime and support growth.", "Higher reliability", "Clearer OpEx", "Scale-ready"],
-        ["cybersecurity", "bi-shield-check", "Cybersecurity", "Layered network and data protection that reduces breach and downtime risk.", "Lower risk", "Business continuity", "Stakeholder trust"],
-        ["cloud", "bi-cloud", "Cloud Services", "Migrate and operate workloads with agility, security, and cost control.", "Faster delivery", "Elasticity", "Cost efficiency"],
-        ["networking", "bi-diagram-3", "Networking", "LAN, WAN, and wireless that keep sites and users connected with predictable performance.", "Stable connectivity", "Branch linking", "Better UX"],
-        ["erp", "bi-boxes", "ERP Solutions", "Automate admin, finance, and technical workflows to improve delivery efficiency.", "Shorter cycles", "Higher accuracy", "Better service"],
-        ["managed", "bi-headset", "Managed IT Services", "Proactive maintenance and support with clear SLAs.", "Faster response", "Preventive care", "Business focus"],
-        ["surveillance", "bi-camera-video", "Surveillance", "IP cameras and NVR systems that protect sites and assets with remote viewing.", "Full visibility", "Evidence on demand", "Operational peace of mind"],
-        ["software", "bi-grid-1x2", "Business Software", "Workplace and industry systems that digitize paper processes.", "Higher productivity", "Automation", "Tangible ROI"]
-      ];
-
-  const hero = pageHero(
-    lang,
-    [{ href: "solutions.html", label: isAr ? "الحلول" : "Solutions" }],
-    isAr ? "حلول تقنية تحقق نتائج أعمال" : "Technology solutions built for business outcomes",
-    isAr
-      ? "كل حل يجيب عن سؤال واحد: لماذا يهتم العميل؟—الموثوقية، الأمان، الكفاءة، والتوسع."
-      : "Every solution answers one question: why should the customer care?—reliability, security, efficiency, and scale."
-  );
-
-  const cards = items
-    .map(([id, icon, title, desc, a, b, c], idx) => {
-      const muted = idx % 2 === 1 ? " section-muted" : "";
-      return `
-      <section class="section${muted}" id="${id}">
-        <div class="container">
-          <div class="row align-items-center g-5">
-            <div class="col-lg-6 reveal">
-              <div class="card-icon mb-3"><i class="bi ${icon}"></i></div>
-              <h2 class="section-title">${title}</h2>
-              <p class="section-lead">${desc}</p>
-              <ul class="feature-list mt-4">
-                <li><i class="bi bi-check-circle-fill"></i><span>${a}</span></li>
-                <li><i class="bi bi-check-circle-fill"></i><span>${b}</span></li>
-                <li><i class="bi bi-check-circle-fill"></i><span>${c}</span></li>
-              </ul>
-              <a class="btn btn-brand mt-4" href="consultation.html">${isAr ? "تحدث إلى خبير" : "Talk to an Expert"}</a>
-            </div>
-            <div class="col-lg-6 reveal">
-              <div class="card-soft p-5 text-center" style="min-height:280px;display:grid;place-items:center;background:linear-gradient(145deg,var(--bg-muted),rgba(13,148,136,.12))">
-                <i class="bi ${icon}" style="font-size:4rem;color:var(--brand-secondary)"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>`;
-    })
-    .join("");
-
-  return (
-    hero +
-    cards +
-    `
-    <section class="section"><div class="container"><div class="cta-band reveal">
-      <h2>${isAr ? "هل تحتاج تقييماً مجانياً؟" : "Need a free assessment?"}</h2>
-      <p>${isAr ? "حدد أولويات البنية والأمان والسحابة مع فريق بياناتك." : "Prioritize infrastructure, security, and cloud with the Bayanatech team."}</p>
-      <a class="btn btn-brand" href="consultation.html">${isAr ? "احجز استشارة" : "Book Consultation"}</a>
-    </div></div></section>`
-  );
-}
-
 function productsBody(lang) {
   const isAr = lang === "ar";
   return (
     pageHero(
       lang,
       [{ href: "products.html", label: isAr ? "المنتجات" : "Products" }],
-      isAr ? "كتالوج المنتجات والحلول" : "Products & solutions catalog",
-      isAr ? "ابحث وصِفِ حسب الفئة—شبكات، خوادم، سحابة، تخطيط موارد، أمن، حضور، ومراقبة." : "Search and filter by category—networking, servers, cloud, ERP, security, attendance, and surveillance."
+      isAr ? "تعمير السحابي" : "Tameer Cloud",
+      isAr
+        ? "نظام ERP سحابي متكامل لإدارة المكاتب الهندسية وشركات المقاولات مالياً وإدارياً وفنياً من منصة واحدة."
+        : "An integrated cloud ERP for managing engineering offices and contracting companies—financially, administratively, and technically—from one platform."
     ) +
     `
     <section class="section">
       <div class="container">
-        <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
-          <div data-product-filters class="filter-bar" role="group" aria-label="${isAr ? "تصفية" : "Filters"}"></div>
-          <label class="visually-hidden" for="productSearch">${isAr ? "بحث" : "Search"}</label>
-          <input id="productSearch" class="product-search form-control" type="search" placeholder="${isAr ? "ابحث عن منتج..." : "Search products..."}" data-product-search>
+        <div class="product-duo reveal" aria-label="${isAr ? "تعمير السحابي" : "Tameer Cloud"}">
+          <div class="product-duo-logo">
+            <img src="../assets/img/tameer-cloud-logo.png" width="360" height="273" alt="${isAr ? "شعار تعمير السحابي" : "Tameer Cloud logo"}" loading="eager">
+          </div>
+          <div class="erp-window" data-parallax-card>
+            <div class="erp-top">
+              <span></span><span></span><span></span>
+              <strong>${isAr ? "لوحة مؤشرات المدير — تعمير ERP" : "Manager dashboard — Tameer ERP"}</strong>
+            </div>
+            <div class="erp-shot">
+              <picture>
+                <source srcset="../assets/img/tameer-manager-dashboard.webp" type="image/webp">
+                <img
+                  src="../assets/img/tameer-manager-dashboard.jpg"
+                  alt="${isAr ? "لوحة مؤشرات المدير في تعمير ERP: إجمالي الإيرادات والمصروفات وصافي الأرباح، تحليلات الإيرادات، حالة المشاريع، وأداء الموظفين" : "Tameer ERP manager dashboard: total revenue, expenses, and net profit; revenue analytics; project status; and employee performance"}"
+                  width="1400"
+                  height="3175"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </picture>
+            </div>
+          </div>
         </div>
-        <div class="row g-4" data-products-grid data-detail-base="product-detail.html"></div>
-        <p class="products-empty" data-products-empty hidden>${isAr ? "لا توجد منتجات مطابقة." : "No matching products."}</p>
+        <div class="section-header centered">
+          <h2 class="section-title">${isAr ? "كل ما تحتاجه لإدارة أعمالك في مكان واحد" : "Everything you need to run your business in one place"}</h2>
+          <p class="section-lead">${isAr ? "يركز تعمير السحابي على أهداف المشروع ومتطلبات العميل والمدة والتكلفة، ويجمع إدارة المشاريع والحسابات والموارد البشرية في نظام واحد سهل الاستخدام." : "Tameer Cloud focuses on project goals, client requirements, timeline, and cost—bringing project management, accounting, and HR together in one easy-to-use system."}</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <a class="card-soft d-flex flex-column text-decoration-none" href="https://tameercloud.com/" target="_blank" rel="noopener">
+              <span class="card-icon"><i class="bi bi-kanban"></i></span>
+              <h3>${isAr ? "إدارة المشاريع" : "Project management"}</h3>
+              <p>${isAr ? "إدارة متخصصة للمشاريع الهندسية تشمل توزيع المهام، ومتابعة المراحل، ومخططات جانت، وسير العمل، والإشعارات، ومؤشرات الأداء." : "Specialized engineering project management including task assignment, stage tracking, Gantt charts, workflows, notifications, and KPIs."}</p>
+              <span class="btn-link-more mt-auto">${isAr ? "استكشف إدارة المشاريع" : "Explore project management"} <i class="bi bi-arrow-${isAr ? "left" : "right"}"></i></span>
+            </a>
+          </div>
+          <div class="col-lg-4">
+            <a class="card-soft d-flex flex-column text-decoration-none" href="https://tameercloud.com/accounts" target="_blank" rel="noopener">
+              <span class="card-icon"><i class="bi bi-calculator"></i></span>
+              <h3>${isAr ? "الحسابات والفوترة" : "Accounting & invoicing"}</h3>
+              <p>${isAr ? "نظام محاسبة وفوترة إلكترونية متكامل لإدارة المبيعات والمشتريات والضرائب والرواتب، مع تقارير مالية ومتابعة ربحية المشاريع." : "An integrated accounting and e-invoicing system for sales, purchasing, tax, and payroll—with financial reports and project profitability tracking."}</p>
+              <span class="btn-link-more mt-auto">${isAr ? "استكشف النظام المحاسبي" : "Explore the accounting system"} <i class="bi bi-arrow-${isAr ? "left" : "right"}"></i></span>
+            </a>
+          </div>
+          <div class="col-lg-4">
+            <a class="card-soft d-flex flex-column text-decoration-none" href="https://tameercloud.com/employees" target="_blank" rel="noopener">
+              <span class="card-icon"><i class="bi bi-people"></i></span>
+              <h3>${isAr ? "الموارد البشرية" : "Human resources"}</h3>
+              <p>${isAr ? "أتمتة شؤون الموظفين من الحضور والانصراف والإجازات والموافقات إلى مسير الرواتب والعقود والملفات، مع خدمات ذاتية عبر الجوال." : "Automate HR from attendance, leave, and approvals to payroll, contracts, and files—with self-service on mobile."}</p>
+              <span class="btn-link-more mt-auto">${isAr ? "استكشف الموارد البشرية" : "Explore human resources"} <i class="bi bi-arrow-${isAr ? "left" : "right"}"></i></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section product-stats" aria-labelledby="product-stats-title">
+      <div class="container">
+        <div class="section-header centered">
+          <span class="section-eyebrow">${isAr ? "أرقام تعكس الثقة" : "Numbers that reflect trust"}</span>
+          <h2 class="section-title" id="product-stats-title">${isAr ? "خبرة واسعة ونظام ينمو مع أعمالك" : "Deep experience and a system that grows with your business"}</h2>
+          <p class="section-lead">${isAr ? "حل محاسبي وإداري موثوق يخدم آلاف المنشآت والمستخدمين في المملكة." : "A trusted accounting and management solution serving thousands of organizations and users across the Kingdom."}</p>
+        </div>
+        <div class="product-metrics" aria-label="${isAr ? "إحصائيات تعمير السحابي" : "Tameer Cloud statistics"}">
+          <div class="product-metric">
+            <strong dir="ltr" data-counter="22" data-digits="latn" data-suffix="${isAr ? " ألف+" : "K+"}">0</strong>
+            <span>${isAr ? "منشأة سعودية" : "Saudi organizations"}</span>
+          </div>
+          <div class="product-metric">
+            <strong dir="ltr" data-counter="12" data-digits="latn" data-suffix="+">0</strong>
+            <span>${isAr ? "سنوات في السوق" : "Years in the market"}</span>
+          </div>
+          <div class="product-metric">
+            <strong dir="ltr" class="product-metric-value">
+              <img class="sar-symbol" src="../assets/img/saudi-riyal-symbol.png" alt="" width="28" height="32" aria-hidden="true">
+              <span data-counter="21" data-digits="latn" data-suffix="${isAr ? " مليون+" : "M+"}">0</span>
+            </strong>
+            <span>${isAr ? "عملية محاسبية" : "Accounting transactions"}</span>
+          </div>
+          <div class="product-metric">
+            <strong dir="ltr" data-counter="100" data-digits="latn" data-suffix="${isAr ? " ألف+" : "K+"}">0</strong>
+            <span>${isAr ? "مستخدم شهرياً" : "Monthly users"}</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section zatca-section" aria-labelledby="zatca-title">
+      <div class="container">
+        <div class="zatca-content">
+          <div class="zatca-copy">
+            <span class="zatca-panel-label">${isAr ? "الامتثال والموثوقية" : "Compliance & trust"}</span>
+            <h2 class="section-title" id="zatca-title">${isAr ? "جاهز لمتطلبات الفوترة الإلكترونية" : "Ready for e-invoicing requirements"}</h2>
+            <p class="section-lead">${isAr ? "يساعدك تعمير السحابي على إدارة الفواتير والعمليات المحاسبية بما يتوافق مع متطلبات هيئة الزكاة والضريبة والجمارك." : "Tameer Cloud helps you manage invoices and accounting operations in line with ZATCA requirements."}</p>
+          </div>
+          <img src="../assets/img/zatca-logo.png" alt="${isAr ? "هيئة الزكاة والضريبة والجمارك" : "Zakat, Tax and Customs Authority (ZATCA)"}" width="1018" height="246" loading="lazy">
+        </div>
+      </div>
+    </section>
+    <section class="section section-muted">
+      <div class="container text-center">
+        <span class="section-eyebrow">${isAr ? "اعرف المزيد" : "Learn more"}</span>
+        <h2 class="section-title">${isAr ? "اكتشف جميع إمكانات تعمير السحابي" : "Discover all Tameer Cloud capabilities"}</h2>
+        <p class="section-lead mx-auto mb-4">${isAr ? "للمزيد من المعلومات حول النظام ومميزاته، تفضل بزيارة الموقع الرسمي لتعمير السحابي." : "For more information about the system and its features, visit the official Tameer Cloud website."}</p>
+        <a class="btn btn-brand" href="https://tameercloud.com/" target="_blank" rel="noopener">${isAr ? "زيارة موقع تعمير السحابي" : "Visit Tameer Cloud website"} <i class="bi bi-box-arrow-up-${isAr ? "left me-2" : "right ms-2"}"></i></a>
       </div>
     </section>`
   );
@@ -723,8 +687,16 @@ function consultationBody(lang) {
 /* Generate all */
 ["en", "ar"].forEach((lang) => {
   const brand = lang === "ar" ? "بياناتك" : "Bayanatech";
-  writePage(lang, "solutions.html", "solutions", `${lang === "ar" ? "الحلول" : "Solutions"} | ${brand}`, lang === "ar" ? "حلول تقنية المعلومات من بياناتك" : "IT solutions from Bayanatech", solutionsBody(lang));
-  writePage(lang, "products.html", "products", `${lang === "ar" ? "المنتجات" : "Products"} | ${brand}`, lang === "ar" ? "منتجات وحلول بياناتك" : "Bayanatech products", productsBody(lang));
+  writePage(
+    lang,
+    "products.html",
+    "products",
+    lang === "ar" ? "تعمير السحابي | منتجات بياناتك" : "Tameer Cloud | Bayanatech Products",
+    lang === "ar"
+      ? "تعمير السحابي، نظام ERP متكامل لإدارة المشاريع والحسابات والموارد البشرية للمكاتب الهندسية وشركات المقاولات."
+      : "Tameer Cloud, an integrated ERP system for project management, accounting, and HR for engineering offices and contracting companies.",
+    productsBody(lang)
+  );
   writePage(lang, "product-detail.html", "products", `${lang === "ar" ? "تفاصيل المنتج" : "Product"} | ${brand}`, lang === "ar" ? "تفاصيل المنتج" : "Product details", productDetailBody(lang));
   writePage(lang, "industries.html", "industries", `${lang === "ar" ? "القطاعات" : "Industries"} | ${brand}`, lang === "ar" ? "قطاعات نخدمها" : "Industries we serve", industriesBody(lang));
   writePage(lang, "about.html", "about", `${lang === "ar" ? "من نحن" : "About"} | ${brand}`, lang === "ar" ? "عن بياناتك" : "About Bayanatech", aboutBody(lang));

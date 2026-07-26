@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="قصص نجاح العملاء">
-  <title>قصص النجاح | بياناتك</title>
+  <meta name="description" content="تفاصيل المنتج">
+  <title>تفاصيل المنتج | بياناتك</title>
   <link rel="icon" href="../assets/img/logo.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,7 @@
   <link href="../assets/css/tokens.css" rel="stylesheet">
   <link href="../assets/css/main.css" rel="stylesheet">
 </head>
-<body data-page="case-studies">
+<body data-page="products">
   <a class="skip-link" href="#main">تخطى إلى المحتوى</a>
 
   <header class="site-header">
@@ -30,13 +30,13 @@
         <div class="collapse navbar-collapse d-none d-lg-flex">
           <ul class="navbar-nav mx-auto align-items-lg-center">
             <li class="nav-item"><a class="nav-link nav-link-main" href="index.html">الرئيسية</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-main" href="products.html">المنتجات</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-main active" href="case-studies.html">أعمالنا</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-main active" href="products.html">المنتجات</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-main" href="case-studies.html">أعمالنا</a></li>
             <li class="nav-item"><a class="nav-link nav-link-main" href="about.html">من نحن</a></li>
             <li class="nav-item"><a class="nav-link nav-link-main" href="contact.html">تواصل معنا</a></li>
           </ul>
           <div class="d-flex align-items-center gap-2">
-            <a class="lang-switch" href="../en/case-studies.html" data-switch-lang="en" hreflang="en">English</a>
+            <a class="lang-switch" href="../en/products.html" data-switch-lang="en" hreflang="en">English</a>
             <a class="btn btn-brand" href="consultation.html">اطلب عرض سعر</a>
           </div>
         </div>
@@ -57,65 +57,48 @@
         <a class="nav-link" href="about.html">من نحن</a>
         <a class="nav-link" href="contact.html">تواصل معنا</a>
         <a class="btn btn-brand w-100 mt-3" href="consultation.html">اطلب عرض سعر</a>
-        <a class="lang-switch d-inline-block mt-3" href="../en/case-studies.html" data-switch-lang="en">English</a>
+        <a class="lang-switch d-inline-block mt-3" href="../en/products.html" data-switch-lang="en">English</a>
       </nav>
     </div>
   </div>
 
   <main id="main">
 
-  <section class="page-hero">
-    <div class="container">
-      <nav class="breadcrumb-nav" aria-label="Breadcrumb"><a href="index.html">الرئيسية</a><span class="sep">/</span><span class="current">قصص النجاح</span></nav>
-      <h1>قصص نجاح العملاء</h1>
-      <p class="lead">تحدٍ، حل، ونتائج—من شراكات حقيقية عبر المملكة.</p>
-    </div>
-  </section><section class="section"><div class="container"><div class="row g-4">
-      <div class="col-md-6 reveal">
-        <article class="card-soft case-card h-100">
-          <div class="case-meta"><span class="case-chip">الضيافة</span></div>
-          <h2 class="h4">ربط مجموعة فنادق</h2>
-          <div class="case-block"><strong>التحدي</strong><p>تحدي الربط اللاسلكي بين الفنادق.</p></div>
-          <div class="case-block"><strong>الحل</strong><p>بنية تحتية وربط لاسلكي ودعم فني.</p></div>
-          <div class="case-block"><strong>النتائج</strong><p>إنجاز المشروع واكتمال الربط.</p></div>
-          <div class="case-metrics"><div><div class="val">8+</div><div class="lbl">سنوات</div></div></div>
-        </article>
+    <section class="page-hero">
+      <div class="container" data-product-detail>
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+          <a href="index.html">الرئيسية</a><span class="sep">/</span>
+          <a href="products.html">المنتجات</a><span class="sep">/</span>
+          <span class="current" data-pd-crumb>—</span>
+        </nav>
+        <span class="badge-cat" data-pd-cat style="background:rgba(255,255,255,.15);color:#fff;padding:.35rem .75rem;border-radius:999px;font-size:.75rem"></span>
+        <h1 class="mt-3" data-pd-title>—</h1>
+        <p class="lead" data-pd-summary>—</p>
       </div>
-      <div class="col-md-6 reveal">
-        <article class="card-soft case-card h-100">
-          <div class="case-meta"><span class="case-chip">الأوقاف</span></div>
-          <h2 class="h4">تحديث شبكة وقف</h2>
-          <div class="case-block"><strong>التحدي</strong><p>الحاجة لتطوير شبكة ونظم معلومات.</p></div>
-          <div class="case-block"><strong>الحل</strong><p>تنفيذ بنية تحتية وتحسينات أنظمة.</p></div>
-          <div class="case-block"><strong>النتائج</strong><p>أثر فعّال في القدرات التقنية.</p></div>
-          <div class="case-metrics"><div><div class="val">Core</div><div class="lbl">رفع</div></div></div>
-        </article>
+    </section>
+    <section class="section">
+      <div class="container" data-product-detail>
+        <div class="row g-5">
+          <div class="col-lg-7">
+            <div class="card-soft mb-4 text-center py-5"><i data-pd-icon class="bi bi-box" style="font-size:4rem;color:var(--brand-secondary)"></i></div>
+            <h2 class="h4 text-brand">نظرة عامة</h2>
+            <p data-pd-desc class="text-muted"></p>
+            <h2 class="h4 text-brand mt-4">المزايا</h2>
+            <ul class="feature-list" data-pd-features></ul>
+          </div>
+          <div class="col-lg-5">
+            <div class="form-card sticky-lg-top" style="top:100px">
+              <h3 class="h5 text-brand mb-3">اطلب هذا الحل</h3>
+              <p class="small text-muted">سنتواصل خلال يوم عمل.</p>
+              <a class="btn btn-brand w-100 mb-2" href="consultation.html" data-pd-cta>اطلب عرضاً</a>
+              <a class="btn btn-brand-outline w-100" href="contact.html">تحدث إلى المبيعات</a>
+              <hr class="my-4">
+              <a class="btn-link-more" href="products.html">العودة للمنتجات <i class="bi bi-arrow-left"></i></a>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-md-6 reveal">
-        <article class="card-soft case-card h-100">
-          <div class="case-meta"><span class="case-chip">مؤسسات</span></div>
-          <h2 class="h4">دعم شركة قابضة</h2>
-          <div class="case-block"><strong>التحدي</strong><p>شبكة موثوقة ودعم مستمر.</p></div>
-          <div class="case-block"><strong>الحل</strong><p>بناء الشبكة ودعم لسبع سنوات.</p></div>
-          <div class="case-block"><strong>النتائج</strong><p>شراكة طويلة واستمرارية تشغيل.</p></div>
-          <div class="case-metrics"><div><div class="val">7</div><div class="lbl">سنوات</div></div></div>
-        </article>
-      </div>
-      <div class="col-md-6 reveal">
-        <article class="card-soft case-card h-100">
-          <div class="case-meta"><span class="case-chip">الضيافة</span></div>
-          <h2 class="h4">مكارم المدينة</h2>
-          <div class="case-block"><strong>التحدي</strong><p>ربط إلكتروني عبر الشبكات اللاسلكية.</p></div>
-          <div class="case-block"><strong>الحل</strong><p>خدمات ربط ودعم فني.</p></div>
-          <div class="case-block"><strong>النتائج</strong><p>تقدير الجهود وتحسين الاتصال.</p></div>
-          <div class="case-metrics"><div><div class="val">WAN</div><div class="lbl">ربط</div></div></div>
-        </article>
-      </div></div>
-    <div class="cta-band mt-5 reveal">
-      <h2>هل لديك مشروع مشابه؟</h2>
-      <a class="btn btn-brand" href="consultation.html">احجز استشارة مجانية</a>
-    </div>
-    </div></section>
+    </section>
   </main>
 
   <footer class="site-footer">

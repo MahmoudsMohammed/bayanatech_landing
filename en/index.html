@@ -57,88 +57,10 @@
           </button>
           <div class="collapse navbar-collapse d-none d-lg-flex">
             <ul class="navbar-nav mx-auto align-items-lg-center">
-              <li class="nav-item nav-item-mega position-static">
-                <a
-                  class="nav-link nav-link-main"
-                  href="solutions.html"
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  >Our Services</a
+              <li class="nav-item">
+                <a class="nav-link nav-link-main active" href="index.html"
+                  >Home</a
                 >
-                <div class="mega-menu" role="region" aria-label="Solutions menu">
-                  <div class="container">
-                    <div class="row g-3">
-                      <div class="col-md-4">
-                        <a
-                          class="mega-item"
-                          href="solutions.html#infrastructure"
-                          ><span class="mega-icon"
-                            ><i class="bi bi-hdd-network"></i
-                          ></span>
-                          <div>
-                            <h6>Infrastructure</h6>
-                            <p>Resilient foundations that scale with your business</p>
-                          </div></a
-                        >
-                      </div>
-                      <div class="col-md-4">
-                        <a class="mega-item" href="solutions.html#cybersecurity"
-                          ><span class="mega-icon"
-                            ><i class="bi bi-shield-check"></i
-                          ></span>
-                          <div>
-                            <h6>Cybersecurity</h6>
-                            <p>Protect data, networks, and continuity</p>
-                          </div></a
-                        >
-                      </div>
-                      <div class="col-md-4">
-                        <a class="mega-item" href="solutions.html#cloud"
-                          ><span class="mega-icon"
-                            ><i class="bi bi-cloud"></i
-                          ></span>
-                          <div>
-                            <h6>Cloud Services</h6>
-                            <p>Agility without compromising control</p>
-                          </div></a
-                        >
-                      </div>
-                      <div class="col-md-4">
-                        <a class="mega-item" href="solutions.html#networking"
-                          ><span class="mega-icon"
-                            ><i class="bi bi-diagram-3"></i
-                          ></span>
-                          <div>
-                            <h6>Networking</h6>
-                            <p>LAN, WAN, and wireless that perform</p>
-                          </div></a
-                        >
-                      </div>
-                      <div class="col-md-4">
-                        <a class="mega-item" href="solutions.html#managed"
-                          ><span class="mega-icon"
-                            ><i class="bi bi-headset"></i
-                          ></span>
-                          <div>
-                            <h6>Managed IT</h6>
-                            <p>Proactive support with clear SLAs</p>
-                          </div></a
-                        >
-                      </div>
-                      <div class="col-md-4">
-                        <a class="mega-item" href="solutions.html#software"
-                          ><span class="mega-icon"
-                            ><i class="bi bi-grid-1x2"></i
-                          ></span>
-                          <div>
-                            <h6>Business Software</h6>
-                            <p>Systems that deliver tangible ROI</p>
-                          </div></a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </li>
               <li class="nav-item">
                 <a class="nav-link nav-link-main" href="products.html"
@@ -192,36 +114,6 @@
       <div class="offcanvas-body">
         <nav aria-label="Mobile">
           <a class="nav-link" href="index.html">Home</a>
-          <div class="accordion accordion-flush" id="mobAcc">
-            <div class="accordion-item border-0">
-              <h3 class="accordion-header">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#mobSol"
-                >
-                  Our Services
-                </button>
-              </h3>
-              <div
-                id="mobSol"
-                class="accordion-collapse collapse"
-                data-bs-parent="#mobAcc"
-              >
-                <div class="accordion-body">
-                  <a class="nav-link" href="solutions.html">All Services</a>
-                  <a class="nav-link" href="solutions.html#infrastructure"
-                    >Infrastructure</a
-                  >
-                  <a class="nav-link" href="solutions.html#cybersecurity"
-                    >Cybersecurity</a
-                  >
-                  <a class="nav-link" href="solutions.html#cloud">Cloud</a>
-                </div>
-              </div>
-            </div>
-          </div>
           <a class="nav-link" href="products.html">Products</a>
           <a class="nav-link" href="case-studies.html">Our Work</a>
           <a class="nav-link" href="about.html">About</a>
@@ -405,7 +297,7 @@
             <h2 class="section-title">Integrated technology solutions under one roof</h2>
           </div>
           <div class="services-grid">
-            <a class="service-card reveal" href="solutions.html#networking"
+            <div class="service-card reveal"
               ><span class="service-num">01</span>
               <div class="card-icon"><i class="bi bi-diagram-3"></i></div>
               <h3>Network infrastructure</h3>
@@ -418,11 +310,9 @@
                 <li>Network management</li>
                 <li>Performance optimization</li>
                 <li>Branch connectivity solutions</li>
-              </ul>
-              <span class="service-link"
-                >Learn more <i class="bi bi-arrow-right"></i></span
-            ></a>
-            <a class="service-card reveal" href="solutions.html#infrastructure"
+              </ul></div
+            >
+            <div class="service-card reveal"
               ><span class="service-num">02</span>
               <div class="card-icon"><i class="bi bi-server"></i></div>
               <h3>Servers & storage solutions</h3>
@@ -435,11 +325,9 @@
                 <li>Backup</li>
                 <li>Virtualization</li>
                 <li>Server monitoring & management</li>
-              </ul>
-              <span class="service-link"
-                >Learn more <i class="bi bi-arrow-right"></i></span
-            ></a>
-            <a class="service-card reveal" href="solutions.html#surveillance"
+              </ul></div
+            >
+            <div class="service-card reveal"
               ><span class="service-num">03</span>
               <div class="card-icon"><i class="bi bi-camera-video"></i></div>
               <h3>Surveillance cameras</h3>
@@ -452,11 +340,9 @@
                 <li>Central monitoring</li>
                 <li>Recording & archiving</li>
                 <li>Maintenance & technical support</li>
-              </ul>
-              <span class="service-link"
-                >Learn more <i class="bi bi-arrow-right"></i></span
-            ></a>
-            <a class="service-card reveal" href="solutions.html#networking"
+              </ul></div
+            >
+            <div class="service-card reveal"
               ><span class="service-num">04</span>
               <div class="card-icon"><i class="bi bi-wifi"></i></div>
               <h3>Wireless networks (Wi-Fi)</h3>
@@ -468,11 +354,9 @@
                 <li>Enterprise Wi-Fi solutions</li>
                 <li>Signal quality optimization</li>
                 <li>User & permission management</li>
-              </ul>
-              <span class="service-link"
-                >Learn more <i class="bi bi-arrow-right"></i></span
-            ></a>
-            <a class="service-card reveal" href="solutions.html"
+              </ul></div
+            >
+            <div class="service-card reveal"
               ><span class="service-num">05</span>
               <div class="card-icon"><i class="bi bi-telephone"></i></div>
               <h3>PBX & communication systems</h3>
@@ -485,11 +369,9 @@
                 <li>Contact center systems</li>
                 <li>Branch linking</li>
                 <li>Call management & reporting</li>
-              </ul>
-              <span class="service-link"
-                >Learn more <i class="bi bi-arrow-right"></i></span
-            ></a>
-            <a class="service-card reveal" href="solutions.html"
+              </ul></div
+            >
+            <div class="service-card reveal"
               ><span class="service-num">06</span>
               <div class="card-icon"><i class="bi bi-person-badge"></i></div>
               <h3>Attendance systems</h3>
@@ -501,11 +383,9 @@
                 <li>Facial recognition</li>
                 <li>Attendance reports</li>
                 <li>Integration with admin systems</li>
-              </ul>
-              <span class="service-link"
-                >Learn more <i class="bi bi-arrow-right"></i></span
-            ></a>
-            <a class="service-card reveal" href="solutions.html#cybersecurity"
+              </ul></div
+            >
+            <div class="service-card reveal"
               ><span class="service-num">07</span>
               <div class="card-icon"><i class="bi bi-shield-lock"></i></div>
               <h3>Information & network security</h3>
@@ -518,11 +398,9 @@
                 <li>Access management</li>
                 <li>Threat monitoring</li>
                 <li>Security risk assessment</li>
-              </ul>
-              <span class="service-link"
-                >Learn more <i class="bi bi-arrow-right"></i></span
-            ></a>
-            <a class="service-card reveal" href="solutions.html#managed"
+              </ul></div
+            >
+            <div class="service-card reveal"
               ><span class="service-num">08</span>
               <div class="card-icon"><i class="bi bi-tools"></i></div>
               <h3>Maintenance & support contracts</h3>
@@ -535,10 +413,8 @@
                 <li>On-site visits</li>
                 <li>Incident handling</li>
                 <li>Periodic reports</li>
-              </ul>
-              <span class="service-link"
-                >Learn more <i class="bi bi-arrow-right"></i></span
-            ></a>
+              </ul></div
+            >
           </div>
         </div>
       </section>
@@ -1212,17 +1088,10 @@
           <div>
             <h5>Explore</h5>
             <ul>
-              <li><a href="solutions.html">Our Services</a></li>
               <li><a href="products.html">Products</a></li>
               <li><a href="case-studies.html">Our Work</a></li>
               <li><a href="about.html">About</a></li>
-            </ul>
-          </div>
-          <div>
-            <h5>Our Services</h5>
-            <ul>
-              <li><a href="solutions.html#networking">Networking</a></li>
-              <li><a href="solutions.html#managed">Maintenance contracts</a></li>
+              <li><a href="contact.html">Contact</a></li>
             </ul>
           </div>
           <div class="footer-contact-col">

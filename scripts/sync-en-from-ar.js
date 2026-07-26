@@ -49,6 +49,7 @@ const phrases = [
   ["الخدمات السحابية", "Cloud Services"],
   ["البنية التحتية", "Infrastructure"],
   ["خدماتنا", "Our Services"],
+  ["منتجاتنا", "Our Products"],
   ["المنتجات", "Products"],
   ["أعمالنا", "Our Work"],
   ["من نحن", "About"],
