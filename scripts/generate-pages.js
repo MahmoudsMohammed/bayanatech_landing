@@ -523,9 +523,9 @@ function aboutBody(lang) {
         <h2 class="section-title">${isAr ? "أكثر من أربعة عشر عاماً من الشراكة التقنية" : "Fourteen+ years of technology partnership"}</h2>
         <p class="text-muted">${isAr ? "نقدّم حلولاً متكاملة في الشبكات ومراكز البيانات والاستشارات والأمن وأنظمة الحاسب وخدمات ما بعد البيع—لأن عملاءنا مقياس نجاحنا وشركاء عمل نسعى لإبقائهم خيارهم الأفضل." : "We deliver integrated solutions across networks, data centers, consulting, security, computer systems, and aftermarket services—because our customers are our measure of success and partners we work hard to keep."}</p>
         <div class="row g-3 mt-3">
-          <div class="col-4"><div class="metric-card"><div class="metric-value" data-counter="14" data-suffix="+">0</div><div class="metric-label">${isAr ? "سنوات" : "Years"}</div></div></div>
-          <div class="col-4"><div class="metric-card"><div class="metric-value" data-counter="300" data-suffix="+">0</div><div class="metric-label">${isAr ? "مشاريع" : "Projects"}</div></div></div>
-          <div class="col-4"><div class="metric-card"><div class="metric-value" data-counter="120" data-suffix="+">0</div><div class="metric-label">${isAr ? "عملاء" : "Clients"}</div></div></div>
+          <div class="col-4"><div class="metric-card"><div class="metric-value" data-counter="14" data-digits="latn" data-suffix="+">0</div><div class="metric-label">${isAr ? "سنة" : "Years"}</div></div></div>
+          <div class="col-4"><div class="metric-card"><div class="metric-value" data-counter="4000" data-digits="latn">0</div><div class="metric-label">${isAr ? "مشروع ناجح" : "Successful projects"}</div></div></div>
+          <div class="col-4"><div class="metric-card"><div class="metric-value" data-counter="3000" data-digits="latn" data-suffix="+">0</div><div class="metric-label">${isAr ? "عميل راضي" : "Satisfied clients"}</div></div></div>
         </div>
       </div>
       <div class="col-lg-6 reveal">
