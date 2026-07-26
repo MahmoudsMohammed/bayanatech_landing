@@ -1370,10 +1370,6 @@ html[lang="ar"] .product-duo .erp-window {
   line-height: 1.55;
 }
 
-.footer-cta {
-  margin-top: 0.75rem;
-}
-
 .footer-bottom {
   position: relative;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -1490,32 +1486,6 @@ html[lang="ar"] .product-duo .erp-window {
   gap: 0.4rem;
   display: inline-flex;
   align-items: center;
-}
-
-.sticky-cta-bar {
-  position: fixed;
-  inset-inline: 0;
-  bottom: 0;
-  z-index: 1035;
-  background: rgba(10, 10, 10, 0.96);
-  color: #fff;
-  padding: 1rem;
-  transform: translateY(110%);
-  transition: transform var(--transition);
-  box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.2);
-}
-
-.sticky-cta-bar.is-visible {
-  transform: translateY(0);
-}
-
-body.has-sticky-cta {
-  padding-bottom: calc(71rem / 16);
-}
-
-.sticky-cta-bar .btn-brand {
-  padding: 0.5rem 1.1rem;
-  font-size: var(--fs-sm);
 }
 
 /* ===== Forms ===== */

@@ -188,7 +188,6 @@ function footer(lang) {
             <li><i class="bi bi-envelope"></i><a href="mailto:${CONTACT.email}">${CONTACT.email}</a></li>
             <li><i class="bi bi-clock"></i><span>${CONTACT.hours.ar}</span></li>
           </ul>
-          <a class="btn btn-brand footer-cta" href="consultation.html">اطلب عرض سعر</a>
         </div>
       </div>
       <div class="footer-bottom">
@@ -227,7 +226,6 @@ function footer(lang) {
             <li><i class="bi bi-envelope"></i><a href="mailto:${CONTACT.email}">${CONTACT.email}</a></li>
             <li><i class="bi bi-clock"></i><span>${CONTACT.hours.en}</span></li>
           </ul>
-          <a class="btn btn-brand footer-cta" href="consultation.html">Request a Quote</a>
         </div>
       </div>
       <div class="footer-bottom">
@@ -246,12 +244,6 @@ function chromeEnd(lang) {
   <div class="fab-contact">
     <a class="fab-btn fab-whatsapp" href="${wa}" target="_blank" rel="noopener" aria-label="${isAr ? "واتساب" : "WhatsApp"}"><i class="bi bi-whatsapp"></i></a>
     <a class="fab-btn fab-consult" href="consultation.html"><i class="bi bi-calendar-check"></i><span>${isAr ? "اطلب عرض سعر" : "Request a Quote"}</span></a>
-  </div>
-  <div class="sticky-cta-bar" role="region" aria-label="${isAr ? "تواصل سريع" : "Quick quote"}">
-    <div class="container d-flex flex-wrap align-items-center justify-content-between gap-2">
-      <span class="small mb-0">${isAr ? "جاهز للحديث مع خبير؟" : "Ready to talk with an expert?"}</span>
-      <a class="btn btn-brand" href="consultation.html">${isAr ? "اطلب عرض سعر" : "Request a Quote"}</a>
-    </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"><\/script>
   <script src="../assets/js/config.js"><\/script>

@@ -416,21 +416,6 @@
     });
   }
 
-  /* Sticky CTA bar — show after scrolling past hero */
-  function initStickyCta() {
-    const bar = document.querySelector(".sticky-cta-bar");
-    const hero = document.querySelector(".hero, .page-hero");
-    if (!bar) return;
-    const toggle = () => {
-      const threshold = hero ? hero.offsetHeight * 0.6 : 400;
-      const visible = window.scrollY > threshold;
-      bar.classList.toggle("is-visible", visible);
-      document.body.classList.toggle("has-sticky-cta", visible);
-    };
-    toggle();
-    window.addEventListener("scroll", toggle, { passive: true });
-  }
-
   /* Newsletter stub */
   function initNewsletter() {
     document.querySelectorAll("[data-newsletter]").forEach((form) => {
@@ -461,7 +446,6 @@
     initCounters();
     initRecaptcha();
     initForms();
-    initStickyCta();
     initNewsletter();
     initParallaxCards();
   });
