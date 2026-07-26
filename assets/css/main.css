@@ -699,6 +699,54 @@ a:hover {
   font-weight: var(--fw-medium);
 }
 
+/* ===== Product page logo + ERP showcase ===== */
+.product-duo {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+  align-items: center;
+  justify-items: center;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.product-duo-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-duo-logo img {
+  display: block;
+  width: min(100%, 280px);
+  height: auto;
+}
+
+.product-duo .erp-window {
+  width: 100%;
+  max-width: 420px;
+  border-color: rgba(15, 76, 129, 0.14);
+  border-radius: 16px;
+  box-shadow: 0 16px 36px rgba(15, 76, 129, 0.14);
+  transform: perspective(900px) rotateY(5deg) rotateX(2deg);
+}
+
+.product-duo .erp-top {
+  height: 36px;
+}
+
+.product-duo .erp-shot {
+  height: 260px;
+}
+
+.product-duo .erp-window:hover .erp-shot img,
+.product-duo .erp-window:focus-within .erp-shot img {
+  transform: translateY(calc(260px - 100%));
+}
+
+html[lang="ar"] .product-duo .erp-window {
+  transform: perspective(900px) rotateY(-5deg) rotateX(2deg);
+}
+
 /* ===== Product statistics and compliance ===== */
 .product-stats {
   background:
@@ -2581,6 +2629,14 @@ body.is-ready [data-hero-item]:nth-child(2) {
   font-size: var(--fs-sm);
 }
 
+.project-signoff {
+  margin-top: 0.85rem;
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: var(--fw-semibold);
+  line-height: 1.55;
+}
+
 .project-arrow {
   position: absolute;
   inset-inline-end: 1.25rem;
@@ -2950,7 +3006,26 @@ body.is-ready [data-hero-item]:nth-child(2) {
   .product-points {
     grid-template-columns: 1fr;
   }
-  .erp-window {
+  .product-duo {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .product-duo-logo img {
+    width: min(100%, 220px);
+  }
+  .product-duo .erp-window {
+    max-width: 340px;
+  }
+  .product-duo .erp-shot {
+    height: 210px;
+  }
+  .product-duo .erp-window:hover .erp-shot img,
+  .product-duo .erp-window:focus-within .erp-shot img {
+    transform: translateY(calc(210px - 100%));
+  }
+  .erp-window,
+  .product-duo .erp-window,
+  html[lang="ar"] .product-duo .erp-window {
     transform: none;
   }
   .erp-shot {
