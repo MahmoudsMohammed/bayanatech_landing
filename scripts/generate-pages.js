@@ -191,7 +191,7 @@ function footer(lang) {
         </div>
       </div>
       <div class="footer-bottom">
-        <span>جميع الحقوق محفوظة © 2008–2026 لمؤسسة بياناتك لتقنية المعلومات</span>
+        <span>جميع الحقوق محفوظة ©2026 لمؤسسة بياناتك لتقنية المعلومات</span>
         <span>المدينة المنورة، المملكة العربية السعودية</span>
       </div>
     </div>
@@ -229,7 +229,7 @@ function footer(lang) {
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2008–2026 Bayanatech for Information Technology. All rights reserved.</span>
+        <span>©2026 Bayanatech for Information Technology. All rights reserved.</span>
         <span>Madinah, Kingdom of Saudi Arabia</span>
       </div>
     </div>
@@ -366,22 +366,29 @@ function productsBody(lang) {
         </div>
         <div class="product-metrics" aria-label="${isAr ? "إحصائيات تعمير السحابي" : "Tameer Cloud statistics"}">
           <div class="product-metric">
-            <strong dir="ltr" data-counter="22" data-digits="latn" data-suffix="${isAr ? " ألف+" : "K+"}">0</strong>
+            <strong dir="ltr" class="product-metric-value">
+              <span data-counter="22" data-digits="latn" data-suffix="${isAr ? "+" : "K+"}">0</span>${isAr ? `
+              <span class="metric-unit">ألف</span>` : ""}
+            </strong>
             <span>${isAr ? "منشأة سعودية" : "Saudi organizations"}</span>
           </div>
           <div class="product-metric">
             <strong dir="ltr" data-counter="12" data-digits="latn" data-suffix="+">0</strong>
-            <span>${isAr ? "سنوات في السوق" : "Years in the market"}</span>
+            <span>${isAr ? "عاماً في السوق" : "Years in the market"}</span>
           </div>
           <div class="product-metric">
             <strong dir="ltr" class="product-metric-value">
+              <span data-counter="21" data-digits="latn" data-suffix="${isAr ? "+" : "M+"}">0</span>${isAr ? `
+              <span class="metric-unit">مليون</span>` : ""}
               <img class="sar-symbol" src="../assets/img/saudi-riyal-symbol.png" alt="" width="28" height="32" aria-hidden="true">
-              <span data-counter="21" data-digits="latn" data-suffix="${isAr ? " مليون+" : "M+"}">0</span>
             </strong>
             <span>${isAr ? "عملية محاسبية" : "Accounting transactions"}</span>
           </div>
           <div class="product-metric">
-            <strong dir="ltr" data-counter="100" data-digits="latn" data-suffix="${isAr ? " ألف+" : "K+"}">0</strong>
+            <strong dir="ltr" class="product-metric-value">
+              <span data-counter="100" data-digits="latn" data-suffix="${isAr ? "+" : "K+"}">0</span>${isAr ? `
+              <span class="metric-unit">ألف</span>` : ""}
+            </strong>
             <span>${isAr ? "مستخدم شهرياً" : "Monthly users"}</span>
           </div>
         </div>
@@ -513,7 +520,7 @@ function aboutBody(lang) {
       <div class="col-lg-6 reveal">
         <span class="section-eyebrow">${isAr ? "قصتنا" : "Our story"}</span>
         <h2 class="section-title">${isAr ? "أكثر من أربعة عشر عاماً من الشراكة التقنية" : "Fourteen+ years of technology partnership"}</h2>
-        <p class="text-muted">${isAr ? "نقدّم حلولاً متكاملة في الشبكات ومراكز البيانات والاستشارات والأمن وأنظمة الحاسب وخدمات ما بعد البيع—لأن عملاءنا مقياس نجاحنا وشركاء عمل نسعى لإبقائهم خيارهم الأفضل." : "We deliver integrated solutions across networks, data centers, consulting, security, computer systems, and aftermarket services—because our customers are our measure of success and partners we work hard to keep."}</p>
+        <p class="text-muted">${isAr ? "نقدّم حلولاً متكاملة في الشبكات ومراكز البيانات والاستشارات والأمن وأنظمة الحاسب وخدمات ما بعد البيع—لأن عملاءنا هم مقياس نجاحنا وشركاء مسيرتنا، فإننا نسعى دائماً لأن نبقى خيارهم الأول في الحلول التقنية." : "We deliver integrated solutions across networks, data centers, consulting, security, computer systems, and aftermarket services—because our customers are the measure of our success and partners in our journey, we always strive to remain their first choice in technical solutions."}</p>
         <div class="row g-3 mt-3">
           <div class="col-4"><div class="metric-card"><div class="metric-value" data-counter="14" data-digits="latn" data-suffix="+">0</div><div class="metric-label">${isAr ? "سنة" : "Years"}</div></div></div>
           <div class="col-4"><div class="metric-card"><div class="metric-value" data-counter="4000" data-digits="latn">0</div><div class="metric-label">${isAr ? "مشروع ناجح" : "Successful projects"}</div></div></div>
@@ -652,12 +659,14 @@ function consultationBody(lang) {
             <div class="col-12"><label class="form-label" for="qService">${isAr ? "مجال الاهتمام" : "Area of interest"}</label>
               <select class="form-select" id="qService" name="service" required>
                 <option value="">${isAr ? "اختر..." : "Select..."}</option>
-                <option>${isAr ? "البنية التحتية" : "Infrastructure"}</option>
-                <option>${isAr ? "الأمن السيبراني" : "Cybersecurity"}</option>
-                <option>${isAr ? "السحابة" : "Cloud"}</option>
-                <option>${isAr ? "الشبكات" : "Networking"}</option>
-                <option>${isAr ? "تخطيط الموارد / تعمير" : "ERP / Tameer"}</option>
-                <option>${isAr ? "عقود الدعم" : "Support contracts"}</option>
+                <option>${isAr ? "البنية التحتية للشبكات" : "Network Infrastructure"}</option>
+                <option>${isAr ? "السيرفرات وحلول التخزين" : "Servers and Storage Solutions"}</option>
+                <option>${isAr ? "كاميرات المراقبة" : "Surveillance Cameras"}</option>
+                <option>${isAr ? "الشبكات اللاسلكية (Wi-Fi)" : "Wireless Networks (Wi-Fi)"}</option>
+                <option>${isAr ? "السنترالات وأنظمة الاتصال" : "PBX and Communication Systems"}</option>
+                <option>${isAr ? "أنظمة الحضور والانصراف" : "Attendance Systems"}</option>
+                <option>${isAr ? "أمن المعلومات والشبكات" : "Information and Network Security"}</option>
+                <option>${isAr ? "عقود الصيانة والدعم الفني" : "Maintenance Contracts and Technical Support"}</option>
                 <option>${isAr ? "أخرى" : "Other"}</option>
               </select>
               <div class="invalid-feedback">${isAr ? "مطلوب" : "Required"}</div>

@@ -74,8 +74,6 @@ const phrases = [
   ["الكاميرات", "Cameras"],
   ["الدعم الفني", "Technical Support"],
   ["تحدث مع خبير", "Talk to an Expert"],
-  ["عاماً من الخبرة", "Years of experience"],
-  ["مشروع تقني", "Technology projects"],
   ["مركز العمليات التقنية", "Network operations center"],
   ["الأنظمة مستقرة", "Systems stable"],
   ["مركز البيانات", "Data center"],
@@ -252,10 +250,21 @@ const phrases = [
   ],
   ["عميل من القطاع غير الربحي", "Non-profit sector client"],
   ["القطاع غير الربحي", "Non-profit sector"],
-  ["تطوير شبكة ونظم معلومات وقف خيري", "Developing network and information systems for a charitable endowment"],
+  [
+    "وقف خادم الحرمين الشريفين الملك عبدالله بن عبدالعزيز - رحمه الله -",
+    "King Abdullah bin Abdulaziz Endowment for the Two Holy Mosques — may God have mercy on him —"
+  ],
+  [
+    "نفخر في مؤسسة بياناتك لتقنية المعلومات بمشاركتنا في تنفيذ أحد المشاريع التقنية المتميزة لصالح وقف خادم الحرمين الشريفين الملك عبدالله بن عبدالعزيز - رحمه الله -، والذي شمل تصميم وتنفيذ البنية التحتية لشبكة الحاسب الآلي، وأنظمة المراقبة الأمنية، وتطوير البرامج والأنظمة الإدارية وفق أعلى المعايير التقنية.",
+    "At Bayanatech, we are proud to have contributed to one of the distinguished technical projects for the King Abdullah bin Abdulaziz Endowment for the Two Holy Mosques — may God have mercy on him — covering the design and implementation of computer network infrastructure, security surveillance systems, and the development of administrative software and systems to the highest technical standards."
+  ],
   ["صديق فارسي القابضة، عميل الدعم الفني", "Sadeeq Farsi Holding, technical support client"],
   ["الشركات", "Enterprises"],
-  ["سبع سنوات من الدعم لشركة قابضة", "Seven years of support for a holding company"],
+  ["شركة فارسي القابضة", "Farsi Holding Company"],
+  [
+    "تشرفت مؤسسة بياناتك لتقنية المعلومات بتنفيذ مشروع البنية التحتية التقنية لشركة فارسي القابضة، والذي شمل إنشاء شبكات الحاسب الآلي، وتجهيز الخوادم، وربط الفروع بشبكة لاسلكية موحدة وآمنة. واستمرارًا لشراكتنا، قدمنا خدمات الدعم الفني والصيانة المتخصصة لمدة سبع سنوات، بما ساهم في استقرار بيئة العمل التقنية وضمان استمرارية العمليات بكفاءة عالية.",
+    "Bayanatech was honored to deliver the technical infrastructure project for Farsi Holding Company, including computer networks, server provisioning, and connecting branches through a unified, secure wireless network. Continuing our partnership, we provided specialized technical support and maintenance services for seven years, helping stabilize the technical work environment and ensure operational continuity at high efficiency."
+  ],
   ["شركاء النجاح", "Success partners"],
   ["عملاء اختارونا شريكاً تقنياً", "Clients who chose us as their technology partner"],
   [
@@ -383,8 +392,8 @@ const phrases = [
   ],
   ["السبت - الخميس 09:00 - 19:00", "Saturday – Thursday, 09:00 – 19:00"],
   [
-    "جميع الحقوق محفوظة © 2008–2026 لمؤسسة بياناتك لتقنية المعلومات",
-    "© 2008–2026 Bayanatech for Information Technology. All rights reserved."
+    "جميع الحقوق محفوظة ©2026 لمؤسسة بياناتك لتقنية المعلومات",
+    "©2026 Bayanatech for Information Technology. All rights reserved."
   ],
   ["المدينة المنورة، المملكة العربية السعودية", "Madinah, Kingdom of Saudi Arabia"],
   ['alt="بياناتك Bayanatech"', 'alt="Bayanatech"'],
@@ -422,10 +431,8 @@ const phrases = [
     "A trusted accounting and management solution serving thousands of organizations and users across the Kingdom."
   ],
   ['aria-label="إحصائيات تعمير السحابي"', 'aria-label="Tameer Cloud statistics"'],
-  ['data-suffix=" ألف+"', 'data-suffix="K+"'],
-  ['data-suffix=" مليون+"', 'data-suffix="M+"'],
   ["منشأة سعودية", "Saudi organizations"],
-  ["سنوات في السوق", "Years in the market"],
+  ["عاماً في السوق", "Years in the market"],
   ["مشروع ناجح", "Successful projects"],
   ["عميل راضي", "Satisfied clients"],
   [">سنة</", ">Years</"],
@@ -489,6 +496,14 @@ function convertArToEn(html) {
       .replace(/\s+/g, "\\s+");
     out = out.replace(new RegExp(flexible, "g"), en);
   }
+
+  // Product metrics: Arabic spells the unit out next to the number ("22+ ألف"),
+  // English folds it into a compact suffix ("22K+").
+  out = out.replace(
+    /(<span data-counter="\d+" data-digits="latn") data-suffix="\+">0<\/span>\s*<span class="metric-unit">(ألف|مليون)<\/span>/g,
+    (match, head, unit) =>
+      `${head} data-suffix="${unit === "ألف" ? "K+" : "M+"}">0</span>`
+  );
 
   // LTR arrow directions
   out = out.replace(/bi-arrow-left/g, "bi-arrow-right");

@@ -750,7 +750,11 @@ html[lang="ar"] .product-duo .erp-window {
 /* ===== Product statistics and compliance ===== */
 .product-stats {
   background:
-    radial-gradient(circle at 12% 20%, rgba(45, 156, 219, 0.08), transparent 30%),
+    radial-gradient(
+      circle at 12% 20%,
+      rgba(45, 156, 219, 0.08),
+      transparent 30%
+    ),
     var(--bg);
 }
 
@@ -785,7 +789,9 @@ html[lang="ar"] .product-duo .erp-window {
 
 .product-metric-value {
   display: inline-flex;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 0.28em;
 }
 
@@ -1045,7 +1051,11 @@ html[lang="ar"] .product-duo .erp-window {
   border: 1px solid var(--border);
   border-radius: var(--radius-xl);
   background:
-    radial-gradient(circle at 92% 8%, var(--brand-accent-soft), transparent 34%),
+    radial-gradient(
+      circle at 92% 8%,
+      var(--brand-accent-soft),
+      transparent 34%
+    ),
     var(--surface);
   box-shadow: var(--shadow-md);
   overflow: hidden;
@@ -1534,9 +1544,7 @@ html[lang="ar"] .product-duo .erp-window {
   box-shadow: var(--focus-ring);
 }
 
-.was-validated
-  .form-check-input.optional-consent:valid
-  ~ .form-check-label {
+.was-validated .form-check-input.optional-consent:valid ~ .form-check-label {
   color: inherit;
 }
 
@@ -1702,7 +1710,11 @@ html[lang="ar"] .trust-label {
       rgba(45, 156, 219, 0.2),
       transparent 30%
     ),
-    radial-gradient(circle at 85% 85%, rgba(0, 163, 163, 0.18), transparent 35%),
+    radial-gradient(
+      circle at 85% 85%,
+      rgba(0, 163, 163, 0.18),
+      transparent 35%
+    ),
     linear-gradient(130deg, #082f50 0%, #0f4c81 52%, #176aa1 100%);
 }
 
@@ -2043,7 +2055,11 @@ html[lang="ar"] .trust-label {
   display: block;
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, var(--brand-secondary), var(--brand-accent));
+  background: linear-gradient(
+    90deg,
+    var(--brand-secondary),
+    var(--brand-accent)
+  );
   transform-origin: right;
   animation: load-bar 1.5s 0.8s both;
 }
@@ -2160,11 +2176,6 @@ body.is-ready [data-hero-item]:nth-child(2) {
   -webkit-line-clamp: 2;
 }
 
-.logo-track .logo-item--ink {
-  background: #111827;
-  border-color: #1f2937;
-}
-
 .logo-track .logo-item--ink figcaption {
   color: #d1d5db;
 }
@@ -2223,7 +2234,11 @@ body.is-ready [data-hero-item]:nth-child(2) {
 
 .service-card-featured {
   grid-column: span 2;
-  background: linear-gradient(135deg, var(--brand-primary-dark), var(--brand-primary));
+  background: linear-gradient(
+    135deg,
+    var(--brand-primary-dark),
+    var(--brand-primary)
+  );
   color: #fff;
 }
 
@@ -2548,6 +2563,30 @@ body.is-ready [data-hero-item]:nth-child(2) {
 .project-large {
   grid-row: span 2;
   grid-template-columns: 1fr;
+}
+
+.project-card:not(.project-large) .project-art {
+  align-self: stretch;
+  min-height: 100%;
+}
+
+.project-card:not(.project-large) .project-copy {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem 1.25rem 3.35rem;
+}
+
+.project-card:not(.project-large) .project-copy h3 {
+  max-width: none;
+  margin: 0.35rem 0 0.55rem;
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.project-card:not(.project-large) .project-copy p {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.7;
 }
 
 .project-art {
