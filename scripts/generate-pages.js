@@ -549,13 +549,17 @@ function casesBody(lang) {
         ["الضيافة", "ربط مجموعة فنادق", "تحدي الربط اللاسلكي بين الفنادق.", "بنية تحتية وربط لاسلكي ودعم فني.", "إنجاز المشروع واكتمال الربط.", "8+", "سنوات"],
         ["الأوقاف", "تحديث شبكة وقف", "الحاجة لتطوير شبكة ونظم معلومات.", "تنفيذ بنية تحتية وتحسينات أنظمة.", "أثر فعّال في القدرات التقنية.", "Core", "رفع"],
         ["مؤسسات", "دعم شركة قابضة", "شبكة موثوقة ودعم مستمر.", "بناء الشبكة ودعم لسبع سنوات.", "شراكة طويلة واستمرارية تشغيل.", "7", "سنوات"],
-        ["الضيافة", "مكارم المدينة", "ربط إلكتروني عبر الشبكات اللاسلكية.", "خدمات ربط ودعم فني.", "تقدير الجهود وتحسين الاتصال.", "WAN", "ربط"]
+        ["الضيافة", "مكارم المدينة", "ربط إلكتروني عبر الشبكات اللاسلكية.", "خدمات ربط ودعم فني.", "تقدير الجهود وتحسين الاتصال.", "WAN", "ربط"],
+        ["التصنيع", "شركة مصنع مياه عذبة", "الحاجة إلى بنية تحتية تقنية متكاملة تربط الفروع والأنظمة بمركز واحد.", "تصميم وتنفيذ شبكات الحاسب الآلي، وتجهيز وإعداد الخوادم، وتركيب نظام السنترال، وربط الفروع عبر شبكة اتصال موحدة وآمنة، بالإضافة إلى تكامل أجهزة الحضور والانصراف مع المركز الرئيسي.", "تعزيز كفاءة التشغيل، وتوحيد إدارة الأنظمة، وضمان استمرارية الأعمال.", "PBX", "سنترال"],
+        ["الرعاية الصحية", "مجموعة د. عبد الرحمن العقالي الطبية", "تطوير البنية التحتية التقنية لجميع فروع المجموعة.", "تصميم وتنفيذ شبكات الحاسب الآلي، وتجهيز وإعداد الخوادم، وإنشاء الشبكات المحلية، وربط الفروع عبر شبكة اتصال لاسلكية آمنة وموثوقة.", "تعزيز كفاءة البنية التقنية، وتحسين الاتصال بين الفروع، ودعم استمرارية الأعمال ورفع كفاءة الأداء التشغيلي.", "Wi-Fi", "ربط لاسلكي"]
       ]
     : [
         ["Hospitality", "Hotel group interconnect", "Need reliable wireless linking across properties.", "Infrastructure, wireless interconnect, and support.", "Project completed to a high standard.", "8+", "Years"],
         ["Non-profit", "Endowment network uplift", "Need to develop network and information systems.", "Infrastructure delivery and systems enablement.", "Effective impact on capability.", "Core", "Uplift"],
         ["Enterprise", "Holding company support", "Dependable network with sustained support.", "Network build and seven years of support.", "Long partnership and continuity.", "7", "Years"],
-        ["Hospitality", "Makarem Al Madinah", "Electronic linking via wireless networking.", "Interconnect services and technical support.", "Recognized contribution to connectivity.", "WAN", "Link"]
+        ["Hospitality", "Makarem Al Madinah", "Electronic linking via wireless networking.", "Interconnect services and technical support.", "Recognized contribution to connectivity.", "WAN", "Link"],
+        ["Manufacturing", "Azbah Water Factory", "A need for integrated technical infrastructure linking branches and systems to one hub.", "Computer network design and delivery, server provisioning, PBX installation, and branch connectivity over a unified, secure network—plus attendance device integration with headquarters.", "Improved operational efficiency, unified systems management, and business continuity.", "PBX", "Telephony"],
+        ["Healthcare", "Dr. Abdulrahman Al-Ogaly Medical Group", "Modernizing the technical infrastructure across every branch of the group.", "Computer network design and delivery, server provisioning, local network build-out, and branch connectivity over a secure, reliable wireless link.", "Stronger technical foundations, better inter-branch connectivity, and improved operational performance.", "Wi-Fi", "Wireless link"]
       ];
 
   return (

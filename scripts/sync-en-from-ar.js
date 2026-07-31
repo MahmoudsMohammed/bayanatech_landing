@@ -278,7 +278,8 @@ const phrases = [
   ["مكارم المدينة", "Makarem Al Madinah"],
   ["مجموعة الشهباء", "Al Shahba Group"],
   ["جمعية التنمية الأسرية (أسرتي)", "Osraty Family Development"],
-  ["مجمع العقالي الطبي", "Al-Ogaly Medical Complex"],
+  ["مجموعة د. عبد الرحمن العقالي الطبية", "Dr. Abdulrahman Al-Ogaly Medical Group"],
+  ["شركة مصنع مياه عذبة", "Azbah Water Factory"],
   ["فندق جوهرة الرشيد", "Jawharat Al-Rasheed Hotel"],
   ["مركز البيان لتدبر معاني القرآن", "Al-Bayan Quran Center"],
   ["مأرز العقارية", "Marz Real Estate"],
@@ -307,6 +308,8 @@ const phrases = [
   ["الشهادة الرابعة", "Testimonial 4"],
   ["الشهادة الخامسة", "Testimonial 5"],
   ["الشهادة السادسة", "Testimonial 6"],
+  ["الشهادة السابعة", "Testimonial 7"],
+  ["الشهادة الثامنة", "Testimonial 8"],
   ["الشهادة السابقة", "Previous testimonial"],
   ["الشهادة التالية", "Next testimonial"],
   ["شعار وقف الملك عبدالله", "King Abdullah Endowment logo"],
@@ -351,6 +354,23 @@ const phrases = [
   [
     "تشكر المديرية العامة للشؤون الصحية بمنطقة المدينة المنورة ممثلة في إدارة الموارد الذاتية مؤسسة بياناتك لتقنية المعلومات على أدائها المتميز في تطوير نظام تكامل لإدارة الموارد الذاتية وذلك للعام الثالث على التوالي. متمنين لهم المزيد من التقدم والإبداع.",
     "The General Directorate of Health Affairs in Madinah Region, represented by the Self-Resources Management Department, thanks Bayanatech for its distinguished performance in developing the Takamol system for self-resources management—for the third consecutive year. Wishing them further progress and creativity."
+  ],
+  ["شعار شركة مصنع مياه عذبة", "Azbah Water Factory logo"],
+  ["محمد ماجد النزاوي", "Mohammed Majed Al-Nazzawi"],
+  ["المدير التنفيذي – شركة مصنع مياه عذبة", "Chief Executive Officer – Azbah Water Factory"],
+  [
+    "نفذت مؤسسة بياناتك لتقنية المعلومات مشروعًا متكاملًا للبنية التحتية التقنية لشركة مصنع مياه عذبة، شمل تصميم وتنفيذ شبكات الحاسب الآلي، وتجهيز وإعداد الخوادم (Servers)، وتركيب نظام السنترال، وربط الفروع عبر شبكة اتصال موحدة وآمنة، بالإضافة إلى تكامل أجهزة الحضور والانصراف مع المركز الرئيسي، بما أسهم في تعزيز كفاءة التشغيل، وتوحيد إدارة الأنظمة، وضمان استمرارية الأعمال.",
+    "Bayanatech delivered an integrated technical infrastructure project for Azbah Water Factory, covering the design and implementation of computer networks, server provisioning and configuration, PBX installation, and branch connectivity over a unified, secure network—along with integrating attendance devices with headquarters. The project improved operational efficiency, unified systems management, and ensured business continuity."
+  ],
+  ["شعار مجموعة د. عبد الرحمن العقالي الطبية", "Dr. Abdulrahman Al-Ogaly Medical Group logo"],
+  ["محمد محمود نافع", "Mohammed Mahmoud Nafe"],
+  [
+    "مدير التخطيط والتطوير – مجموعة د. عبد الرحمن العقالي الطبية",
+    "Director of Planning and Development – Dr. Abdulrahman Al-Ogaly Medical Group"
+  ],
+  [
+    "نفذت شركة بياناتك لتقنية المعلومات مشروعًا متكاملًا لتطوير البنية التحتية التقنية لجميع فروع مجموعة د. عبد الرحمن العقالي الطبية، شمل تصميم وتنفيذ شبكات الحاسب الآلي، وتجهيز وإعداد الخوادم، وإنشاء الشبكات المحلية، وربط الفروع عبر شبكة اتصال لاسلكية آمنة وموثوقة. وقد أسهم المشروع في تعزيز كفاءة البنية التقنية، وتحسين الاتصال بين الفروع، ودعم استمرارية الأعمال ورفع كفاءة الأداء التشغيلي.",
+    "Bayanatech delivered an integrated project to modernize the technical infrastructure across every branch of Dr. Abdulrahman Al-Ogaly Medical Group, covering the design and implementation of computer networks, server provisioning and configuration, local network build-out, and branch connectivity over a secure, reliable wireless network. The project strengthened the technical foundations, improved connectivity between branches, and supported business continuity and operational performance."
   ],
   ["هل لديك مشروع أو احتياج تقني؟", "Have a project or technology need?"],
   [
