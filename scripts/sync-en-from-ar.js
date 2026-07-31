@@ -55,6 +55,7 @@ const phrases = [
   ["من نحن", "About"],
   ["تواصل معنا", "Contact"],
   ["اطلب عرض سعر", "Request a Quote"],
+  ["ملف تعريفي", "Company Profile"],
   ["كل الحلول", "All Solutions"],
   ["كل الخدمات", "All Services"],
   ["السحابة", "Cloud"],
