@@ -113,7 +113,7 @@ function header(lang, active) {
     <nav class="navbar navbar-expand-lg" aria-label="${t.navAria}">
       <div class="container">
         <a class="brand-logo" href="index.html">
-          <img src="../assets/img/logo-transparent.png" class="logo-full" height="58" alt="Bayanatech">
+          <img src="../assets/img/logo-horizontal.png" class="logo-full" height="68" alt="Bayanatech">
           ${brand}
         </a>
         <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-label="${t.menu}">
@@ -166,7 +166,7 @@ function footer(lang) {
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand-col">
-          <div class="footer-brand"><img src="../assets/img/logo-transparent.png" class="logo-full" height="72" alt="بياناتك Bayanatech"></div>
+          <div class="footer-brand"><img src="../assets/img/logo-horizontal.png" class="logo-full" height="84" alt="بياناتك Bayanatech"></div>
           <p class="footer-tagline">شريك موثوق للتحول الرقمي وحلول تقنية المعلومات للشركات في المملكة العربية السعودية.</p>
           ${socialLinks("وسائل التواصل")}
         </div>
@@ -204,7 +204,7 @@ function footer(lang) {
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand-col">
-          <div class="footer-brand"><img src="../assets/img/logo-transparent.png" class="logo-full" height="72" alt="Bayanatech"></div>
+          <div class="footer-brand"><img src="../assets/img/logo-horizontal.png" class="logo-full" height="84" alt="Bayanatech"></div>
           <p class="footer-tagline">A trusted digital transformation and IT solutions partner for businesses in Saudi Arabia.</p>
           ${socialLinks("Social media")}
         </div>

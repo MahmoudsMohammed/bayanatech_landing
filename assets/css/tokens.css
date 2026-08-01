@@ -71,7 +71,7 @@
   --fw-bold: 700;
 
   /* Layout */
-  --header-h: 84px;
+  --header-h: 92px;
   --container: 1140px;
   --transition: 0.25s cubic-bezier(0.22, 1, 0.36, 1);
   --focus-ring: 0 0 0 3px rgba(45, 156, 219, 0.32);
@@ -79,4 +79,10 @@
 
 html[lang="ar"] {
   --font: var(--font-ar);
+}
+
+@media (max-width: 575.98px) {
+  :root {
+    --header-h: 78px;
+  }
 }

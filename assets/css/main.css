@@ -209,8 +209,8 @@ a:hover {
 
 .brand-logo img.logo-full {
   width: auto;
-  height: 58px;
-  max-width: min(132px, 42vw);
+  height: clamp(50px, 7vw, 68px);
+  max-width: min(240px, 58vw);
   object-fit: contain;
 }
 
@@ -235,11 +235,11 @@ a:hover {
 
 .footer-brand img.logo-full {
   width: auto;
-  height: 72px;
-  max-width: 148px;
+  height: 84px;
+  max-width: 300px;
   object-fit: contain;
   background: #fff;
-  padding: 0.45rem 0.55rem;
+  padding: 0.55rem 0.75rem;
   border-radius: 12px;
 }
 
