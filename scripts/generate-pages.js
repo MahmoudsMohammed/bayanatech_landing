@@ -52,7 +52,7 @@ function head({ lang, title, description, active }) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="${description}">
   <title>${title}</title>
-  <link rel="icon" href="../assets/img/logo.png" type="image/png">
+  <link rel="icon" href="../assets/img/favicon.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="${fonts}" rel="stylesheet">
@@ -113,7 +113,7 @@ function header(lang, active) {
     <nav class="navbar navbar-expand-lg" aria-label="${t.navAria}">
       <div class="container">
         <a class="brand-logo" href="index.html">
-          <img src="../assets/img/logo-transparent.png" class="logo-full" height="46" alt="Bayanatech">
+          <img src="../assets/img/logo-transparent.png" class="logo-full" height="58" alt="Bayanatech">
           ${brand}
         </a>
         <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-label="${t.menu}">
@@ -166,7 +166,7 @@ function footer(lang) {
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand-col">
-          <div class="footer-brand"><img src="../assets/img/logo.png" class="logo-full" height="48" alt="بياناتك Bayanatech"></div>
+          <div class="footer-brand"><img src="../assets/img/logo-transparent.png" class="logo-full" height="72" alt="بياناتك Bayanatech"></div>
           <p class="footer-tagline">شريك موثوق للتحول الرقمي وحلول تقنية المعلومات للشركات في المملكة العربية السعودية.</p>
           ${socialLinks("وسائل التواصل")}
         </div>
@@ -204,8 +204,8 @@ function footer(lang) {
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand-col">
-          <div class="footer-brand"><img src="../assets/img/logo.png" class="logo-full" height="48" alt="Bayanatech"></div>
-          <p class="footer-tagline">Trusted digital transformation and IT solutions partner for businesses in Saudi Arabia.</p>
+          <div class="footer-brand"><img src="../assets/img/logo-transparent.png" class="logo-full" height="72" alt="Bayanatech"></div>
+          <p class="footer-tagline">A trusted digital transformation and IT solutions partner for businesses in Saudi Arabia.</p>
           ${socialLinks("Social media")}
         </div>
         <div>
@@ -523,7 +523,7 @@ function aboutBody(lang) {
         <p class="text-muted">${isAr ? "نقدّم حلولاً متكاملة في الشبكات ومراكز البيانات والاستشارات والأمن وأنظمة الحاسب وخدمات ما بعد البيع—لأن عملاءنا هم مقياس نجاحنا وشركاء مسيرتنا، فإننا نسعى دائماً لأن نبقى خيارهم الأول في الحلول التقنية." : "We deliver integrated solutions across networks, data centers, consulting, security, computer systems, and aftermarket services—because our customers are the measure of our success and partners in our journey, we always strive to remain their first choice in technical solutions."}</p>
         <div class="row g-3 mt-3">
           <div class="col-4"><div class="metric-card"><div class="metric-value" data-counter="14" data-digits="latn" data-suffix="+">0</div><div class="metric-label">${isAr ? "سنة" : "Years"}</div></div></div>
-          <div class="col-4"><div class="metric-card"><div class="metric-value" data-counter="4000" data-digits="latn">0</div><div class="metric-label">${isAr ? "مشروع ناجح" : "Successful projects"}</div></div></div>
+          <div class="col-4"><div class="metric-card"><div class="metric-value" data-counter="4000" data-digits="latn" data-suffix="+">0</div><div class="metric-label">${isAr ? "مشروع ناجح" : "Successful projects"}</div></div></div>
           <div class="col-4"><div class="metric-card"><div class="metric-value" data-counter="3000" data-digits="latn" data-suffix="+">0</div><div class="metric-label">${isAr ? "عميل راضي" : "Satisfied clients"}</div></div></div>
         </div>
       </div>

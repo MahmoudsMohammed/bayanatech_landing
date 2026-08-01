@@ -1,149 +1,343 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="About Bayanatech">
-  <title>About | Bayanatech</title>
-  <link rel="icon" href="../assets/img/logo.png" type="image/png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-  <link href="../assets/css/tokens.css" rel="stylesheet">
-  <link href="../assets/css/main.css" rel="stylesheet">
-</head>
-<body data-page="about">
-  <a class="skip-link" href="#main">Skip to content</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="About Bayanatech" />
+    <title>About | Bayanatech</title>
+    <link rel="icon" href="../assets/img/favicon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link href="../assets/css/tokens.css" rel="stylesheet" />
+    <link href="../assets/css/main.css" rel="stylesheet" />
+  </head>
+  <body data-page="about">
+    <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header">
-    <nav class="navbar navbar-expand-lg" aria-label="Primary">
-      <div class="container">
-        <a class="brand-logo" href="index.html">
-          <img src="../assets/img/logo-transparent.png" class="logo-full" height="46" alt="Bayanatech">
-          <span class="brand-name">Bayanatech<span class="brand-tag">Information Technology</span></span>
-        </a>
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-label="Menu">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse d-none d-lg-flex">
-          <ul class="navbar-nav mx-auto align-items-lg-center">
-            <li class="nav-item"><a class="nav-link nav-link-main" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-main" href="products.html">Products</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-main" href="case-studies.html">Our Work</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-main active" href="about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-main" href="contact.html">Contact</a></li>
-          </ul>
-          <div class="d-flex align-items-center gap-2">
-            <a class="lang-switch" href="../ar/about.html" data-switch-lang="ar" hreflang="ar">العربية</a>
-            <a class="btn btn-brand" href="consultation.html">Request a Quote</a>
+    <header class="site-header">
+      <nav class="navbar navbar-expand-lg" aria-label="Primary">
+        <div class="container">
+          <a class="brand-logo" href="index.html">
+            <img
+              src="../assets/img/logo-transparent.png"
+              class="logo-full"
+              height="58"
+              alt="Bayanatech"
+            />
+            <span class="brand-name"
+              >Bayanatech<span class="brand-tag">Information Technology</span></span
+            >
+          </a>
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#mobileNav"
+            aria-controls="mobileNav"
+            aria-label="Menu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse d-none d-lg-flex">
+            <ul class="navbar-nav mx-auto align-items-lg-center">
+              <li class="nav-item">
+                <a class="nav-link nav-link-main" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-link-main" href="products.html"
+                  >Products</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-link-main" href="case-studies.html"
+                  >Our Work</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-link-main active" href="about.html"
+                  >About</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-link-main" href="contact.html"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+            <div class="d-flex align-items-center gap-2">
+              <a
+                class="lang-switch"
+                href="../ar/about.html"
+                data-switch-lang="ar"
+                hreflang="ar"
+                >العربية</a
+              >
+              <a class="btn btn-brand" href="consultation.html">Request a Quote</a>
+            </div>
           </div>
         </div>
-      </div>
-    </nav>
-  </header>
-
-  <div class="offcanvas offcanvas-end offcanvas-nav" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel">
-    <div class="offcanvas-header">
-      <h2 class="offcanvas-title h5" id="mobileNavLabel">Menu</h2>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      <nav aria-label="Mobile">
-        <a class="nav-link" href="index.html">Home</a>
-        <a class="nav-link" href="products.html">Products</a>
-        <a class="nav-link" href="case-studies.html">Our Work</a>
-        <a class="nav-link" href="about.html">About</a>
-        <a class="nav-link" href="contact.html">Contact</a>
-        <a class="btn btn-brand w-100 mt-3" href="consultation.html">Request a Quote</a>
-        <a class="lang-switch d-inline-block mt-3" href="../ar/about.html" data-switch-lang="ar">العربية</a>
       </nav>
-    </div>
-  </div>
+    </header>
 
-  <main id="main">
-
-  <section class="page-hero">
-    <div class="container">
-      <nav class="breadcrumb-nav" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span class="current">About</span></nav>
-      <h1>About Bayanatech</h1>
-      <p class="lead">We develop IT and electronic solutions that help our clients run their businesses with ease and confidence.</p>
-    </div>
-  </section>
-    <section class="section"><div class="container"><div class="row g-5 align-items-center">
-      <div class="col-lg-6 reveal">
-        <span class="section-eyebrow">Our story</span>
-        <h2 class="section-title">Fourteen+ years of technology partnership</h2>
-        <p class="text-muted">We deliver integrated solutions across networks, data centers, consulting, security, computer systems, and aftermarket services—because our customers are the measure of our success and partners in our journey, we always strive to remain their first choice in technical solutions.</p>
-        <div class="row g-3 mt-3">
-          <div class="col-4"><div class="metric-card"><div class="metric-value" data-counter="14" data-digits="latn" data-suffix="+">0</div><div class="metric-label">Years</div></div></div>
-          <div class="col-4"><div class="metric-card"><div class="metric-value" data-counter="4000" data-digits="latn">0</div><div class="metric-label">Successful projects</div></div></div>
-          <div class="col-4"><div class="metric-card"><div class="metric-value" data-counter="3000" data-digits="latn" data-suffix="+">0</div><div class="metric-label">Satisfied clients</div></div></div>
-        </div>
+    <div
+      class="offcanvas offcanvas-end offcanvas-nav"
+      tabindex="-1"
+      id="mobileNav"
+      aria-labelledby="mobileNavLabel"
+    >
+      <div class="offcanvas-header">
+        <h2 class="offcanvas-title h5" id="mobileNavLabel">Menu</h2>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
       </div>
-      <div class="col-lg-6 reveal">
-        <div class="row g-3">
-          <div class="col-md-6"><div class="card-soft"><h3 class="h5">Mission</h3><p class="small text-muted mb-0">Enable organizations with reliable IT that improves efficiency, security, and scalability.</p></div></div>
-          <div class="col-md-6"><div class="card-soft"><h3 class="h5">Vision</h3><p class="small text-muted mb-0">To be the preferred digital transformation partner in Saudi Arabia.</p></div></div>
-          <div class="col-12"><div class="card-soft"><h3 class="h5">Values</h3><p class="small text-muted mb-0">Trust, professionalism, accountability, and long-term partnership.</p></div></div>
-        </div>
+      <div class="offcanvas-body">
+        <nav aria-label="Mobile">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="products.html">Products</a>
+          <a class="nav-link" href="case-studies.html">Our Work</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+          <a class="btn btn-brand w-100 mt-3" href="consultation.html"
+            >Request a Quote</a
+          >
+          <a
+            class="lang-switch d-inline-block mt-3"
+            href="../ar/about.html"
+            data-switch-lang="ar"
+            >العربية</a
+          >
+        </nav>
       </div>
-    </div></div></section>
-    <section class="section section-muted"><div class="container text-center reveal">
-      <h2 class="section-title">Ready to start your transformation?</h2>
-      <a class="btn btn-brand" href="consultation.html">Request Consultation</a>
-    </div></section>
-  </main>
+    </div>
 
-  <footer class="site-footer">
-    <div class="footer-glow" aria-hidden="true"></div>
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand-col">
-          <div class="footer-brand"><img src="../assets/img/logo.png" class="logo-full" height="48" alt="Bayanatech"></div>
-          <p class="footer-tagline">Trusted digital transformation and IT solutions partner for businesses in Saudi Arabia.</p>
-          <div class="social-links" aria-label="Social media">
-            <a href="https://www.facebook.com/Bayanatech" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.twitter.com/Bayanatech" target="_blank" rel="noopener" aria-label="X"><i class="bi bi-twitter-x"></i></a>
-            <a href="https://www.youtube.com/channel/UCTb3AivjT1Vp7ZkZFLgb_TQ" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+    <main id="main">
+      <section class="page-hero">
+        <div class="container">
+          <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+            <a href="index.html">Home</a><span class="sep">/</span
+            ><span class="current">About</span>
+          </nav>
+          <h1>About Bayanatech Information Technology</h1>
+          <p class="lead">
+            We develop IT and electronic solutions that help our clients run their businesses with ease and confidence.
+          </p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="row g-5 align-items-center">
+            <div class="col-lg-6 reveal">
+              <span class="section-eyebrow">Our story</span>
+              <h2 class="section-title">
+                Fourteen+ years of technology partnership
+              </h2>
+              <p class="text-muted">
+                We deliver integrated solutions across networks, data centers, consulting, security, computer systems, and aftermarket services—because our customers are the measure of our success and partners in our journey, we always strive to remain their first choice in technical solutions.
+              </p>
+              <div class="row g-3 mt-3">
+                <div class="col-4">
+                  <div class="metric-card">
+                    <div
+                      class="metric-value"
+                      data-counter="14"
+                      data-digits="latn"
+                      data-suffix="+"
+                    >
+                      0
+                    </div>
+                    <div class="metric-label">Years</div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="metric-card">
+                    <div
+                      class="metric-value"
+                      data-counter="4000"
+                      data-digits="latn"
+                      data-suffix="+"
+                    >
+                      0
+                    </div>
+                    <div class="metric-label">Successful projects</div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="metric-card">
+                    <div
+                      class="metric-value"
+                      data-counter="3000"
+                      data-digits="latn"
+                      data-suffix="+"
+                    >
+                      0
+                    </div>
+                    <div class="metric-label">Satisfied clients</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 reveal">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="card-soft">
+                    <h3 class="h5">Mission</h3>
+                    <p class="small text-muted mb-0">
+                      Enable organizations with reliable IT that improves efficiency, security, and scalability.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card-soft">
+                    <h3 class="h5">Vision</h3>
+                    <p class="small text-muted mb-0">
+                      To be the preferred digital transformation partner in Saudi Arabia.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="card-soft">
+                    <h3 class="h5">Values</h3>
+                    <p class="small text-muted mb-0">
+                      Trust, professionalism, accountability, and long-term partnership.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div>
-          <h5>Explore</h5>
-          <ul>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="case-studies.html">Our Work</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
+      </section>
+      <section class="section section-muted">
+        <div class="container text-center reveal">
+          <h2 class="section-title">Ready to start your transformation?</h2>
+          <a class="btn btn-brand" href="consultation.html">Request Consultation</a>
         </div>
-        <div class="footer-contact-col">
-          <h5>Contact</h5>
-          <ul class="footer-contact-list">
-            <li><i class="bi bi-geo-alt"></i><span>Khalidah bint Al-Aswad St., Taybah District, opposite Taibah University</span></li>
-            <li><i class="bi bi-telephone"></i><a href="tel:0568587099" dir="ltr">056 858 7099</a></li>
-            <li><i class="bi bi-whatsapp"></i><a href="https://wa.me/966503326610" target="_blank" rel="noopener" dir="ltr">050 332 6610</a></li>
-            <li><i class="bi bi-envelope"></i><a href="mailto:info@bayanatech.com.sa">info@bayanatech.com.sa</a></li>
-            <li><i class="bi bi-clock"></i><span>Saturday – Thursday, 09:00 – 19:00</span></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>©2026 Bayanatech for Information Technology. All rights reserved.</span>
-        <span>Madinah, Kingdom of Saudi Arabia</span>
-      </div>
-    </div>
-  </footer>
+      </section>
+    </main>
 
-  <div class="fab-contact">
-    <a class="fab-btn fab-whatsapp" href="https://wa.me/966503326610" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-    <a class="fab-btn fab-consult" href="consultation.html"><i class="bi bi-calendar-check"></i><span>Request a Quote</span></a>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/js/config.js"></script>
-  <script src="../assets/js/products.js"></script>
-  <script src="../assets/js/i18n.js"></script>
-  <script src="../assets/js/main.js"></script>
-</body>
+    <footer class="site-footer">
+      <div class="footer-glow" aria-hidden="true"></div>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand-col">
+            <div class="footer-brand">
+              <img
+                src="../assets/img/logo-transparent.png"
+                class="logo-full"
+                height="72"
+                alt="Bayanatech"
+              />
+            </div>
+            <p class="footer-tagline">
+              A trusted digital transformation and IT solutions partner for businesses in Saudi Arabia.
+            </p>
+            <div class="social-links" aria-label="Social media">
+              <a
+                href="https://www.facebook.com/Bayanatech"
+                target="_blank"
+                rel="noopener"
+                aria-label="Facebook"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a
+                href="https://www.twitter.com/Bayanatech"
+                target="_blank"
+                rel="noopener"
+                aria-label="X"
+                ><i class="bi bi-twitter-x"></i
+              ></a>
+              <a
+                href="https://www.youtube.com/channel/UCTb3AivjT1Vp7ZkZFLgb_TQ"
+                target="_blank"
+                rel="noopener"
+                aria-label="YouTube"
+                ><i class="bi bi-youtube"></i
+              ></a>
+            </div>
+          </div>
+          <div>
+            <h5>Explore</h5>
+            <ul>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="case-studies.html">Our Work</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact-col">
+            <h5>Contact</h5>
+            <ul class="footer-contact-list">
+              <li>
+                <i class="bi bi-geo-alt"></i
+                ><span>Khalidah bint Al-Aswad St., Taybah District, opposite Taibah University</span>
+              </li>
+              <li>
+                <i class="bi bi-telephone"></i
+                ><a href="tel:0568587099" dir="ltr">056 858 7099</a>
+              </li>
+              <li>
+                <i class="bi bi-whatsapp"></i
+                ><a
+                  href="https://wa.me/966503326610"
+                  target="_blank"
+                  rel="noopener"
+                  dir="ltr"
+                  >050 332 6610</a
+                >
+              </li>
+              <li>
+                <i class="bi bi-envelope"></i
+                ><a href="mailto:info@bayanatech.com.sa"
+                  >info@bayanatech.com.sa</a
+                >
+              </li>
+              <li>
+                <i class="bi bi-clock"></i
+                ><span>Saturday – Thursday, 09:00 – 19:00</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>©2026 Bayanatech for Information Technology. All rights reserved.</span>
+          <span>Madinah, Kingdom of Saudi Arabia</span>
+        </div>
+      </div>
+    </footer>
+
+    <div class="fab-contact">
+      <a
+        class="fab-btn fab-whatsapp"
+        href="https://wa.me/966503326610"
+        target="_blank"
+        rel="noopener"
+        aria-label="WhatsApp"
+        ><i class="bi bi-whatsapp"></i
+      ></a>
+      <a class="fab-btn fab-consult" href="consultation.html"
+        ><i class="bi bi-calendar-check"></i><span>Request a Quote</span></a
+      >
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/config.js"></script>
+    <script src="../assets/js/products.js"></script>
+    <script src="../assets/js/i18n.js"></script>
+    <script src="../assets/js/main.js"></script>
+  </body>
 </html>

@@ -209,8 +209,9 @@ a:hover {
 
 .brand-logo img.logo-full {
   width: auto;
-  height: 46px;
-  max-width: min(200px, 52vw);
+  height: 58px;
+  max-width: min(132px, 42vw);
+  object-fit: contain;
 }
 
 .brand-logo img.logo-mark,
@@ -234,8 +235,12 @@ a:hover {
 
 .footer-brand img.logo-full {
   width: auto;
-  height: 40px;
-  max-width: 180px;
+  height: 72px;
+  max-width: 148px;
+  object-fit: contain;
+  background: #fff;
+  padding: 0.45rem 0.55rem;
+  border-radius: 12px;
 }
 
 .nav-link-main {

@@ -1,5 +1,5 @@
 /**
- * Build English index.html and products.html from Arabic counterparts
+ * Build English index.html, products.html, and about.html from Arabic counterparts
  * by translating text while preserving structure.
  * Run: node scripts/sync-en-from-ar.js
  */
@@ -472,7 +472,38 @@ const phrases = [
   ["زيارة موقع تعمير السحابي", "Visit Tameer Cloud website"],
   ["القائمة", "Menu"],
   ["الرئيسية", "Home"],
-  ["إغلاق", "Close"]
+  ["إغلاق", "Close"],
+  ["عن بياناتك", "About Bayanatech"],
+  ["من نحن | بياناتك", "About | Bayanatech"],
+  ["عن بياناتك لتقنية المعلومات", "About Bayanatech Information Technology"],
+  [
+    "نسعى لتطوير حلول تقنية المعلومات والحلول الإلكترونية لتمكين عملائنا من الاستمرار في أعمالهم بيسر وسهولة.",
+    "We develop IT and electronic solutions that help our clients run their businesses with ease and confidence."
+  ],
+  ["قصتنا", "Our story"],
+  ["أكثر من أربعة عشر عاماً من الشراكة التقنية", "Fourteen+ years of technology partnership"],
+  [
+    "نقدّم حلولاً متكاملة في الشبكات ومراكز البيانات والاستشارات والأمن وأنظمة الحاسب وخدمات ما بعد البيع—لأن عملاءنا هم مقياس نجاحنا وشركاء مسيرتنا، فإننا نسعى دائماً لأن نبقى خيارهم الأول في الحلول التقنية.",
+    "We deliver integrated solutions across networks, data centers, consulting, security, computer systems, and aftermarket services—because our customers are the measure of our success and partners in our journey, we always strive to remain their first choice in technical solutions."
+  ],
+  ["الرسالة", "Mission"],
+  [
+    "تمكين المؤسسات بحلول تقنية موثوقة تزيد الكفاءة والأمان وقابلية التوسع.",
+    "Enable organizations with reliable IT that improves efficiency, security, and scalability."
+  ],
+  ["الرؤية", "Vision"],
+  [
+    "أن نكون الشريك المفضل للتحول الرقمي في المملكة.",
+    "To be the preferred digital transformation partner in Saudi Arabia."
+  ],
+  ["القيم", "Values"],
+  [
+    "الثقة، الاحتراف، المساءلة، والشراكة طويلة الأمد.",
+    "Trust, professionalism, accountability, and long-term partnership."
+  ],
+  ["هل تود الانضمام إلى رحلة التحول؟", "Ready to start your transformation?"],
+  ["اطلب استشارة", "Request Consultation"],
+  ['aria-label="Breadcrumb"', 'aria-label="Breadcrumb"']
 ];
 
 // Sort by Arabic length descending so longer phrases win
@@ -543,7 +574,7 @@ function convertArToEn(html) {
   };
 }
 
-for (const file of ["index.html", "products.html"]) {
+for (const file of ["index.html", "products.html", "about.html"]) {
   const arPath = path.join(ROOT, "ar", file);
   const enPath = path.join(ROOT, "en", file);
   const html = fs.readFileSync(arPath, "utf8");
